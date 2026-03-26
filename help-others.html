@@ -16,6 +16,13 @@
     content="Future volunteer opportunities for people interested in helping others through peer grief support."
   >
   <meta name="twitter:card" content="summary">
+  <script>
+    try {
+      if (window.sessionStorage.getItem("rgInternalPageTransition") === "1") {
+        document.documentElement.classList.add("is-page-entering");
+      }
+    } catch (error) {}
+  </script>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/script.js" defer></script>
 </head>

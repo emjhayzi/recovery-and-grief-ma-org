@@ -31,6 +31,7 @@ if (currentHref && nav) {
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const INTERNAL_TRANSITION_KEY = "rgInternalPageTransition";
+const INTERNAL_ENTRY_CLASS = "is-page-entering";
 const cameFromInternalTransition = (() => {
   try {
     const shouldSkipEntry = window.sessionStorage.getItem(INTERNAL_TRANSITION_KEY) === "1";
@@ -112,13 +113,16 @@ const setupPageReveals = () => {
   });
 };
 
-const setupPageTransitionTargets = () => {
-  if (cameFromInternalTransition) {
+const setupInternalEntryTransition = () => {
+  if (reduceMotionQuery.matches || !cameFromInternalTransition) {
+    document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
     return;
   }
 
-  [...document.querySelectorAll("main, .site-footer")].forEach((element) => {
-    element.classList.add("page-transition-target");
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
+    });
   });
 };
 
@@ -159,7 +163,7 @@ const setupHomeMotion = () => {
   });
 };
 
-setupPageTransitionTargets();
+setupInternalEntryTransition();
 setupPageTransitions();
 setupPageReveals();
 setupHomeMotion();

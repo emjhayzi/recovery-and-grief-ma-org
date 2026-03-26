@@ -61,11 +61,20 @@ body {
   overflow-x: hidden;
 }
 
-.page-transition-target {
-  animation: page-fade-in 420ms var(--ease-soft) both;
+main,
+.site-footer {
+  transition: opacity 260ms var(--ease-soft), filter 260ms var(--ease-soft), transform 260ms var(--ease-soft);
 }
 
-body.is-page-exiting .page-transition-target {
+html.is-page-entering main,
+html.is-page-entering .site-footer {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(8px);
+}
+
+body.is-page-exiting main,
+body.is-page-exiting .site-footer {
   opacity: 0;
   filter: none;
   transition: opacity 220ms var(--ease-soft);
@@ -1574,13 +1583,13 @@ body.has-motion-enhancements .home-section.is-visible .portal-card:nth-child(6) 
     filter: none !important;
   }
 
-  .page-transition-target {
-    animation: none !important;
-  }
-
-  body.is-page-exiting .page-transition-target {
+  html.is-page-entering main,
+  html.is-page-entering .site-footer,
+  body.is-page-exiting main,
+  body.is-page-exiting .site-footer {
     opacity: 1 !important;
     filter: none !important;
+    transform: none !important;
   }
 
   .page-reveal {
