@@ -67,8 +67,8 @@ body {
 
 body.is-page-exiting .page-transition-target {
   opacity: 0;
-  filter: blur(3px);
-  transition: opacity 240ms var(--ease-soft), filter 240ms var(--ease-soft);
+  filter: none;
+  transition: opacity 220ms var(--ease-soft);
 }
 
 .page-reveal {

@@ -30,6 +30,20 @@ if (currentHref && nav) {
 }
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const INTERNAL_TRANSITION_KEY = "rgInternalPageTransition";
+const cameFromInternalTransition = (() => {
+  try {
+    const shouldSkipEntry = window.sessionStorage.getItem(INTERNAL_TRANSITION_KEY) === "1";
+
+    if (shouldSkipEntry) {
+      window.sessionStorage.removeItem(INTERNAL_TRANSITION_KEY);
+    }
+
+    return shouldSkipEntry;
+  } catch (error) {
+    return false;
+  }
+})();
 
 const setupPageTransitions = () => {
   if (reduceMotionQuery.matches) {
@@ -69,6 +83,11 @@ const setupPageTransitions = () => {
       }
 
       event.preventDefault();
+      try {
+        window.sessionStorage.setItem(INTERNAL_TRANSITION_KEY, "1");
+      } catch (error) {
+        // Ignore storage errors and continue with the transition.
+      }
       document.body.classList.add("is-page-exiting");
       window.setTimeout(() => {
         window.location.href = destination.href;
@@ -78,7 +97,7 @@ const setupPageTransitions = () => {
 };
 
 const setupPageReveals = () => {
-  if (reduceMotionQuery.matches) {
+  if (reduceMotionQuery.matches || cameFromInternalTransition) {
     return;
   }
 
@@ -94,6 +113,10 @@ const setupPageReveals = () => {
 };
 
 const setupPageTransitionTargets = () => {
+  if (cameFromInternalTransition) {
+    return;
+  }
+
   [...document.querySelectorAll("main, .site-footer")].forEach((element) => {
     element.classList.add("page-transition-target");
   });
