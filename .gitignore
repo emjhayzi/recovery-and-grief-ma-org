@@ -1,0 +1,17 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Python cache
+__pycache__/
+*.pyc
+
+# Local Node cache
+node_modules/
+
+# Temporary local files
+.preview-server.pid
+
+# Optional large source/reference materials not needed for deployment
+References/
