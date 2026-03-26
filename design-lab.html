@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Lab | Recovery & Grief</title>
+  <link rel="stylesheet" href="assets/css/design-lab.css">
+</head>
+<body>
+  <div class="lab-shell">
+    <aside class="lab-sidebar">
+      <div class="lab-brand">
+        <p class="lab-kicker">Interactive CSS Playground</p>
+        <h1>Design Lab</h1>
+        <p class="lab-intro">
+          Open the site, adjust the basics, and generate live CSS overrides without touching the main files.
+          The controls are focused on the landing-page hero, but you can preview the other pages too.
+        </p>
+      </div>
+
+      <section class="lab-card">
+        <div class="lab-card-head">
+          <h2>Preview</h2>
+          <p>Choose a page and device frame.</p>
+        </div>
+
+        <label class="field">
+          <span>Page</span>
+          <select data-setting="page">
+            <option value="index.html">Landing Page</option>
+            <option value="about.html">About</option>
+            <option value="connect.html">Connect</option>
+            <option value="groups.html">Groups</option>
+            <option value="whole-person.html">Whole Person</option>
+            <option value="resources.html">Resources</option>
+            <option value="help-others.html">Help Others</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Preview Size</span>
+          <select data-setting="previewSize">
+            <option value="desktop">Desktop</option>
+            <option value="tablet">Tablet</option>
+            <option value="mobile">Mobile</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="lab-card">
+        <div class="lab-card-head">
+          <h2>Hero Layout</h2>
+          <p>Tune the landing-page split, copy width, and button arrangement.</p>
+        </div>
+
+        <label class="field">
+          <span>Main Panel Weight <output data-value-for="mainWeight"></output></span>
+          <input type="range" min="110" max="170" step="1" data-setting="mainWeight">
+        </label>
+
+        <label class="field">
+          <span>Companion Width <output data-value-for="companionWidth"></output></span>
+          <input type="range" min="220" max="380" step="2" data-setting="companionWidth">
+        </label>
+
+        <label class="field">
+          <span>Stage Gap <output data-value-for="stageGap"></output></span>
+          <input type="range" min="8" max="28" step="1" data-setting="stageGap">
+        </label>
+
+        <label class="field">
+          <span>Copy Max Width <output data-value-for="copyMaxWidth"></output></span>
+          <input type="range" min="30" max="48" step="0.5" data-setting="copyMaxWidth">
+        </label>
+
+        <label class="field">
+          <span>Heading Max Size <output data-value-for="headingSize"></output></span>
+          <input type="range" min="3.8" max="5.8" step="0.05" data-setting="headingSize">
+        </label>
+
+        <label class="field">
+          <span>Button Layout</span>
+          <select data-setting="buttonsLayout">
+            <option value="row">Side by Side</option>
+            <option value="column">Stacked</option>
+          </select>
+        </label>
+
+        <label class="field field-check">
+          <input type="checkbox" data-setting="lockHeroLines">
+          <span>Keep hero title on fixed lines</span>
+        </label>
+      </section>
+
+      <section class="lab-card">
+        <div class="lab-card-head">
+          <h2>Hero Tone</h2>
+          <p>Adjust the stage, reading veil, and companion card to match the site palette.</p>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Stage Surface</span>
+            <input type="color" data-setting="stageColor">
+          </label>
+
+          <label class="field">
+            <span>Reading Veil</span>
+            <input type="color" data-setting="veilColor">
+          </label>
+
+          <label class="field">
+            <span>Companion Surface</span>
+            <input type="color" data-setting="companionColor">
+          </label>
+
+          <label class="field">
+            <span>Accent</span>
+            <input type="color" data-setting="accentColor">
+          </label>
+
+          <label class="field">
+            <span>Text</span>
+            <input type="color" data-setting="textColor">
+          </label>
+
+          <label class="field">
+            <span>Muted Text</span>
+            <input type="color" data-setting="mutedColor">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Stage Opacity <output data-value-for="stageOpacity"></output></span>
+          <input type="range" min="35" max="98" step="1" data-setting="stageOpacity">
+        </label>
+
+        <label class="field">
+          <span>Veil Opacity <output data-value-for="veilOpacity"></output></span>
+          <input type="range" min="15" max="95" step="1" data-setting="veilOpacity">
+        </label>
+
+        <label class="field">
+          <span>Companion Opacity <output data-value-for="companionOpacity"></output></span>
+          <input type="range" min="20" max="96" step="1" data-setting="companionOpacity">
+        </label>
+
+        <label class="field">
+          <span>Support Item Fill <output data-value-for="supportFillOpacity"></output></span>
+          <input type="range" min="12" max="85" step="1" data-setting="supportFillOpacity">
+        </label>
+      </section>
+
+      <section class="lab-card">
+        <div class="lab-card-head">
+          <h2>CSS Output</h2>
+          <p>Copy the current overrides when you land on a version you like.</p>
+        </div>
+
+        <textarea id="css-output" spellcheck="false" readonly></textarea>
+
+        <div class="lab-actions">
+          <button type="button" id="copy-css">Copy CSS</button>
+          <button type="button" id="reset-controls" class="secondary-action">Reset</button>
+          <button type="button" id="reload-preview" class="secondary-action">Refresh Now</button>
+        </div>
+
+        <p class="lab-note" id="lab-status">Live overrides are active. Auto-refresh is watching for file changes.</p>
+      </section>
+    </aside>
+
+    <main class="lab-preview-area">
+      <div class="preview-toolbar">
+        <div>
+          <p class="lab-kicker">Live Preview</p>
+          <h2 id="preview-title">Landing Page</h2>
+        </div>
+        <p class="preview-hint">Edits apply only inside this lab preview until you copy the CSS.</p>
+      </div>
+
+      <div class="preview-shell" data-preview-size="desktop" id="preview-shell">
+        <div class="preview-chrome">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <iframe id="preview-frame" src="index.html" title="Website preview"></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/design-lab.js"></script>
+</body>
+</html>

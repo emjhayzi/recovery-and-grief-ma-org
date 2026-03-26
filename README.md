@@ -35,6 +35,7 @@ Press `Ctrl+C` in that terminal to stop the local server.
 If you want clickable shortcuts instead of typing commands, use:
 
 - [Start Website Test.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Start Website Test.cmd)
+- [Start Design Lab.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Start Design Lab.cmd)
 - [Stop Website Test.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Stop Website Test.cmd)
 - [Prepare Cloudflare Publish.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Prepare Cloudflare Publish.cmd)
 
