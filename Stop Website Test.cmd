@@ -16,4 +16,4 @@ if defined FOUND_SERVER (
 ) else (
   echo No local website preview server was found on port 8000.
 )
-pause
+exit /b 0
