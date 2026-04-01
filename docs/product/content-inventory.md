@@ -2,7 +2,7 @@
 
 ## Project Format
 
-The project is a folder-based static website. There is no framework, build pipeline, or package manager in the current setup.
+The project is a folder-based static website. There is no framework, build pipeline, or package manager in the current setup, but the workspace is tracked in Git and mirrored into a deploy-ready `publish/` folder for Cloudflare Pages staging.
 
 ## Top-Level Inventory
 
@@ -15,20 +15,24 @@ The project is a folder-based static website. There is no framework, build pipel
 - `whole-person.html`
 - `resources.html`
 - `help-others.html`
+- `design-lab.html`
 - `robots.txt`
 
 ### Shared Front-End Assets
 
 - `assets/css/styles.css`: full visual system, layout, responsive behavior, and page atmosphere styling
+- `assets/css/design-lab.css`: internal design-lab interface styles
 - `assets/js/script.js`: mobile navigation toggle and active-page state
+- `assets/js/design-lab.js`: internal live preview and override tooling for the design lab
 - `assets/images/sadod-logo.png`
 - `assets/images/tswr-logo.png`
-- `assets/images/sadod-logo-backup.png`
 
 ### Local Preview Scripts
 
 - `Start Website Test.cmd`: starts a Python-based local server on port 8000 and opens the browser
+- `Start Design Lab.cmd`: starts the local server and opens the design lab at `http://localhost:8000/design-lab.html`
 - `Stop Website Test.cmd`: stops the local server on port 8000
+- `Prepare Cloudflare Publish.cmd`: refreshes the deploy-ready `publish/` folder from the current site files
 
 ### Project And Handoff Docs
 
@@ -66,6 +70,7 @@ The project is a folder-based static website. There is no framework, build pipel
 - Browser support for HTML/CSS/JavaScript
 - Google Fonts import in `assets/css/styles.css`
 - Python available locally for `python -m http.server 8000` or the start script
+- Git-based deployment workflow using the `publish/` directory for Cloudflare Pages staging
 
 ### No-Build Characteristics
 
@@ -94,7 +99,9 @@ The project is a folder-based static website. There is no framework, build pipel
 
 - `docs/operations/runbook.md`
 - `docs/operations/publish-checklist.md`
+- `docs/operations/qa-smoke-checklist.md`
 - `docs/operations/client-hosting-recommendation.md`
+- `docs/operations/cloudflare-pages-staging.md`
 
 ### Research
 
@@ -108,5 +115,5 @@ The project is a folder-based static website. There is no framework, build pipel
 
 - launch contact path is still missing
 - several pages still contain approved-placeholder language only
-- there is no live deployment target in the folder
-- source control is not yet configured in this workspace
+- production launch details still need final confirmation even though staging is set up
+- the design lab is still an internal tool and needs a final decision before public launch

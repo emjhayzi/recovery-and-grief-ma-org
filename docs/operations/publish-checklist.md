@@ -4,8 +4,10 @@
 
 - Start a local preview with `python -m http.server 8000` from the project folder
 - Review the site at `http://localhost:8000`
+- Use `http://localhost:8000/design-lab.html` if you need to sanity-check visual tuning controls before handoff
 - Click every internal navigation link
 - Resize the browser for mobile-width testing before publishing
+- Complete `docs/operations/qa-smoke-checklist.md`
 
 ## Content
 
@@ -32,8 +34,10 @@
 
 ## Publishing
 
-- Choose hosting or website platform
+- Choose the final static host and confirm the DNS plan
 - Confirm production domain
+- Confirm maintainer access to hosting, DNS, and repository
 - Upload files and test all internal links
 - Test all external links and forms in production
 - Run a final mobile and desktop review
+- Decide whether `design-lab.html` should remain available after launch or be excluded from the final public build

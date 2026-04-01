@@ -11,6 +11,7 @@ This folder is now organized as a lightweight Agile project workspace for the Re
 - Use `docs/agile/raid-log.md` to track risks, assumptions, issues, and dependencies
 - Use `docs/product/content-inventory.md` for a page-by-page and folder-by-folder project inventory
 - Use `docs/operations/runbook.md` for editing, preview, QA, publishing, and maintenance workflow
+- Use `docs/operations/qa-smoke-checklist.md` for repeatable browser QA and staging checks
 
 ## Folder Map
 
@@ -36,8 +37,10 @@ Product, audience, and content definition.
 Launch, hosting, publishing, and ongoing support documents.
 
 - `runbook.md`
+- `qa-smoke-checklist.md`
 - `publish-checklist.md`
 - `client-hosting-recommendation.md`
+- `squarespace-vs-native-comparison.md`
 
 ### `docs/research/`
 
@@ -57,6 +60,7 @@ Review prompts and external review support material.
 - Current delivery status: `docs/agile/project-status.md`
 - Current work priorities: `docs/agile/product-backlog.md`
 - Launch readiness: `docs/operations/publish-checklist.md`
+- Browser QA: `docs/operations/qa-smoke-checklist.md`
 - Operating workflow: `docs/operations/runbook.md`
 
 ## Recommended Agile Cadence

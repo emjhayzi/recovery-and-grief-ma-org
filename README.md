@@ -39,6 +39,18 @@ If you want clickable shortcuts instead of typing commands, use:
 - [Stop Website Test.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Stop Website Test.cmd)
 - [Prepare Cloudflare Publish.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Prepare Cloudflare Publish.cmd)
 
+## Design Lab
+
+For visual tuning without editing the main CSS directly, open:
+
+- [design-lab.html](C:\Users\emjhayzi\Documents\Recovery & Grief Website\design-lab.html)
+
+For the best live-preview behavior, use:
+
+- [Start Design Lab.cmd](C:\Users\emjhayzi\Documents\Recovery & Grief Website\Start Design Lab.cmd)
+
+The Design Lab is intended as an internal staging/design tool, not a final public-facing page.
+
 ## Current Status
 
 The project has:
@@ -57,6 +69,7 @@ For the current PM-style status snapshot, start with:
 - `docs/agile/product-backlog.md`
 - `docs/operations/runbook.md`
 - `docs/operations/cloudflare-pages-staging.md`
+- `docs/operations/qa-smoke-checklist.md`
 
 ## Second Opinion
 

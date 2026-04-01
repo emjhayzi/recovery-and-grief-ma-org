@@ -34,7 +34,7 @@ If you change the main site files later, refresh the deploy folder by running:
 
 ### Option A: Best long-term setup
 
-1. Put this project in a GitHub repository.
+1. Push the latest approved changes to the existing GitHub repository.
 2. In Cloudflare, open `Pages`.
 3. Click `Create project`.
 4. Choose `Import an existing Git repository`.
@@ -69,6 +69,8 @@ Notes:
 
 Use only the deploy-ready files in `publish/`.
 
+The current refresh script also includes `design-lab.html` for internal staging review. Keep it in staging if the design team still needs it, but make an explicit call before production launch.
+
 Do not deploy:
 
 - `References/`
@@ -84,7 +86,7 @@ Do not deploy:
 
 1. Deploy to Cloudflare Pages staging.
 2. Open the `*.pages.dev` URL yourself first.
-3. Test navigation, logos, mobile layout, and key calls to action.
+3. Complete the browser pass in `docs/operations/qa-smoke-checklist.md`.
 4. Send the staging link to the client.
 5. Collect one consolidated round of feedback.
 6. Revise locally.

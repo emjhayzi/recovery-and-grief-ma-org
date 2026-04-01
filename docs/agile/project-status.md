@@ -2,9 +2,9 @@
 
 ## Snapshot
 
-- Date: March 26, 2026
+- Date: March 30, 2026
 - Phase: Alpha draft / pre-launch planning
-- Delivery state: structurally strong first build, active visual-polish and interaction-tuning phase
+- Delivery state: structurally strong first build, approved custom-site direction, active launch-prep phase
 
 ## Current Build Summary
 
@@ -29,6 +29,16 @@ The current pass focused on homepage feel and visual interaction polish. Recent 
 - the full-site background was updated to blend SADOD-inspired cool tones on the left with TSWRF-inspired warm sunrise tones on the right
 - the header was intentionally simplified again after testing a stronger branded gradient treatment
 - CTA and menu-button hover states were improved with more intentional interaction choreography
+
+## Recent Engineering Cleanup
+
+The latest engineering pass focused on maintainability and repeatable review:
+
+- removed dead CSS branches from older homepage-hero experiments that were no longer used by the live markup
+- simplified page-to-page transition logic to reduce flicker while preserving a softer internal fade
+- added an internal design-lab page and helper launcher for controlled visual tuning during staging review
+- refreshed the Cloudflare publish helper so staging exports include the current internal design tools
+- added QA documentation so future browser review can follow the same smoke-check process
 
 ## Current Site Map
 
@@ -55,7 +65,7 @@ The current pass focused on homepage feel and visual interaction polish. Recent 
 - Final team bios, photos, and trust-building details
 - Final group schedule or sign-up flow
 - Approved external resources and partner links
-- Final publish destination and deployment workflow
+- Final static host selection and deployment workflow
 
 ## Current Completion View
 
@@ -78,25 +88,28 @@ The current pass focused on homepage feel and visual interaction polish. Recent 
 
 ### Not Yet Complete
 
-- launch-ready content approval
 - production deployment
 - live form/contact flow
 - analytics/search-console setup
 - final external link review
 
+## Recently Resolved Decisions
+
+- The client approved the custom static-site direction rather than keeping the full website build inside Squarespace
+- Ongoing website care will be handled directly by the website designer-developer
+
 ## Open Decisions
 
 - Which direct contact channel is primary: phone, text, form, scheduler, or hybrid
 - Whether `help-others.html` stays public before a real volunteer workflow exists
-- Which hosting platform will be used for the static site
-- Whether final maintenance will be retainer-based, ad hoc, or client-managed
+- Which static host will be used for the approved custom site
 
 ## Recommended Next Sprint Focus
 
 1. Finalize direct contact workflow and exact CTA language
 2. Validate the revised homepage visual language in-browser on desktop and mobile
 3. Replace placeholders with approved bios, logos, and resources
-4. Confirm group participation instructions and complete QA/launch setup decisions
+4. Confirm group participation instructions and lock the final static host and DNS setup
 
 ## PM Note
 

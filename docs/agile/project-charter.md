@@ -75,8 +75,8 @@ An alpha-stage content and design draft that is structurally complete but not ye
 - Sensitive audience and tone requirements
 - Final content is still awaiting approval in several places
 - Contact workflow is not finalized
-- Hosting choice is not yet locked
-- The workspace is currently a folder-based project with no git repository initialized
+- The custom static-site direction is approved, but the final static host is not yet locked
+- The project is still maintained as a lightweight file-based static site, so disciplined Git use and publish checks remain important
 
 ## Key Stakeholders
 
@@ -90,7 +90,7 @@ An alpha-stage content and design draft that is structurally complete but not ye
 - Product Owner: confirms scope, priorities, and approvals
 - Project Manager: maintains backlog, roadmap, RAID log, and status
 - Content Lead: approves wording, bios, resources, and trust signals
-- Technical Lead: manages front-end implementation, QA, and publishing
+- Technical Lead: manages front-end implementation, QA, publishing, and ongoing site maintenance
 
 ## Working Assumptions
 

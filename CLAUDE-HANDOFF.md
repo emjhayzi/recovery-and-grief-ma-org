@@ -46,9 +46,11 @@ Recent design/interaction notes from the latest pass:
 - homepage section changes were softened with fade-based reveal treatment rather than stronger motion
 - the six pathway cards on the homepage have active hover choreography and should be reviewed in-browser
 - page-to-page transitions now animate main content and footer, while the header remains visually stable
+- internal page transitions were cleaned up again to reduce flicker while preserving a soft fade between pages
 - the overall site background now blends cooler SADOD-inspired tones on the left with warmer TSWRF-inspired tones on the right
 - the header background was tested with a stronger co-branded gradient and then intentionally simplified back down
 - button and menu interactions were refined and should be reviewed for feel, not just layout
+- an internal design lab now exists at `design-lab.html` for controlled CSS/hero tuning during staging review
 
 Already done:
 
@@ -106,6 +108,7 @@ There are also two clickable helper scripts in the project root:
 - `docs/product/site-brief.md`
 - `docs/product/content-inventory.md`
 - `docs/operations/publish-checklist.md`
+- `docs/operations/qa-smoke-checklist.md`
 
 ## Important Context
 

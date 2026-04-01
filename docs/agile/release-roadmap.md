@@ -45,7 +45,7 @@ Target outcomes:
 - mobile and desktop QA complete
 - accessibility review complete on final content
 - publish checklist completed
-- hosting and DNS plan approved
+- final static host and DNS plan approved
 - deployment workflow tested
 
 ## Sprint 4: Go Live And Stabilize
@@ -68,7 +68,7 @@ Focus areas:
 - SEO refinements
 - content updates from real program activity
 - volunteer pathway expansion if needed
-- maintenance-retainer or handoff model implementation
+- owner-managed maintenance workflow in regular use
 
 ## Milestone Summary
 

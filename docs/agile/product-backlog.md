@@ -128,11 +128,12 @@ Acceptance criteria:
 ### `P0` Finalize hosting and deployment
 
 User story:
-As the project team, we want a clear hosting setup so that launch is predictable and maintainable.
+As the website owner and maintainer, I want the final static host and DNS plan locked so that launch is predictable and maintainable.
 
 Acceptance criteria:
 
-- production host is selected
+- approved custom static hosting direction is documented
+- final static host is selected
 - domain/DNS plan is confirmed
 - publish workflow is documented
 
@@ -141,13 +142,14 @@ Acceptance criteria:
 ### `P1` Document maintenance ownership
 
 User story:
-As the client or maintainer, I want to know how the website is updated so that the site can be sustained after launch.
+As the maintainer, I want the update and publishing workflow documented so that the site can be sustained after launch.
 
 Acceptance criteria:
 
 - maintenance workflow is documented
+- website maintainer is clearly identified
 - ownership for content approvals is identified
-- support model is selected or clearly proposed
+- owner-managed maintenance expectations are documented
 
 ### `P2` Add measurement and iteration plan
 
@@ -175,6 +177,6 @@ Acceptance criteria:
 
 ### Sprint 3
 
-- choose host
+- choose final static host
 - deploy
 - complete handoff and maintenance setup

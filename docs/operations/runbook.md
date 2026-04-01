@@ -10,6 +10,9 @@ This runbook explains how to work with the Recovery and Grief website from editi
 - No build step
 - No CMS in the project folder
 - Best suited for static hosting
+- Approved direction is a custom static site rather than a full Squarespace site build
+- The domain may remain in Squarespace even if the website is hosted elsewhere
+- Ongoing updates and publishing are handled directly by the website designer-developer
 
 ## Editing Workflow
 
@@ -25,6 +28,7 @@ This runbook explains how to work with the Recovery and Grief website from editi
 - Run `Start Website Test.cmd`
 - Review the site at `http://localhost:8000`
 - Run `Stop Website Test.cmd` when finished
+- Run `Start Design Lab.cmd` if you want the live CSS playground instead of the plain site preview
 
 ### Option 2: Manual Command
 
@@ -44,7 +48,20 @@ Before any publish or handoff:
 3. Review mobile width and desktop width
 4. Confirm logos, images, and footer details render correctly
 5. Review pages for placeholder language that should not remain public
-6. Complete `docs/operations/publish-checklist.md`
+6. Complete `docs/operations/qa-smoke-checklist.md`
+7. Complete `docs/operations/publish-checklist.md`
+
+## Design Lab Workflow
+
+Use the design lab when you want to explore visual changes without directly editing the shared stylesheet first.
+
+1. Run `Start Design Lab.cmd`
+2. Open `http://localhost:8000/design-lab.html`
+3. Adjust the hero/layout/tone controls
+4. Copy the generated CSS when a direction is approved
+5. Move approved values back into the real site files
+
+The design lab is meant for internal design iteration and staging review, not as a final public page.
 
 ## Publishing Workflow
 
@@ -52,7 +69,7 @@ Recommended process:
 
 1. Finalize approved content
 2. Run local QA
-3. Select static host
+3. Select the final static host
 4. Upload or deploy the website files
 5. Update DNS if using the Squarespace-managed domain
 6. Test the live domain on desktop and mobile
@@ -76,6 +93,7 @@ Before launch, confirm owners for:
 - bios and partner descriptions
 - resource links
 - hosting credentials and DNS access
+- ongoing site publishing and post-launch updates
 
 ## Recommended Maintenance Rhythm
 
@@ -97,4 +115,5 @@ The minimum clean handoff should include:
 ## Operational Notes
 
 - The site currently depends on Google Fonts loading successfully
-- The workspace is not currently a git repository, so file version history is limited to manual copies unless git is introduced
+- The workspace is tracked in Git and currently pushes to GitHub for Cloudflare Pages staging
+- If you use `Prepare Cloudflare Publish.cmd`, it now includes the design lab page in the refreshed `publish/` folder
