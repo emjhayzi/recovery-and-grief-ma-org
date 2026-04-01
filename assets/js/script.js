@@ -1,12 +1,73 @@
 const nav = document.querySelector(".site-nav");
 const menuButton = document.querySelector(".menu-toggle");
 const page = document.body.dataset.page;
+const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 
 if (menuButton && nav) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+  const setNavOpen = (isOpen) => {
+    nav.classList.toggle("is-open", isOpen);
     menuButton.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("has-open-menu", mobileNavQuery.matches && isOpen);
+
+    if (mobileNavQuery.matches) {
+      nav.hidden = !isOpen;
+    } else {
+      nav.hidden = false;
+    }
+  };
+
+  setNavOpen(false);
+
+  menuButton.addEventListener("click", () => {
+    setNavOpen(!nav.classList.contains("is-open"));
   });
+
+  [...nav.querySelectorAll("a")].forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileNavQuery.matches) {
+        setNavOpen(false);
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      setNavOpen(false);
+      menuButton.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !mobileNavQuery.matches ||
+      !nav.classList.contains("is-open") ||
+      nav.contains(event.target) ||
+      menuButton.contains(event.target)
+    ) {
+      return;
+    }
+
+    setNavOpen(false);
+  });
+
+  const syncNavForViewport = () => {
+    if (!mobileNavQuery.matches) {
+      setNavOpen(false);
+      nav.hidden = false;
+      return;
+    }
+
+    nav.hidden = !nav.classList.contains("is-open");
+    document.body.classList.toggle("has-open-menu", nav.classList.contains("is-open"));
+  };
+
+  if (typeof mobileNavQuery.addEventListener === "function") {
+    mobileNavQuery.addEventListener("change", syncNavForViewport);
+  } else if (typeof mobileNavQuery.addListener === "function") {
+    mobileNavQuery.addListener(syncNavForViewport);
+  }
+
+  syncNavForViewport();
 }
 
 const navMap = {
