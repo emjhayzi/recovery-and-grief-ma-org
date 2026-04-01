@@ -61,16 +61,9 @@ body {
   overflow-x: hidden;
 }
 
-.site-header,
 main,
 .site-footer {
   transition: opacity 260ms var(--ease-soft), filter 260ms var(--ease-soft), transform 260ms var(--ease-soft);
-}
-
-html.is-page-entering .site-header {
-  opacity: 0;
-  filter: none;
-  transform: none;
 }
 
 html.is-page-entering main,
@@ -78,13 +71,6 @@ html.is-page-entering .site-footer {
   opacity: 0;
   filter: blur(2px);
   transform: translateY(8px);
-}
-
-body.is-page-exiting .site-header {
-  opacity: 0;
-  filter: none;
-  transform: none;
-  transition: opacity 180ms var(--ease-soft);
 }
 
 body.is-page-exiting main,
