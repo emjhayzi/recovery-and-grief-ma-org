@@ -126,6 +126,9 @@ main {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
   padding-top: 1.5rem;
 }
 
@@ -1348,6 +1351,10 @@ body.has-motion-enhancements .home-section.is-visible .portal-card:nth-child(6) 
 
   .brand-shell {
     padding: 0.9rem;
+  }
+
+  .site-header {
+    padding-top: 0.9rem;
   }
 
   .header-tri {
