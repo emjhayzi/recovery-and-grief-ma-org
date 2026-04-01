@@ -132,6 +132,7 @@ main {
 .brand-shell {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   background: rgba(255, 250, 245, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 30px;
@@ -145,6 +146,7 @@ main {
   content: "";
   position: absolute;
   inset: auto auto 0 0;
+  z-index: 0;
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
@@ -173,6 +175,8 @@ main {
 }
 
 .header-tri {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 12rem 1fr 12rem;
   gap: 1.5rem;
