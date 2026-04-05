@@ -4,6 +4,7 @@ This folder is now organized as a lightweight Agile project workspace for the Re
 
 ## How To Use This Folder
 
+- Start with `docs/getting-oriented.md` for the fastest project re-entry
 - Start with `docs/agile/project-status.md` for the current snapshot
 - Use `docs/agile/project-charter.md` for goals, scope, stakeholders, and success criteria
 - Use `docs/agile/product-backlog.md` to manage prioritized work
@@ -23,6 +24,7 @@ Project management and delivery control documents.
 - `project-status.md`
 - `product-backlog.md`
 - `release-roadmap.md`
+- `github-project-setup.md`
 - `raid-log.md`
 
 ### `docs/product/`
@@ -56,6 +58,7 @@ Review prompts and external review support material.
 
 ## Source Of Truth Guidance
 
+- Quick re-entry: `docs/getting-oriented.md`
 - Product intent: `docs/product/site-brief.md`
 - Current delivery status: `docs/agile/project-status.md`
 - Current work priorities: `docs/agile/product-backlog.md`
