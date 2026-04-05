@@ -159,6 +159,7 @@ if (currentHref && nav) {
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const INTERNAL_TRANSITION_KEY = "rgInternalPageTransition";
 const INTERNAL_ENTRY_CLASS = "is-page-entering";
+const ENTRY_IMAGE_WAIT_TIMEOUT_MS = 700;
 const cameFromInternalTransition = (() => {
   try {
     const shouldSkipEntry = window.sessionStorage.getItem(INTERNAL_TRANSITION_KEY) === "1";
@@ -172,6 +173,58 @@ const cameFromInternalTransition = (() => {
     return false;
   }
 })();
+
+const waitForImageReady = (image) => {
+  if (!image) {
+    return Promise.resolve();
+  }
+
+  if (image.complete && image.naturalWidth > 0) {
+    if (typeof image.decode === "function") {
+      return image.decode().catch(() => {});
+    }
+
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve) => {
+    const finish = () => {
+      image.removeEventListener("load", finish);
+      image.removeEventListener("error", finish);
+      resolve();
+    };
+
+    image.addEventListener("load", finish, { once: true });
+    image.addEventListener("error", finish, { once: true });
+  });
+};
+
+const getCriticalEntryImages = () => {
+  const topBoundary = window.innerHeight * 1.15;
+
+  return [...document.querySelectorAll("main img")]
+    .filter((image) => {
+      const rect = image.getBoundingClientRect();
+
+      return rect.top < topBoundary && rect.bottom > -48;
+    })
+    .slice(0, 2);
+};
+
+const waitForCriticalEntryImages = () => {
+  const criticalImages = getCriticalEntryImages();
+
+  if (!criticalImages.length) {
+    return Promise.resolve();
+  }
+
+  return Promise.race([
+    Promise.all(criticalImages.map(waitForImageReady)),
+    new Promise((resolve) => {
+      window.setTimeout(resolve, ENTRY_IMAGE_WAIT_TIMEOUT_MS);
+    }),
+  ]);
+};
 
 const setupPageTransitions = () => {
   if (reduceMotionQuery.matches) {
@@ -248,7 +301,9 @@ const setupInternalEntryTransition = () => {
 
   window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
+      waitForCriticalEntryImages().finally(() => {
+        document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
+      });
     });
   });
 };

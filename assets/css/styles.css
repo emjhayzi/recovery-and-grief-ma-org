@@ -1752,7 +1752,7 @@ body.has-motion-enhancements .home-section.is-visible .portal-card:nth-child(6) 
 
 .peer-overview-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -2086,6 +2086,9 @@ p.peer-overview-card__eyebrow {
   border-radius: var(--radius-md);
   overflow: hidden;
   min-height: 260px;
+  background:
+    linear-gradient(180deg, rgba(79, 143, 147, 0.12), rgba(79, 143, 147, 0.04)),
+    rgba(255, 255, 255, 0.86);
 }
 
 .connect-band__image img {
@@ -2205,7 +2208,7 @@ p.peer-overview-card__eyebrow {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 2rem;
   padding: 1.9rem;
-  align-items: stretch;
+  align-items: center;
 }
 
 .path-band__text h2 {
@@ -2235,7 +2238,16 @@ p.peer-overview-card__eyebrow {
 
 .path-intro-band .connect-band__image,
 .path-intro-band .connect-band__image img {
-  min-height: 22rem;
+  min-height: 0;
+}
+
+.path-intro-band .connect-band__image {
+  aspect-ratio: 5 / 4;
+  max-height: 31rem;
+}
+
+.path-intro-band .connect-band__image img {
+  object-position: 50% 68%;
 }
 
 .path-feature-meta {
@@ -2943,7 +2955,16 @@ p.peer-overview-card__eyebrow {
 
   .path-intro-band .connect-band__image,
   .path-intro-band .connect-band__image img {
-    min-height: 18rem;
+    min-height: 0;
+  }
+
+  .path-intro-band .connect-band__image {
+    aspect-ratio: 6 / 5;
+    max-height: 24rem;
+  }
+
+  .path-intro-band .connect-band__image img {
+    object-position: 50% 64%;
   }
 
   .path-media-card,
