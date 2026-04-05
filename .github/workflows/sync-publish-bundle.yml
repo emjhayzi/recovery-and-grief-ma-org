@@ -31,13 +31,14 @@ jobs:
       - name: Commit updated publish bundle
         shell: bash
         run: |
-          if [[ -z "$(git status --short -- publish)" ]]; then
+          git add -A -f publish
+
+          if git diff --cached --quiet -- publish; then
             echo "Publish bundle is already up to date."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f publish
           git commit -m "chore: sync publish bundle"
           git push
