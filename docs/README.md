@@ -33,6 +33,12 @@ Supporting business and maintenance research.
 
 External review support prompts.
 
+### `docs/archive/`
+
+Archived historical snapshots and retired variants kept for reference.
+
+- `homepage/`
+
 ## Working Rule
 
 When the website changes:
