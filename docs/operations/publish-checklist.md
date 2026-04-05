@@ -13,7 +13,8 @@
 
 - Add final direct contact details to `connect.html`
 - Add partner logos and approved external links to all pages
-- Replace team placeholders in `about.html`
+- Replace team placeholders in `who-we-are.html`
+- Finalize program content in `what-we-do.html`
 - Add live group schedule or registration instructions to `groups.html`
 - Add final resources to `resources.html`
 - Decide whether `help-others.html` stays public, becomes hidden, or becomes an interest form

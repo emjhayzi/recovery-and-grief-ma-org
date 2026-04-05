@@ -43,7 +43,7 @@ The intended audience is navigating grief, recovery, stigma, and overwhelm at th
 
 ## In Scope
 
-- Seven-page static website
+- Nine-page static website with About Us dropdown split
 - Shared CSS and JavaScript
 - Partner branding and page-level messaging
 - Local preview workflow
@@ -60,7 +60,7 @@ The intended audience is navigating grief, recovery, stigma, and overwhelm at th
 
 ## Current Deliverable
 
-An alpha-stage content and design draft that is structurally complete but not yet launch-ready.
+An advanced-stage content and design build that is structurally complete, with remaining work concentrated on content approval, placeholder replacement, and production deployment.
 
 ## Success Criteria
 

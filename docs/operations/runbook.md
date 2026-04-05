@@ -6,8 +6,8 @@ This runbook explains how to work with the Recovery and Grief website from editi
 
 ## Project Model
 
-- Static HTML, CSS, and JavaScript
-- No build step
+- Static HTML, CSS, and JavaScript (9 public pages plus 1 internal design lab)
+- No build step required for local preview
 - No CMS in the project folder
 - Best suited for static hosting
 - Approved direction is a custom static site rather than a full Squarespace site build

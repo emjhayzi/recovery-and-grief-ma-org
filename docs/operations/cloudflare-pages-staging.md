@@ -33,7 +33,9 @@ If you change the main site files later, refresh the deploy folder by running:
 
 The Node build script copies all root-level `.html` files automatically, so newly added pages are included in staging without needing to update a hardcoded copy list.
 
-`publish/` is a generated local artifact and should not be relied on as the source of truth in Git. The source files remain the root HTML pages plus `assets/`.
+`publish/` is generated from the root HTML pages plus `assets/`. It should not be hand-edited directly.
+
+This repository also includes a GitHub Actions workflow that rebuilds and commits `publish/` after source changes. That workflow is a compatibility safeguard for Pages projects that are still deploying the committed `publish/` bundle.
 
 ## Recommended Workflow
 
@@ -53,6 +55,8 @@ The Node build script copies all root-level `.html` files automatically, so newl
 7. Deploy.
 8. Cloudflare will provide a `*.pages.dev` URL for staging.
 9. Every later push to the connected branch will trigger a fresh staging deploy automatically.
+
+If the Pages project is still using the older `exit 0` plus `publish` configuration, the GitHub workflow will keep the committed `publish/` directory current so staging still receives the latest assets and pages.
 
 ### Option B: Cloudflare CLI path
 

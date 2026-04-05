@@ -4,7 +4,7 @@ Static website draft for a Massachusetts peer grief support site focused on peop
 
 ## Project Structure
 
-- `index.html` and the other root `.html` files: site pages
+- `index.html` and the other root `.html` files: 9 public pages plus the internal design lab
 - `assets/css/styles.css`: shared visual system and responsive styles
 - `assets/js/script.js`: mobile navigation and current-page state
 - `publish/`: generated deploy-ready website files for staging/hosting
@@ -16,7 +16,7 @@ Static website draft for a Massachusetts peer grief support site focused on peop
 - `docs/operations/`: runbook, publish checklist, hosting recommendation, and Cloudflare staging guide
 - `docs/reviews/`: external review prompt
 - `docs/research/`: supporting research
-- `References/`: source planning documents and visual reference material
+- `References/`: source planning documents, v3-0 copy decks, and visual reference material
 
 ## Preview
 
@@ -46,7 +46,7 @@ To refresh the deploy-ready staging bundle directly from source files, you can a
 node scripts/build-publish.mjs
 ```
 
-The `publish/` folder is generated locally and is not intended to be committed to Git.
+The `publish/` folder is generated from source. It should not be hand-edited directly.
 
 ## Design Lab
 
@@ -64,17 +64,21 @@ The Design Lab is intended as an internal staging/design tool, not a final publi
 
 The project has:
 
-- a complete first-pass page structure
-- a shared visual style
-- basic accessibility support
-- page-level SEO metadata
-- a simple Python-based local testing workflow
+- 9 public pages with a shared visual system
+- per-page atmospheric hero backgrounds using real Unsplash photography
+- an About Us section split into Who We Are and What We Do
+- a rebuilt Direct Connections page with alternating image/text layout and a prominent email CTA
+- page transition animations and staggered reveal effects
+- basic accessibility support and page-level SEO metadata
+- a Cloudflare Pages staging pipeline
 
-The project still needs final contact details, partner logos, team bios, resource links, and live publishing details.
+The project still needs final team bios, group schedules, resource links, some placeholder copy approvals, and production hosting/domain decisions.
 
 ## GitHub To Cloudflare Staging
 
 The repo is set up so Cloudflare Pages can rebuild `publish/` from source on every Git push.
+
+There is also a GitHub Actions fallback that rebuilds and commits the `publish/` bundle after source changes. This keeps staging assets current even if the connected Cloudflare Pages project is still deploying the committed `publish/` folder.
 
 Recommended Cloudflare Pages settings:
 

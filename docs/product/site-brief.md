@@ -49,13 +49,13 @@ Working style: Grounded Renewal
 
 Introduce the site, confirm the audience, and guide people toward their next step quickly.
 
-### About Us
+### About Us (Who We Are / What We Do)
 
-Explain what peer grief support is, who it is for, and how it works.
+Explain what peer grief support is, who is behind it, what programs exist, and how the RIVER model works. Split into two sub-pages accessible through a navigation dropdown.
 
 ### Direct Connection
 
-Offer the easiest path to immediate human support and clarify one-on-one options.
+Offer the easiest path to immediate human support, present program options (Get Help Soon / Get Ongoing Help), and provide a clear email CTA.
 
 ### Support Groups
 
@@ -75,12 +75,12 @@ Hold space for a future volunteer pathway without overstating what is already av
 
 ## Content Still Needed
 
-- final contact details
-- partner logos
-- real bios and headshots
+- final team bios and headshots
 - support group schedule or signup flow
 - final resources and outbound links
-- any Phoenix/NewForm videos or QR codes
+- video embeds for whole-person page
+- Request Help form destination
+- some placeholder copy in teaser sections pending client approval
 
 ## Success Criteria
 

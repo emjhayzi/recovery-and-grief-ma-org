@@ -16,6 +16,8 @@ Start with:
 Then inspect the website files:
 - index.html
 - about.html
+- who-we-are.html
+- what-we-do.html
 - connect.html
 - groups.html
 - whole-person.html

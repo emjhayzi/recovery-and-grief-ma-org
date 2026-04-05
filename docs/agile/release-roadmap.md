@@ -4,12 +4,13 @@
 
 This project is small in code footprint and moderate in launch coordination. The site already has:
 
-- 7 public HTML pages
-- 1 shared stylesheet
+- 9 public HTML pages (plus 1 internal design lab)
+- 1 shared stylesheet (~2,240 lines)
 - 1 shared JavaScript file
 - a working local preview workflow
 - a prepared `publish/` deployment copy
 - launch, QA, and hosting documentation already in place
+- Cloudflare Pages staging pipeline with GitHub Actions fallback
 
 That means the remaining work is mostly content approval, trust-building detail, QA, and deployment operations rather than large-scale engineering. Because launch has now been pulled forward, the project is operating on a compressed 12-day launch program.
 
@@ -43,7 +44,7 @@ Delivered:
 
 Must finish in this phase:
 
-- finalize the primary contact route in `connect.html`
+- finalize the primary contact route in `connect.html` ✅ (email CTA implemented)
 - define first-response expectations and intake language
 - finalize group participation instructions in `groups.html`
 - align homepage and footer CTAs with the same primary contact route
@@ -60,7 +61,7 @@ Exit criteria:
 
 Must finish in this phase:
 
-- replace placeholder team content in `about.html`
+- replace placeholder team content in `who-we-are.html`
 - add approved partner framing, logos, and trust details
 - finalize curated resources in `resources.html`
 - clarify the whole-person pathway in `whole-person.html`

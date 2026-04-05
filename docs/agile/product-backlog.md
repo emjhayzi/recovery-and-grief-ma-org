@@ -15,10 +15,12 @@ As a grieving visitor, I want one clear way to reach a real person so that I do 
 
 Acceptance criteria:
 
-- `connect.html` contains approved phone, text, email, or form details
+- `connect.html` contains a prominent email CTA to `connect@recoveryandgrief-MA.org` ✅
+- connect.html presents Get Help Soon and Get Ongoing Help program options ✅
 - first-response expectation is described clearly
-- CTA language is low-pressure and human
+- CTA language is low-pressure and human ✅
 - footer and homepage surface the same primary route consistently
+- Request Help form destination is linked (currently placeholder)
 
 ### `P0` Define one-on-one support intake
 
@@ -40,7 +42,7 @@ As a visitor, I want to see who is behind the program so that the site feels rea
 
 Acceptance criteria:
 
-- `about.html` includes approved names, roles, short bios, and optional images
+- `who-we-are.html` includes approved names, roles, short bios, and optional images
 - partner relationship is clearly explained
 - placeholder copy is removed from public view
 

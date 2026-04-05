@@ -15,6 +15,8 @@ Use this checklist for repeatable browser QA before staging review, client hando
 - Open every public page:
   - `index.html`
   - `about.html`
+  - `who-we-are.html`
+  - `what-we-do.html`
   - `connect.html`
   - `groups.html`
   - `whole-person.html`

@@ -10,6 +10,8 @@ The project is a folder-based static website. There is no framework, build pipel
 
 - `index.html`
 - `about.html`
+- `who-we-are.html`
+- `what-we-do.html`
 - `connect.html`
 - `groups.html`
 - `whole-person.html`
@@ -20,12 +22,14 @@ The project is a folder-based static website. There is no framework, build pipel
 
 ### Shared Front-End Assets
 
-- `assets/css/styles.css`: full visual system, layout, responsive behavior, and page atmosphere styling
+- `assets/css/styles.css`: full visual system, layout, responsive behavior, and page atmosphere styling (~2,240 lines)
 - `assets/css/design-lab.css`: internal design-lab interface styles
-- `assets/js/script.js`: mobile navigation toggle and active-page state
+- `assets/js/script.js`: mobile navigation toggle, active-page state, page transitions, and homepage motion
 - `assets/js/design-lab.js`: internal live preview and override tooling for the design lab
 - `assets/images/sadod-logo.png`
 - `assets/images/tswr-logo.png`
+- `assets/images/hero-*.jpg`: per-page atmospheric hero backgrounds (7 images)
+- `assets/images/card-*.jpg`: card background images for homepage pathways and inner-page sections (6 images)
 
 ### Local Preview Scripts
 
@@ -48,20 +52,24 @@ The project is a folder-based static website. There is no framework, build pipel
 
 | Page | Purpose | Current Status | Main CTA / Outcome |
 | --- | --- | --- | --- |
-| `index.html` | Introduce the program and route visitors into support pathways | Strong draft | Talk to someone now |
-| `about.html` | Explain peer grief support and the partner model | Draft with placeholders | Build trust and understanding |
-| `connect.html` | Present direct connection and one-on-one support options | Structurally ready, operationally incomplete | Reach out for support |
+| `index.html` | Introduce the program and route visitors into support pathways | Strong draft with hero pathway cards | Talk to someone now |
+| `about.html` | Legacy about page retained for routing | Redirect candidate | Build trust and understanding |
+| `who-we-are.html` | Team, mission, and peer grief support model | Draft with placeholders for bios | Build trust and understanding |
+| `what-we-do.html` | Programs, RIVER model, and support options | Good draft with approved content | Understand available support |
+| `connect.html` | Present direct connection and program options | Rebuilt from v3-0 copy deck with alternating layout | Reach out for support |
 | `groups.html` | Explain group support and how to join | Needs final schedule/process | Join or ask about a group |
-| `whole-person.html` | Frame grief support within broader recovery wellbeing | Good draft, needs program specifics | Understand broader support path |
+| `whole-person.html` | Frame grief support within broader recovery wellbeing | Good draft, needs video embeds | Understand broader support path |
 | `resources.html` | Offer curated follow-up materials and links | Needs approved external resources | Explore trusted resources |
 | `help-others.html` | Hold a future volunteer/supporter pathway | Strategic decision pending | Volunteer or express interest |
 
 ## Design System Notes
 
-- Typography is loaded from Google Fonts in the stylesheet
-- The visual direction uses warm neutrals, teal accents, soft cards, and page-specific hero atmospheres
+- Typography uses Geneva font loaded from local font files, with Verdana/Tahoma fallbacks
+- The visual direction uses warm neutrals, teal accents, soft cards, per-page hero atmospheres with Unsplash photography, and CSS gradient overlays
 - Layout is mobile-responsive through shared media queries
+- Navigation includes an About Us dropdown grouping Who We Are and What We Do
 - Navigation state is controlled through the `data-page` attribute on each page body
+- The header uses a three-column CSS grid with co-branded partner logos
 
 ## Technical Inventory
 
@@ -113,7 +121,9 @@ The project is a folder-based static website. There is no framework, build pipel
 
 ## Current Gaps Visible From Inventory
 
-- launch contact path is still missing
-- several pages still contain approved-placeholder language only
+- team bios and photos are still placeholder
+- several pages still contain placeholder language pending client approval
+- Request Help form destination is not yet linked
+- video embeds for whole-person page are not yet in place
 - production launch details still need final confirmation even though staging is set up
 - the design lab is still an internal tool and needs a final decision before public launch

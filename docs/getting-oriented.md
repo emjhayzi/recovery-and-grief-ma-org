@@ -16,8 +16,10 @@ The project goal is a calm, trustworthy website for Massachusetts peer grief sup
 ### Public Pages
 
 - `index.html`: homepage and main entry point
-- `about.html`: explains peer grief support and the partner model
-- `connect.html`: direct connection and one-on-one support path
+- `about.html`: legacy about page (retained for routing)
+- `who-we-are.html`: team, mission, and peer grief support model
+- `what-we-do.html`: programs, RIVER model, and support options
+- `connect.html`: direct connection with alternating image/text layout and email CTA
 - `groups.html`: group support overview and joining guidance
 - `whole-person.html`: whole-person recovery framing
 - `resources.html`: curated resources and follow-up materials
@@ -25,8 +27,9 @@ The project goal is a calm, trustworthy website for Massachusetts peer grief sup
 
 ### Shared Front-End Files
 
-- `assets/css/styles.css`: shared design system, layout, motion, responsive behavior, page hero styles
+- `assets/css/styles.css`: shared design system, layout, motion, responsive behavior, page hero styles (~2,240 lines)
 - `assets/js/script.js`: mobile nav toggle, active nav highlighting, page transitions, homepage motion behavior
+- `assets/images/`: 13 hero/card background images + 2 partner logos
 
 ### Internal Tooling
 
@@ -55,6 +58,8 @@ The body on each page has a `data-page` attribute such as:
 
 - `data-page="home"`
 - `data-page="about"`
+- `data-page="who-we-are"`
+- `data-page="what-we-do"`
 - `data-page="connect"`
 
 That value is used by the shared JavaScript and CSS to:
@@ -62,6 +67,8 @@ That value is used by the shared JavaScript and CSS to:
 - highlight the current navigation item
 - apply page-specific hero imagery and atmosphere
 - enable homepage-only motion behavior
+
+The navigation includes an "About Us" dropdown that groups the Who We Are and What We Do sub-pages.
 
 ## How To Preview The Site
 
@@ -99,6 +106,8 @@ Edit the relevant page directly:
 
 - homepage copy: `index.html`
 - about page copy: `about.html`
+- who we are copy: `who-we-are.html`
+- what we do copy: `what-we-do.html`
 - contact/support flow copy: `connect.html`
 - group flow copy: `groups.html`
 - recovery framing copy: `whole-person.html`
@@ -145,20 +154,26 @@ The design lab is for internal testing and visual exploration, not final public 
 
 ## What Is Already In Good Shape
 
-- clear page structure
-- consistent shared styling
+- 9-page site structure with About Us dropdown split
+- consistent shared styling with per-page hero atmospheres
+- Direct Connections page rebuilt from v3-0 copy deck
 - mobile navigation
 - page-level SEO title and description tags
 - basic accessibility support like skip link and menu semantics
+- page-to-page transitions and reveal animations
 - organized project docs for product, operations, and launch planning
+- Cloudflare Pages staging pipeline
 
 ## What Is Still Not Final
 
-- direct contact details
+- final team bios and photos
 - final group schedule or sign-up process
 - final partner/resource links
-- final bios and photos
+- Request Help form destination
+- video embeds for whole-person page
+- some placeholder copy in teaser sections pending client approval
 - production hosting and DNS decisions
+- mobile view audit and responsive refinements
 - final decision on whether `help-others.html` should stay public before a real workflow exists
 
 ## Recommended Build Order From Here

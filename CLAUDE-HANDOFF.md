@@ -8,16 +8,21 @@ Build a calm, clear, static website for Massachusetts peer grief support aimed a
 
 ## What Is In Scope Right Now
 
-- Static multi-page site
+- Static multi-page site (9 public pages)
 - Shared CSS and small JavaScript file
 - Co-branded SADOD + The Sun Will Rise header/footer
-- Early but structured content draft based on planning documents
+- Per-page atmospheric hero backgrounds with Unsplash photography
+- An About Us section split into Who We Are and What We Do sub-pages
+- A rebuilt Direct Connections page with alternating image/text layout
+- Content drafts informed by v3-0 copy decks in the References folder
 - Local preview/testing through Python
 
 ## Main Files
 
 - `index.html`
 - `about.html`
+- `who-we-are.html`
+- `what-we-do.html`
 - `connect.html`
 - `groups.html`
 - `whole-person.html`
@@ -41,35 +46,37 @@ The site is intentionally a first structured draft, not a finished launch build.
 
 Recent design/interaction notes from the latest pass:
 
-- the homepage hero was reworked so both left and right panes sit inset within the hero, with the outer surfaces acting as visible framing layers
-- the homepage hero no longer uses scroll-linked drifting; movement was reduced in favor of calmer static composition
-- homepage section changes were softened with fade-based reveal treatment rather than stronger motion
-- the six pathway cards on the homepage have active hover choreography and should be reviewed in-browser
-- page-to-page transitions now animate main content and footer, while the header remains visually stable
-- internal page transitions were cleaned up again to reduce flicker while preserving a soft fade between pages
-- the overall site background now blends cooler SADOD-inspired tones on the left with warmer TSWRF-inspired tones on the right
-- the header background was tested with a stronger co-branded gradient and then intentionally simplified back down
-- button and menu interactions were refined and should be reviewed for feel, not just layout
-- an internal design lab now exists at `design-lab.html` for controlled CSS/hero tuning during staging review
+- the About Us section was split into Who We Are and What We Do, with a navigation dropdown
+- connect.html was rebuilt from the v3-0 Direct Connection copy deck with alternating image/text bands, a prominent email CTA, and program teaser sections
+- per-page atmospheric hero backgrounds use real Unsplash photography with CSS gradient fade overlays
+- the header uses a three-column CSS grid with SADOD and TSWR logos flanking centered brand content
+- navigation was redesigned to pipe-separated links on a single row
+- page transition animations, staggered IntersectionObserver reveals, card drift-in, and scroll parallax are all in place
+- the homepage hero was reworked as six pathway cards integrated directly into the hero stage
+- the full-site background blends SADOD-inspired cool tones on the left with TSWRF-inspired warm sunrise tones on the right
 
 Already done:
 
-- page structure
-- shared visual system
-- responsive nav
-- logo integration
+- 9-page site structure with About Us dropdown split
+- shared visual system with per-page hero atmospheres
+- responsive nav with pipe-separated links
+- co-branded logo integration (pixel-edited SADOD logo + TSWR logo)
+- alternating image/text layout on Direct Connections page
+- page-to-page transitions and staggered section reveals
 - basic accessibility support
 - basic SEO meta tags
 - Python-based local preview workflow
+- Cloudflare Pages staging pipeline
 
 Still intentionally unfinished:
 
-- real contact details
-- final bios and team photos
+- final team bios and photos
 - final support-group schedule or registration flow
 - final outbound resource links
-- Phoenix/NewForm media embeds
+- video embeds for whole-person page
+- some placeholder copy in teaser sections pending client approval
 - production hosting/domain setup
+- Request Help form destination
 
 ## What Needs Review
 

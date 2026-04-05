@@ -23,8 +23,8 @@
 
 | ID | Issue | Current Effect | Owner Needed |
 | --- | --- | --- | --- |
-| I1 | Direct contact details are missing | Core CTA is not yet launch-ready | Product/program owner |
-| I2 | Team bios and real trust details are missing | About page feels unfinished | Content lead |
+| I1 | Direct contact details are partially implemented | Email CTA is live on connect.html; phone/text/form path still undecided | Product/program owner |
+| I2 | Team bios and real trust details are missing | Who We Are page has placeholders | Content lead |
 | I3 | Group schedule or registration path is missing | Group page lacks decisive next step | Program lead |
 | I4 | Resource links are not finalized | Resource page is still partial | Content lead |
 | I5 | Volunteer page intent is unresolved | Navigation may promise more than exists today | Product owner |

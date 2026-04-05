@@ -10,25 +10,26 @@
 
 The project is a static multi-page website with:
 
-- 7 public HTML pages
-- 1 shared stylesheet
+- 9 public HTML pages (plus 1 internal design lab)
+- 1 shared stylesheet (~2,240 lines)
 - 1 shared JavaScript file
-- 2 active partner logo assets
+- 15 image assets (13 hero/card images + 2 partner logos)
 - local preview scripts for simple browser testing
 - supporting docs for launch, hosting, and review
+- Cloudflare Pages staging pipeline with GitHub Actions fallback
 
-## Recent Design Update
+## Recent Design And Content Updates
 
-The current pass focused on homepage feel and visual interaction polish. Recent implemented changes include:
+The current pass focused on page implementation from the v3-0 copy deck series and visual system refinement:
 
-- homepage hero panes were resized and inset so the outer hero surfaces act as visible framing layers
-- homepage hero scroll drift was removed so the hero now stays static while scrolling
-- homepage section transitions were softened to use fade-based reveal behavior rather than stronger motion
-- pathway-card hover behavior was restored and refined so the six support pathways feel responsive again
-- page-to-page transition behavior was softened and limited to main content and footer, while the header stays visually stable
-- the full-site background was updated to blend SADOD-inspired cool tones on the left with TSWRF-inspired warm sunrise tones on the right
-- the header was intentionally simplified again after testing a stronger branded gradient treatment
-- CTA and menu-button hover states were improved with more intentional interaction choreography
+- the About Us page was split into Who We Are (`who-we-are.html`) and What We Do (`what-we-do.html`), accessible through a navigation dropdown
+- the Direct Connections page (`connect.html`) was rebuilt from the v3-0 copy deck with alternating image/text bands, a prominent email CTA to `connect@recoveryandgrief-MA.org`, program teaser blocks (Get Help Soon / Get Ongoing Help), and lower explanatory content
+- per-page atmospheric hero backgrounds use real Unsplash photography with CSS gradient fade overlays
+- the header was restructured as a three-column CSS grid with SADOD and TSWR logos flanking centered brand content
+- navigation was redesigned to pipe-separated links on a single nowrap row
+- the SADOD logo was pixel-edited to recolor inscription text and clean compression artifacts
+- page transition animations, staggered IntersectionObserver reveals, and button shimmer effects are in place
+- the homepage hero was reworked as six pathway cards integrated directly into the hero stage
 
 ## Recent Engineering Cleanup
 
@@ -43,8 +44,10 @@ The latest engineering pass focused on maintainability and repeatable review:
 ## Current Site Map
 
 - `index.html`: homepage and primary pathway selection
-- `about.html`: what peer grief support is and who it is for
-- `connect.html`: direct connection and one-on-one support path
+- `about.html`: legacy about page (retained for routing)
+- `who-we-are.html`: who we are — team, mission, peer grief support model
+- `what-we-do.html`: what we do — programs, RIVER model, support options
+- `connect.html`: direct connection with alternating image/text layout and email CTA
 - `groups.html`: support group overview and joining guidance
 - `whole-person.html`: whole-person recovery support framing
 - `resources.html`: curated resource path
@@ -52,31 +55,39 @@ The latest engineering pass focused on maintainability and repeatable review:
 
 ## What Is Working Well
 
-- Clear multi-page information architecture
-- Consistent design language across pages
+- Clear multi-page information architecture with About Us dropdown split
+- Consistent design language with per-page hero atmospheres
+- Direct Connections page rebuilt from approved copy deck with clear contact pathway
+- Page-to-page transitions and staggered section reveal animations
 - Basic accessibility support such as skip link and menu toggle semantics
 - Shared front-end files make the site easy to maintain
-- Strong documentation foundation already existed and has now been expanded
-- Homepage interaction feel is being actively tuned instead of left at a static first-draft state
+- Strong documentation foundation across Agile, product, and operations
+- Cloudflare Pages staging pipeline with automated publish bundle
 
 ## What Is Not Finished Yet
 
-- Direct contact details and response workflow
 - Final team bios, photos, and trust-building details
 - Final group schedule or sign-up flow
 - Approved external resources and partner links
+- Request Help form destination (linked from connect.html)
+- Video embeds for whole-person page
+- Some placeholder copy in teaser sections pending client approval
 - Final static host selection and deployment workflow
+- Mobile view audit and responsive refinements
 - Final production launch verification
 
 ## Current Completion View
 
 ### Completed Or Mostly Complete
 
-- site structure
-- visual system
-- responsive navigation behavior
+- site structure (9 public pages)
+- visual system with per-page hero atmospheres
+- responsive navigation with About Us dropdown
+- Direct Connections page rebuilt from copy deck
 - page-level SEO titles and descriptions
+- page transitions and reveal animations
 - local testing workflow
+- Cloudflare Pages staging pipeline
 - project management documentation baseline
 
 ### Partially Complete
@@ -98,6 +109,10 @@ The latest engineering pass focused on maintainability and repeatable review:
 
 - The client approved the custom static-site direction rather than keeping the full website build inside Squarespace
 - Ongoing website care will be handled directly by the website designer-developer
+- The About Us section was split into Who We Are and What We Do with a dropdown
+- The Direct Connections page layout was implemented as alternating image/text bands from the v3-0 copy deck
+- The primary contact email is `connect@recoveryandgrief-MA.org`
+- Site typography was switched to Geneva per client direction
 
 ## Open Decisions
 
