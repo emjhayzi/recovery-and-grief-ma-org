@@ -9,7 +9,6 @@
 | R3 | Final static host provider stays unresolved | Launch timing may slip late in the process | Decide host and DNS model during launch-readiness sprint |
 | R4 | Sensitive audience may be affected by unclear language | Confusing or clinical wording could reduce engagement | Run final tone review with stakeholder approval |
 | R5 | Git workflow remains lightweight and single-maintainer | Publish history or rollback discipline may be weaker than ideal if updates are rushed | Keep regular commits and follow the publish checklist before launch changes |
-| R6 | Root source files and `publish/` bundle may drift apart | QA or staging review may happen against the wrong homepage/content variant | Reconcile source of truth before the next homepage pass and refresh `publish/` from the approved root files |
 
 ## Assumptions
 
@@ -29,7 +28,6 @@
 | I3 | Group schedule or registration path is missing | Group page lacks decisive next step | Program lead |
 | I4 | Resource links are not finalized | Resource page is still partial | Content lead |
 | I5 | Volunteer page intent is unresolved | Navigation may promise more than exists today | Product owner |
-| I6 | Homepage source-of-truth is currently split between recovered root `index.html` and newer `publish/index.html` | Team members may review or edit different homepage versions by accident | Website maintainer |
 
 ## Dependencies
 
