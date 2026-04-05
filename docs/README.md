@@ -56,6 +56,12 @@ Review prompts and external review support material.
 
 - `claude-second-opinion-prompt.md`
 
+### `docs/archive/`
+
+Archived historical snapshots and retired variants kept for reference.
+
+- `homepage/`
+
 ## Source Of Truth Guidance
 
 - Quick re-entry: `docs/getting-oriented.md`
