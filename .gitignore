@@ -12,6 +12,26 @@ node_modules/
 
 # Temporary local files
 .preview-server.pid
+publish/
+Create-UIUX-Issues.ps1
+preview-server.ps1
 
+
+# Local tool/browser workspace data
+.claude/
+.codex-review/
+.edge-profile/
+.edge-profile-about/
+.edge-profile-connect/
+.edge-profile-mobile/
+.edge-shot-profile/
+.edge-shot-profile-review/
+
+# Local review screenshots
+about-desktop.png
+connect-desktop.png
+home-desktop.png
+home-mobile.png
 # Optional large source/reference materials not needed for deployment
 References/
+

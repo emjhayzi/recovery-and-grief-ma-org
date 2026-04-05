@@ -2,9 +2,9 @@
 
 ## Snapshot
 
-- Date: March 30, 2026
-- Phase: Alpha draft / pre-launch planning
-- Delivery state: structurally strong first build, approved custom-site direction, active launch-prep phase
+- Date: April 5, 2026
+- Stage: Stage 1 / accelerated launch prep
+- Delivery state: structurally strong first build, approved custom-site direction, compressed launch schedule targeting April 14, 2026
 
 ## Current Build Summary
 
@@ -66,6 +66,7 @@ The latest engineering pass focused on maintainability and repeatable review:
 - Final group schedule or sign-up flow
 - Approved external resources and partner links
 - Final static host selection and deployment workflow
+- Final production launch verification
 
 ## Current Completion View
 
@@ -104,13 +105,20 @@ The latest engineering pass focused on maintainability and repeatable review:
 - Whether `help-others.html` stays public before a real volunteer workflow exists
 - Which static host will be used for the approved custom site
 
+## Accelerated Launch Dates
+
+- Stage 1 target: April 7, 2026
+- Stage 2 target: April 10, 2026
+- Stage 3 target: April 12, 2026
+- Production launch target: April 14, 2026
+
 ## Recommended Next Sprint Focus
 
 1. Finalize direct contact workflow and exact CTA language
-2. Validate the revised homepage visual language in-browser on desktop and mobile
-3. Replace placeholders with approved bios, logos, and resources
-4. Confirm group participation instructions and lock the final static host and DNS setup
+2. Finalize group participation instructions and exact pathway messaging
+3. Replace placeholders with approved bios, logos, and resources on the compressed timeline
+4. Confirm final hosting, DNS, and publish-readiness decisions before Stage 3
 
 ## PM Note
 
-This project is in a healthy place for a first structured draft. The main risk is no longer lack of structure. The main risk is carrying placeholder content too far into launch prep without locking ownership, approvals, and operational details.
+This project is still in a healthy place structurally, but the timeline is now materially tighter. The main risk is no longer lack of structure. The main risk is compressed approval and publishing time between April 5 and April 14, 2026.

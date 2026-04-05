@@ -29,6 +29,11 @@ This project includes a `publish/` folder containing only the deployable website
 If you change the main site files later, refresh the deploy folder by running:
 
 - `Prepare Cloudflare Publish.cmd`
+- or `node scripts/build-publish.mjs`
+
+The Node build script copies all root-level `.html` files automatically, so newly added pages are included in staging without needing to update a hardcoded copy list.
+
+`publish/` is a generated local artifact and should not be relied on as the source of truth in Git. The source files remain the root HTML pages plus `assets/`.
 
 ## Recommended Workflow
 
@@ -42,11 +47,12 @@ If you change the main site files later, refresh the deploy folder by running:
 6. Use these build settings:
 
 - Framework preset: `None`
-- Build command: `exit 0`
+- Build command: `node scripts/build-publish.mjs`
 - Build output directory: `publish`
 
 7. Deploy.
 8. Cloudflare will provide a `*.pages.dev` URL for staging.
+9. Every later push to the connected branch will trigger a fresh staging deploy automatically.
 
 ### Option B: Cloudflare CLI path
 

@@ -6,7 +6,7 @@ For this website, the best lightweight planner is a single GitHub Project tied t
 
 ## Recommended Project
 
-- Project name: `Recovery & Grief Launch`
+- Project name: `Recovery and Grief Launch`
 - Project type: board first, with roadmap and table views added after setup
 - Scope: one project for launch work, content approvals, QA, and deployment
 

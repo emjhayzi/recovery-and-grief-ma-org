@@ -2,21 +2,79 @@ const nav = document.querySelector(".site-nav");
 const menuButton = document.querySelector(".menu-toggle");
 const page = document.body.dataset.page;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
+const navDropdown = document.querySelector(".nav-dropdown");
+const dropdownBtn = document.querySelector(".nav-dropdown-label");
+const dropdownMenu = document.querySelector(".nav-dropdown-menu");
+let navCloseTimer = null;
+
+const clearNavCloseTimer = () => {
+  if (navCloseTimer !== null) {
+    window.clearTimeout(navCloseTimer);
+    navCloseTimer = null;
+  }
+};
+
+const setDropdownOpen = (open, { immediate = false } = {}) => {
+  if (!navDropdown || !dropdownBtn || !dropdownMenu) {
+    return;
+  }
+
+  if (mobileNavQuery.matches) {
+    navDropdown.classList.remove("is-open");
+    dropdownBtn.setAttribute("aria-expanded", "true");
+    return;
+  }
+
+  dropdownBtn.setAttribute("aria-expanded", String(open));
+
+  if (open) {
+    navDropdown.classList.add("is-open");
+    return;
+  }
+
+  if (immediate) {
+    navDropdown.classList.remove("is-open");
+    return;
+  }
+
+  navDropdown.classList.remove("is-open");
+};
 
 if (menuButton && nav) {
-  const setNavOpen = (isOpen) => {
-    nav.classList.toggle("is-open", isOpen);
+  const setNavOpen = (isOpen, { immediate = false } = {}) => {
+    clearNavCloseTimer();
     menuButton.setAttribute("aria-expanded", String(isOpen));
     document.body.classList.toggle("has-open-menu", mobileNavQuery.matches && isOpen);
 
-    if (mobileNavQuery.matches) {
-      nav.hidden = !isOpen;
-    } else {
+    if (!mobileNavQuery.matches) {
+      nav.classList.remove("is-open");
       nav.hidden = false;
+      return;
     }
+
+    if (isOpen) {
+      nav.hidden = false;
+      window.requestAnimationFrame(() => {
+        nav.classList.add("is-open");
+      });
+      return;
+    }
+
+    nav.classList.remove("is-open");
+
+    if (immediate) {
+      nav.hidden = true;
+      return;
+    }
+
+    navCloseTimer = window.setTimeout(() => {
+      if (!nav.classList.contains("is-open")) {
+        nav.hidden = true;
+      }
+    }, 260);
   };
 
-  setNavOpen(false);
+  setNavOpen(false, { immediate: true });
 
   menuButton.addEventListener("click", () => {
     setNavOpen(!nav.classList.contains("is-open"));
@@ -35,6 +93,11 @@ if (menuButton && nav) {
       setNavOpen(false);
       menuButton.focus();
     }
+
+    if (event.key === "Escape" && navDropdown?.classList.contains("is-open")) {
+      setDropdownOpen(false, { immediate: true });
+      dropdownBtn?.focus();
+    }
   });
 
   document.addEventListener("click", (event) => {
@@ -52,13 +115,15 @@ if (menuButton && nav) {
 
   const syncNavForViewport = () => {
     if (!mobileNavQuery.matches) {
-      setNavOpen(false);
+      setNavOpen(false, { immediate: true });
+      setDropdownOpen(false, { immediate: true });
       nav.hidden = false;
       return;
     }
 
     nav.hidden = !nav.classList.contains("is-open");
     document.body.classList.toggle("has-open-menu", nav.classList.contains("is-open"));
+    setDropdownOpen(false, { immediate: true });
   };
 
   if (typeof mobileNavQuery.addEventListener === "function") {
@@ -72,7 +137,8 @@ if (menuButton && nav) {
 
 const navMap = {
   home: "index.html",
-  about: "about.html",
+  "who-we-are": "who-we-are.html",
+  "what-we-do": "what-we-do.html",
   connect: "connect.html",
   groups: "groups.html",
   "whole-person": "whole-person.html",
@@ -228,3 +294,24 @@ setupInternalEntryTransition();
 setupPageTransitions();
 setupPageReveals();
 setupHomeMotion();
+
+if (dropdownBtn && navDropdown && dropdownMenu) {
+  dropdownBtn.addEventListener("click", (e) => {
+    if (mobileNavQuery.matches) return;
+    e.preventDefault();
+    e.stopPropagation();
+    setDropdownOpen(!navDropdown.classList.contains("is-open"));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navDropdown.contains(e.target)) {
+      setDropdownOpen(false, { immediate: true });
+    }
+  });
+
+  document.addEventListener("focusin", (e) => {
+    if (!mobileNavQuery.matches && !navDropdown.contains(e.target)) {
+      setDropdownOpen(false, { immediate: true });
+    }
+  });
+}

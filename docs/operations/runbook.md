@@ -33,7 +33,7 @@ This runbook explains how to work with the Recovery and Grief website from editi
 ### Option 2: Manual Command
 
 ```powershell
-cd "C:\Users\emjhayzi\Documents\Recovery & Grief Website"
+cd "<project-root>"
 python -m http.server 8000
 ```
 
@@ -69,11 +69,12 @@ Recommended process:
 
 1. Finalize approved content
 2. Run local QA
-3. Select the final static host
-4. Upload or deploy the website files
-5. Update DNS if using the Squarespace-managed domain
-6. Test the live domain on desktop and mobile
-7. Record any post-launch fixes in `docs/agile/product-backlog.md`
+3. Refresh the deploy bundle with `Prepare Cloudflare Publish.cmd` or `node scripts/build-publish.mjs`
+4. Select the final static host
+5. Upload or deploy the website files
+6. Update DNS if using the Squarespace-managed domain
+7. Test the live domain on desktop and mobile
+8. Record any post-launch fixes in `docs/agile/product-backlog.md`
 
 ## Change Control
 
@@ -116,4 +117,5 @@ The minimum clean handoff should include:
 
 - The site currently depends on Google Fonts loading successfully
 - The workspace is tracked in Git and currently pushes to GitHub for Cloudflare Pages staging
-- If you use `Prepare Cloudflare Publish.cmd`, it now includes the design lab page in the refreshed `publish/` folder
+- Cloudflare Pages should be configured to build with `node scripts/build-publish.mjs` and deploy the `publish/` directory
+- If you use `Prepare Cloudflare Publish.cmd`, it now runs the same Node-based publish build used by Cloudflare Pages
