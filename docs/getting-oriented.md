@@ -1,5 +1,7 @@
 # Getting Oriented
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 This file is the fastest way to re-learn how the Recovery and Grief website is set up and how to keep building it.
 
 ## What This Project Is

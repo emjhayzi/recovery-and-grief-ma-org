@@ -1,5 +1,7 @@
 # Operations Runbook
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 ## Purpose
 
 This runbook explains how to work with the Recovery and Grief website from editing through testing, publishing, and ongoing maintenance.

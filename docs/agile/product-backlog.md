@@ -1,5 +1,7 @@
 # Product Backlog
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 Prioritization key:
 
 - `P0`: launch-blocking
@@ -19,7 +21,7 @@ Acceptance criteria:
 - connect.html presents Get Help Soon and Get Ongoing Help program options ✅
 - first-response expectation is described clearly
 - CTA language is low-pressure and human ✅
-- footer and homepage surface the same primary route consistently
+- homepage and footer surface the same primary route consistently
 - Request Help form destination is linked (currently placeholder)
 
 ### `P0` Define one-on-one support intake
@@ -32,6 +34,7 @@ Acceptance criteria:
 - the one-on-one section explains the process plainly
 - matching or referral expectations are defined
 - any intake limitations are described without sounding clinical
+- the live support path still feels human rather than institutional
 
 ## Epic 2: Trust, Credibility, And Safety
 
@@ -56,6 +59,7 @@ Acceptance criteria:
 - footer includes final contact and partner details
 - approved external links are added where relevant
 - copy is reviewed for warmth, clarity, and non-judgmental tone
+- placeholder trust language is removed from public-facing pages
 
 ## Epic 3: Support Group Experience
 
@@ -66,7 +70,7 @@ As a visitor considering a group, I want to know how to join and what to expect 
 
 Acceptance criteria:
 
-- `groups.html` includes real schedule, interest form, or registration instructions
+- `groups.html` includes final directory, schedule, interest form, or registration instructions
 - virtual or in-person format is stated if known
 - recurring questions are answered in plain language
 
@@ -126,6 +130,7 @@ Acceptance criteria:
 - mobile and desktop layouts are reviewed
 - content placeholders intended for removal are gone
 - accessibility checks are completed on final content
+- production smoke test is completed after deployment
 
 ### `P0` Finalize hosting and deployment
 
@@ -135,9 +140,10 @@ As the website owner and maintainer, I want the final static host and DNS plan l
 Acceptance criteria:
 
 - approved custom static hosting direction is documented
-- final static host is selected
+- final production deployment configuration is selected
 - domain/DNS plan is confirmed
 - publish workflow is documented
+- Cloudflare Pages settings are verified against the documented workflow
 
 ## Epic 6: Governance And Handoff
 
@@ -179,6 +185,6 @@ Acceptance criteria:
 
 ### Sprint 3
 
-- choose final static host
-- deploy
+- verify Cloudflare Pages production settings
+- deploy staging and production
 - complete handoff and maintenance setup

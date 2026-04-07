@@ -1,8 +1,10 @@
 # Content Inventory
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 ## Project Format
 
-The project is a folder-based static website. There is no framework, build pipeline, or package manager in the current setup, but the workspace is tracked in Git and mirrored into a deploy-ready `publish/` folder for Cloudflare Pages staging.
+The project is a folder-based static website. There is no framework or package-manager-driven app runtime in the current setup, but the workspace is tracked in Git and mirrored into a deploy-ready `publish/` folder for Cloudflare Pages staging and deployment.
 
 ## Top-Level Inventory
 
@@ -58,13 +60,13 @@ The project is a folder-based static website. There is no framework, build pipel
 | `what-we-do.html` | Programs, RIVER model, and support options | Good draft with approved content | Understand available support |
 | `connect.html` | Present direct connection and program options | Rebuilt from v3-0 copy deck with alternating layout | Reach out for support |
 | `groups.html` | Explain group support and how to join | Needs final schedule/process | Join or ask about a group |
-| `whole-person.html` | Frame grief support within broader recovery wellbeing | Good draft, needs video embeds | Understand broader support path |
-| `resources.html` | Offer curated follow-up materials and links | Needs approved external resources | Explore trusted resources |
+| `whole-person.html` | Frame grief support within broader recovery wellbeing | Good draft, video decision still open | Understand broader support path |
+| `resources.html` | Offer curated follow-up materials and links | Implemented, pending final approval/curation check | Explore trusted resources |
 | `help-others.html` | Hold a future volunteer/supporter pathway | Strategic decision pending | Volunteer or express interest |
 
 ## Design System Notes
 
-- Typography uses Geneva font loaded from local font files, with Verdana/Tahoma fallbacks
+- Typography uses Geneva as the preferred face, with a local font file plus Verdana/Tahoma fallbacks
 - The visual direction uses warm neutrals, teal accents, soft cards, per-page hero atmospheres with Unsplash photography, and CSS gradient overlays
 - Layout is mobile-responsive through shared media queries
 - Navigation includes an About Us dropdown grouping Who We Are and What We Do
@@ -76,7 +78,7 @@ The project is a folder-based static website. There is no framework, build pipel
 ### Dependencies
 
 - Browser support for HTML/CSS/JavaScript
-- Google Fonts import in `assets/css/styles.css`
+- local Geneva font asset plus the current stylesheet imports
 - Python available locally for `python -m http.server 8000` or the start script
 - Git-based deployment workflow using the `publish/` directory for Cloudflare Pages staging
 
@@ -124,6 +126,6 @@ The project is a folder-based static website. There is no framework, build pipel
 - team bios and photos are still placeholder
 - several pages still contain placeholder language pending client approval
 - Request Help form destination is not yet linked
-- video embeds for whole-person page are not yet in place
+- whole-person video/embed direction is still not fully decided
 - production launch details still need final confirmation even though staging is set up
 - the design lab is still an internal tool and needs a final decision before public launch

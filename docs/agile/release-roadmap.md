@@ -1,5 +1,7 @@
 # Release Roadmap
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 ## Planning Basis
 
 This project is small in code footprint and moderate in launch coordination. The site already has:
@@ -19,7 +21,7 @@ That means the remaining work is mostly content approval, trust-building detail,
 - Start date: April 2, 2026
 - Target deployment date: April 14, 2026
 - Working rhythm: daily check-in, rapid approval turnaround, and end-of-stage QA gate
-- Delivery condition: this schedule assumes contact details, bios, group access, and hosting decisions move without multi-day approval stalls
+- Delivery condition: this schedule assumes contact, group access, bios, and deployment decisions move without multi-day approval stalls
 
 ## Stage Program
 
@@ -47,12 +49,12 @@ Must finish in this phase:
 - finalize the primary contact route in `connect.html` ✅ (email CTA implemented)
 - define first-response expectations and intake language
 - finalize group participation instructions in `groups.html`
-- align homepage and footer CTAs with the same primary contact route
+- align homepage and footer CTAs with the same primary contact route where needed
 
 Exit criteria:
 
 - a visitor can clearly see how to reach a real person
-- the one-on-one and group pathways no longer rely on placeholders
+- the one-on-one and group pathways no longer rely on unresolved next-step messaging
 
 ### Stage 2: Trust And Content Completion
 
@@ -81,14 +83,14 @@ Must finish in this phase:
 
 - run full mobile and desktop smoke QA
 - complete accessibility review on final content
-- confirm final hosting choice, DNS plan, and maintainer access
+- confirm final Cloudflare Pages configuration, DNS plan, and maintainer access
 - decide whether `design-lab.html` is excluded from the production build
 - test the `publish/` workflow end to end
 
 Exit criteria:
 
 - no launch-blocking QA issues remain open
-- the production publishing path is documented and tested
+- the production publishing path is documented, tested, and matches platform settings
 
 ### Stage 4: Staging, Approval, And Deployment
 
@@ -127,6 +129,7 @@ Exit criteria:
 - Run QA on laptop and phone
 - Complete accessibility checks
 - Lock hosting, DNS, and publish workflow
+- Verify Cloudflare Pages settings match the documented workflow
 
 ### Window 4: April 13 to April 14
 
@@ -173,5 +176,6 @@ gantt
 ## Schedule Risk Notes
 
 - The largest schedule risks are delayed approval of contact details, missing bios or logos, and late hosting or DNS decisions.
+- A platform-settings mismatch between GitHub, Cloudflare Pages, and the documented workflow can also delay launch.
 - Under this accelerated schedule, even a 1 to 2 day approval slip can push launch beyond April 14, 2026.
 - Because the codebase is simple, it is still better to protect review quality and content accuracy than to skip QA or operational checks.

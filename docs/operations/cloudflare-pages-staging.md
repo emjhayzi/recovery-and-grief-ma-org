@@ -1,5 +1,21 @@
 # Cloudflare Pages Staging Plan
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
+## Verification Note
+
+This document reflects the intended Cloudflare Pages workflow for the project.
+
+The live Cloudflare Pages settings should be verified directly before launch, including:
+
+- connected GitHub repository
+- production branch
+- build command
+- build output directory
+- custom domains / DNS
+
+If the live Pages settings differ from this document, update both this file and `docs/agile/single-source-of-truth.md`.
+
 This is the recommended Cloudflare staging workflow for this project.
 
 ## Best Path

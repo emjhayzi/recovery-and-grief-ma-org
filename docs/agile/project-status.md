@@ -1,10 +1,12 @@
 # Project Status
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 ## Snapshot
 
-- Date: April 5, 2026
-- Stage: Stage 1 / accelerated launch prep
-- Delivery state: structurally strong first build, approved custom-site direction, compressed launch schedule targeting April 14, 2026
+- Date: April 7, 2026
+- Stage: accelerated launch prep
+- Delivery state: structurally strong build with the main architecture in place, but still carrying launch-blocking content and operations decisions
 
 ## Current Build Summary
 
@@ -14,32 +16,24 @@ The project is a static multi-page website with:
 - 1 shared stylesheet (~2,240 lines)
 - 1 shared JavaScript file
 - 15 image assets (13 hero/card images + 2 partner logos)
-- local preview scripts for simple browser testing
-- supporting docs for launch, hosting, and review
-- Cloudflare Pages staging pipeline with GitHub Actions fallback
+- a generated `publish/` bundle for deployment
+- local preview scripts for browser testing
+- supporting docs for launch, hosting, QA, and review
+- GitHub as the repository of record
+- Cloudflare Pages as the preferred staging and deployment path
 
-## Recent Design And Content Updates
+## Confirmed Implemented Changes
 
-The current pass focused on page implementation from the v3-0 copy deck series and visual system refinement:
-
-- the About Us page was split into Who We Are (`who-we-are.html`) and What We Do (`what-we-do.html`), accessible through a navigation dropdown
-- the Direct Connections page (`connect.html`) was rebuilt from the v3-0 copy deck with alternating image/text bands, a prominent email CTA to `connect@recoveryandgrief-MA.org`, program teaser blocks (Get Help Soon / Get Ongoing Help), and lower explanatory content
-- per-page atmospheric hero backgrounds use real Unsplash photography with CSS gradient fade overlays
-- the header was restructured as a three-column CSS grid with SADOD and TSWR logos flanking centered brand content
-- navigation was redesigned to pipe-separated links on a single nowrap row
-- the SADOD logo was pixel-edited to recolor inscription text and clean compression artifacts
-- page transition animations, staggered IntersectionObserver reveals, and button shimmer effects are in place
-- the homepage hero was reworked as six pathway cards integrated directly into the hero stage
-
-## Recent Engineering Cleanup
-
-The latest engineering pass focused on maintainability and repeatable review:
-
-- removed dead CSS branches from older homepage-hero experiments that were no longer used by the live markup
-- simplified page-to-page transition logic to reduce flicker while preserving a softer internal fade
-- added an internal design-lab page and helper launcher for controlled visual tuning during staging review
-- refreshed the Cloudflare publish helper so staging exports include the current internal design tools
-- added QA documentation so future browser review can follow the same smoke-check process
+- homepage hero reworked into integrated pathway cards
+- page transitions softened and stabilized
+- staggered reveal effects added
+- About Us split into `who-we-are.html` and `what-we-do.html`
+- `about.html` retained as a legacy routing page
+- `connect.html` rebuilt from the v3-0 copy deck with a live email CTA
+- `groups.html` updated with Group Directory guidance and email support route
+- `resources.html` populated with recovery resource cards
+- `publish/` generated from source files
+- GitHub Actions workflows added for publish bundle validation and sync
 
 ## Current Site Map
 
@@ -55,85 +49,81 @@ The latest engineering pass focused on maintainability and repeatable review:
 
 ## What Is Working Well
 
-- Clear multi-page information architecture with About Us dropdown split
-- Consistent design language with per-page hero atmospheres
-- Direct Connections page rebuilt from approved copy deck with clear contact pathway
-- Page-to-page transitions and staggered section reveal animations
-- Basic accessibility support such as skip link and menu toggle semantics
-- Shared front-end files make the site easy to maintain
-- Strong documentation foundation across Agile, product, and operations
-- Cloudflare Pages staging pipeline with automated publish bundle
+- clear multi-page information architecture
+- consistent design language and shared front-end architecture
+- direct support path now has a live email CTA
+- support groups page has a clearer next-step route
+- basic accessibility support such as skip link and menu semantics
+- strong documentation foundation across Agile, product, and operations
+- GitHub-backed deployment model is defined
 
 ## What Is Not Finished Yet
 
-- Final team bios, photos, and trust-building details
-- Final group schedule or sign-up flow
-- Approved external resources and partner links
-- Request Help form destination (linked from connect.html)
-- Video embeds for whole-person page
-- Some placeholder copy in teaser sections pending client approval
-- Final static host selection and deployment workflow
-- Mobile view audit and responsive refinements
-- Final production launch verification
+- final team bios, names, and optional photos
+- final trust-building details and partner framing
+- first-response expectations for direct contact
+- Request Help form destination
+- final group joining process and exact participation path
+- final outbound resource approval
+- whole-person video embeds if still desired
+- final production hosting and DNS confirmation
+- mobile audit, accessibility QA, and production smoke test
 
 ## Current Completion View
 
 ### Completed Or Mostly Complete
 
-- site structure (9 public pages)
-- visual system with per-page hero atmospheres
-- responsive navigation with About Us dropdown
-- Direct Connections page rebuilt from copy deck
-- page-level SEO titles and descriptions
-- page transitions and reveal animations
-- local testing workflow
-- Cloudflare Pages staging pipeline
-- project management documentation baseline
+- site structure
+- shared design system
+- About Us split
+- direct connection page rebuild
+- resources page population
+- local preview workflow
+- generated publish bundle
+- baseline project documentation
 
 ### Partially Complete
 
-- content polish
 - trust signals
-- calls to action
-- footer completeness
-- operational handoff
+- contact workflow
+- group workflow
+- launch operations
+- handoff and maintenance clarity
 
 ### Not Yet Complete
 
 - production deployment
-- live form/contact flow
-- analytics/search-console setup
-- final external link review
+- final contact/form workflow
+- final DNS and production validation
+- analytics/search-console decision
+- final external link verification
 
 ## Recently Resolved Decisions
 
-- The client approved the custom static-site direction rather than keeping the full website build inside Squarespace
-- Ongoing website care will be handled directly by the website designer-developer
-- The About Us section was split into Who We Are and What We Do with a dropdown
-- The Direct Connections page layout was implemented as alternating image/text bands from the v3-0 copy deck
-- The primary contact email is `connect@recoveryandgrief-MA.org`
-- Site typography was switched to Geneva per client direction
+- custom static-site direction is approved
+- GitHub is the repository of record
+- Cloudflare Pages is the preferred staging and deployment path
+- About Us is split into Who We Are and What We Do
+- the primary direct-contact email on the site is `connect@recoveryandgrief-MA.org`
+- Geneva is the preferred typography direction
+- ongoing website care is handled directly by the maintainer
 
 ## Open Decisions
 
-- Which direct contact channel is primary: phone, text, form, scheduler, or hybrid
-- Whether `help-others.html` stays public before a real volunteer workflow exists
-- Which static host will be used for the approved custom site
+- whether the support path remains email-only or expands to form, text, or phone
+- whether `help-others.html` remains public before a real volunteer workflow exists
+- whether `design-lab.html` remains staging-only or is excluded from production
+- exact production branch and final Cloudflare Pages configuration to treat as locked
 
-## Accelerated Launch Dates
+## Recommended Next Focus
 
-- Stage 1 target: April 7, 2026
-- Stage 2 target: April 10, 2026
-- Stage 3 target: April 12, 2026
-- Production launch target: April 14, 2026
-
-## Recommended Next Sprint Focus
-
-1. Finalize direct contact workflow and exact CTA language
-2. Finalize group participation instructions and exact pathway messaging
-3. Replace placeholders with approved bios, logos, and resources on the compressed timeline
-4. Confirm final hosting, DNS, and publish-readiness decisions before Stage 3
+1. Finalize direct contact workflow language and response expectations
+2. Finalize group participation instructions
+3. Replace placeholder bios and trust content
+4. Confirm final resources and partner details
+5. Complete mobile, accessibility, and launch QA
+6. Lock hosting and DNS details
 
 ## PM Note
 
-This project is still in a healthy place structurally, but the timeline is now materially tighter. The main risk is no longer lack of structure. The main risk is compressed approval and publishing time between April 5 and April 14, 2026.
+The project is healthy structurally. The main risk is not architecture anymore; it is allowing unresolved content and deployment decisions to stay split across too many documents or too close to launch.

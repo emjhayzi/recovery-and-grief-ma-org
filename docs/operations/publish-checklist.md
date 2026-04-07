@@ -1,5 +1,7 @@
 # Publish Checklist
 
+Primary tracker: `docs/agile/single-source-of-truth.md`
+
 ## Local Testing
 
 - Start a local preview with `python -m http.server 8000` from the project folder
@@ -11,12 +13,14 @@
 
 ## Content
 
-- Add final direct contact details to `connect.html`
-- Add partner logos and approved external links to all pages
+- Confirm direct contact language in `connect.html` is final and consistent with homepage/footer
+- Confirm first-response expectations are stated clearly
+- Confirm partner logos and partner framing are final across the public pages
 - Replace team placeholders in `who-we-are.html`
-- Finalize program content in `what-we-do.html`
-- Add live group schedule or registration instructions to `groups.html`
-- Add final resources to `resources.html`
+- Finalize any remaining public-facing program content in `what-we-do.html`
+- Add final group schedule, directory, or registration instructions to `groups.html`
+- Confirm final approved resources in `resources.html`
+- Replace the placeholder Request Help form destination
 - Decide whether `help-others.html` stays public, becomes hidden, or becomes an interest form
 
 ## Accessibility
@@ -35,10 +39,11 @@
 
 ## Publishing
 
-- Choose the final static host and confirm the DNS plan
+- Confirm the final Cloudflare Pages configuration and DNS plan
 - Confirm production domain
 - Confirm maintainer access to hosting, DNS, and repository
-- Upload files and test all internal links
+- Confirm `publish/` was rebuilt from current source files
+- Deploy the current build and test all internal links
 - Test all external links and forms in production
 - Run a final mobile and desktop review
 - Decide whether `design-lab.html` should remain available after launch or be excluded from the final public build
