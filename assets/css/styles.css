@@ -33,6 +33,16 @@
   --sadod-silver: rgba(207, 210, 216, 0.18);
   --tswr-sun: rgba(255, 131, 26, 0.14);
   --tswr-glow: rgba(255, 174, 93, 0.12);
+  --banner-mesh-text:
+    radial-gradient(circle at 12% 38%, rgba(58, 149, 184, 0.28), transparent 24%),
+    radial-gradient(circle at 34% 28%, rgba(113, 78, 155, 0.24), transparent 19%),
+    radial-gradient(circle at 74% 32%, rgba(205, 141, 72, 0.24), transparent 22%),
+    linear-gradient(96deg, #2f758e 0%, #6d5099 24%, #55606a 52%, #8d6a35 76%, #b36334 100%);
+  --banner-mesh-text-soft:
+    radial-gradient(circle at 16% 42%, rgba(58, 149, 184, 0.2), transparent 24%),
+    radial-gradient(circle at 42% 32%, rgba(113, 78, 155, 0.16), transparent 18%),
+    radial-gradient(circle at 78% 36%, rgba(205, 141, 72, 0.17), transparent 20%),
+    linear-gradient(96deg, #4d7889 0%, #6a5a86 28%, #6b685f 56%, #8c7049 78%, #9d694d 100%);
 }
 
 *,
@@ -769,33 +779,30 @@ body.has-motion-enhancements .home-section.is-visible::before {
 
 /* Page heroes for inner pages */
 .page-hero {
-  padding: clamp(1.5rem, 4vw, 3rem);
+  min-height: 0;
+  margin: 0 0 clamp(1.15rem, 2vw, 1.55rem);
+  padding: clamp(1rem, 1.95vw, 1.55rem) 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.24rem;
+  text-align: center;
   position: relative;
-  overflow: hidden;
+  isolation: auto;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.page-hero::before,
+.page-hero::after {
+  content: none;
 }
 
 .page-hero-bg {
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.page-hero-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center right;
-}
-
-.page-hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(255,252,247,0.97) 5%, rgba(255,252,247,0.85) 28%, rgba(255,252,247,0.45) 55%, rgba(255,252,247,0.1) 78%, transparent 100%);
+  display: none;
 }
 
 .page-hero > *:not(.page-hero-bg) {
@@ -803,45 +810,65 @@ body.has-motion-enhancements .home-section.is-visible::before {
   z-index: 1;
 }
 
-/* About pages: use the dedicated higher-resolution about hero */
-[data-page="about"] .page-hero-bg::before {
-  background-image: url('../images/hero-about.jpg');
+.inner-page > .page-hero + * {
+  margin-top: 0;
 }
 
-/* Who We Are: use the dedicated higher-resolution about hero */
-[data-page="who-we-are"] .page-hero-bg::before {
-  background-image: url('../images/hero-about.jpg');
+.page-hero h1 {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding-inline: 0;
+  color: #2f3a34;
+  font-size: clamp(1.05rem, calc(0.65rem + 1.6vw), 2rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  -webkit-text-stroke: 0 transparent;
+  paint-order: normal;
+  text-shadow: none;
 }
 
-/* What We Do: use the dedicated higher-resolution about hero */
-[data-page="what-we-do"] .page-hero-bg::before {
-  background-image: url('../images/hero-about.jpg');
+.page-hero .page-subtitle,
+.page-hero .page-intro,
+.page-hero .section-kicker,
+.page-hero .groups-contact-note,
+.page-hero .path-contact-line,
+.page-hero .connect-email-cta {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(0.76rem, calc(0.72rem + 0.24vw), 0.92rem);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-shadow: none;
 }
 
-/* Connect: use the dedicated higher-resolution connection hero */
-[data-page="connect"] .page-hero-bg::before {
-  background-image: url('../images/hero-connect.jpg');
+.page-hero .section-kicker {
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
 }
 
-/* Groups: use the dedicated higher-resolution groups hero */
-[data-page="groups"] .page-hero-bg::before {
-  background-image: url('../images/hero-groups.jpg');
+.page-hero .page-intro,
+.page-hero .page-subtitle {
+  max-width: 38rem;
 }
 
-/* Whole Person: use the dedicated higher-resolution recovery hero */
-[data-page="whole-person"] .page-hero-bg::before {
-  background-image: url('../images/hero-whole-person.jpg');
-  background-position: right 60%;
+.page-hero h1::before,
+.page-hero h1::after {
+  content: none;
 }
 
-/* Resources: use the dedicated higher-resolution resources hero */
-[data-page="resources"] .page-hero-bg::before {
-  background-image: url('../images/hero-resources.jpg');
-}
-
-/* Help Others: use the dedicated higher-resolution volunteer hero */
-[data-page="help-others"] .page-hero-bg::before {
-  background-image: url('../images/hero-help-others.jpg');
+.page-hero:has(.page-subtitle),
+.page-hero:has(.page-intro),
+.page-hero:has(.section-kicker),
+.page-hero:has(.groups-contact-note),
+.page-hero:has(.path-contact-line),
+.page-hero:has(.connect-email-cta) {
+  min-height: 0;
+  padding-block: clamp(1.1rem, 2vw, 1.7rem);
 }
 
 h1 {
@@ -2446,15 +2473,40 @@ p.peer-overview-card__eyebrow {
   }
 
   .page-hero {
-    padding: 1.2rem;
+    min-height: 0;
+    margin-bottom: 1rem;
+    padding: 0.85rem 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
-  .page-hero-bg::before {
-    background-position: center center;
+  .page-hero h1 {
+    font-size: clamp(0.98rem, calc(0.8rem + 0.9vw), 1.45rem);
   }
 
-  .page-hero-bg::after {
-    background: linear-gradient(180deg, rgba(255, 252, 247, 0.97) 0%, rgba(255, 252, 247, 0.88) 36%, rgba(255, 252, 247, 0.58) 72%, rgba(255, 252, 247, 0.18) 100%);
+  .page-hero h1::before,
+  .page-hero h1::after {
+    content: none;
+  }
+
+  .page-hero .page-subtitle,
+  .page-hero .page-intro,
+  .page-hero .section-kicker,
+  .page-hero .groups-contact-note,
+  .page-hero .path-contact-line,
+  .page-hero .connect-email-cta {
+    font-size: 0.78rem;
+  }
+
+  .page-hero:has(.page-subtitle),
+  .page-hero:has(.page-intro),
+  .page-hero:has(.section-kicker),
+  .page-hero:has(.groups-contact-note),
+  .page-hero:has(.path-contact-line),
+  .page-hero:has(.connect-email-cta) {
+    min-height: 0;
+    padding-block: 1rem;
   }
 
   .hero-home {
