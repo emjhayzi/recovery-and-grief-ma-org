@@ -6,7 +6,7 @@ This folder is now organized as a lightweight Agile project workspace for the Re
 
 - Start with `docs/agile/single-source-of-truth.md` for the master project tracker
 - Start with `docs/getting-oriented.md` for the fastest project re-entry
-- Start with `docs/agile/project-status.md` for the current snapshot
+- Use `docs/agile/project-status.md` for the current narrative snapshot
 - Use `docs/agile/project-charter.md` for goals, scope, stakeholders, and success criteria
 - Use `docs/agile/product-backlog.md` to manage prioritized work
 - Use `docs/agile/release-roadmap.md` to plan delivery phases
@@ -21,6 +21,7 @@ This folder is now organized as a lightweight Agile project workspace for the Re
 
 Project management and delivery control documents.
 
+- `single-source-of-truth.md`
 - `project-charter.md`
 - `project-status.md`
 - `product-backlog.md`
@@ -40,6 +41,7 @@ Product, audience, and content definition.
 Launch, hosting, publishing, and ongoing support documents.
 
 - `runbook.md`
+- `cloudflare-pages-staging.md`
 - `qa-smoke-checklist.md`
 - `publish-checklist.md`
 - `client-hosting-recommendation.md`
@@ -62,7 +64,7 @@ Review prompts and external review support material.
 - Master project tracker: `docs/agile/single-source-of-truth.md`
 - Quick re-entry: `docs/getting-oriented.md`
 - Product intent: `docs/product/site-brief.md`
-- Current delivery status: `docs/agile/project-status.md`
+- Current delivery snapshot: `docs/agile/project-status.md`
 - Current work priorities: `docs/agile/product-backlog.md`
 - Launch readiness: `docs/operations/publish-checklist.md`
 - Browser QA: `docs/operations/qa-smoke-checklist.md`

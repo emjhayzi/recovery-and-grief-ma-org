@@ -55,6 +55,8 @@ All other Agile and operations docs should support this file, not compete with i
 - `connect.html` rebuilt from the v3-0 copy deck
 - `groups.html` updated with Group Directory guidance and email route
 - `resources.html` populated with recovery-path resource cards
+- `whole-person.html` rebuilt as an editorial sequence with inline embeds for approved videos
+- footer trust area now includes partner logos plus a dedicated crisis CTA slot
 - `publish/` is generated from source and used for staging/deployment
 - GitHub Actions workflows exist for publish-bundle validation and sync
 
@@ -88,6 +90,7 @@ All other Agile and operations docs should support this file, not compete with i
 - first-response expectations still need to be stated clearly
 - Request Help form destination is still placeholder
 - one-on-one intake expectations need tighter explanation
+- crisis CTA destination is still unresolved
 
 ### Group Workflow
 
@@ -96,7 +99,7 @@ All other Agile and operations docs should support this file, not compete with i
 
 ### Launch Operations
 
-- final static host / production setup decision needs confirmation
+- current Cloudflare Pages project settings still need to be confirmed against the documented GitHub-connected workflow
 - DNS plan needs confirmation
 - mobile audit and final responsive QA still need completion
 - final production smoke test is still pending
@@ -113,6 +116,7 @@ All other Agile and operations docs should support this file, not compete with i
 ## Current Open Decisions
 
 - is the primary support path email only, or email plus form/text/phone
+- what exact destination should power the crisis CTA once it is made live
 - does `help-others.html` stay public before a real volunteer workflow exists
 - should `design-lab.html` remain available in staging only or also be excluded from production
 - what exact production branch / Cloudflare Pages configuration should be treated as final
@@ -155,8 +159,8 @@ These remain useful, but they should be treated as supporting views:
 ### GitHub
 
 - This file should live in the repo and be committed like any other source document
-- If GitHub is connected to Cloudflare Pages, this file becomes part of the remote record automatically
-- GitHub Actions already rebuild the `publish/` directory after source changes
+- A push to the connected staging branch should feed Cloudflare Pages automatically
+- GitHub Actions already rebuild the `publish/` directory after source changes when that compatibility path is needed
 
 ### Cloudflare
 
@@ -176,4 +180,4 @@ When project management changes happen:
 1. update this file first
 2. update any supporting board that is affected
 3. commit and push the change to GitHub
-4. let Cloudflare mirror the updated repo state through normal deployment flow
+4. verify the Cloudflare staging project receives the updated repo state through the normal deployment flow

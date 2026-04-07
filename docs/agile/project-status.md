@@ -13,9 +13,9 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 The project is a static multi-page website with:
 
 - 9 public HTML pages (plus 1 internal design lab)
-- 1 shared stylesheet (~2,240 lines)
+- 1 shared stylesheet
 - 1 shared JavaScript file
-- 15 image assets (13 hero/card images + 2 partner logos)
+- a shared image library for hero, card, and partner artwork
 - a generated `publish/` bundle for deployment
 - local preview scripts for browser testing
 - supporting docs for launch, hosting, QA, and review
@@ -31,7 +31,9 @@ The project is a static multi-page website with:
 - `about.html` retained as a legacy routing page
 - `connect.html` rebuilt from the v3-0 copy deck with a live email CTA
 - `groups.html` updated with Group Directory guidance and email support route
+- `whole-person.html` rebuilt with approved inline playable video embeds where links are available
 - `resources.html` populated with recovery resource cards
+- footer partner/logo presentation refined and restructured around a dedicated crisis CTA slot
 - `publish/` generated from source files
 - GitHub Actions workflows added for publish bundle validation and sync
 
@@ -63,9 +65,10 @@ The project is a static multi-page website with:
 - final trust-building details and partner framing
 - first-response expectations for direct contact
 - Request Help form destination
+- crisis CTA destination
 - final group joining process and exact participation path
 - final outbound resource approval
-- whole-person video embeds if still desired
+- approved Tavyn media link or asset for `whole-person.html`
 - final production hosting and DNS confirmation
 - mobile audit, accessibility QA, and production smoke test
 
@@ -111,6 +114,7 @@ The project is a static multi-page website with:
 ## Open Decisions
 
 - whether the support path remains email-only or expands to form, text, or phone
+- what exact destination should power the crisis CTA once it goes live
 - whether `help-others.html` remains public before a real volunteer workflow exists
 - whether `design-lab.html` remains staging-only or is excluded from production
 - exact production branch and final Cloudflare Pages configuration to treat as locked

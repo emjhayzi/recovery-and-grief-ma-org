@@ -15,12 +15,14 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 
 - Confirm direct contact language in `connect.html` is final and consistent with homepage/footer
 - Confirm first-response expectations are stated clearly
+- Confirm the future live destination for the footer crisis CTA
 - Confirm partner logos and partner framing are final across the public pages
 - Replace team placeholders in `who-we-are.html`
 - Finalize any remaining public-facing program content in `what-we-do.html`
 - Add final group schedule, directory, or registration instructions to `groups.html`
 - Confirm final approved resources in `resources.html`
 - Replace the placeholder Request Help form destination
+- Confirm any remaining unresolved media links on `whole-person.html`
 - Decide whether `help-others.html` stays public, becomes hidden, or becomes an interest form
 
 ## Accessibility
@@ -39,11 +41,14 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 
 ## Publishing
 
-- Confirm the final Cloudflare Pages configuration and DNS plan
+- Confirm the documented Cloudflare Pages configuration and DNS plan still match the live project settings
 - Confirm production domain
 - Confirm maintainer access to hosting, DNS, and repository
 - Confirm `publish/` was rebuilt from current source files
-- Deploy the current build and test all internal links
+- Push the approved commit to GitHub
+- Confirm the latest GitHub commit feeds the intended Cloudflare staging deployment
+- Confirm the `sync-publish-bundle` workflow if the Pages project still relies on the committed `publish/` directory
+- Review the staging build and test all internal links there first
 - Test all external links and forms in production
 - Run a final mobile and desktop review
 - Decide whether `design-lab.html` should remain available after launch or be excluded from the final public build

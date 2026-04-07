@@ -12,6 +12,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 | R4 | Sensitive audience may be affected by unclear language | Confusing or clinical wording could reduce engagement | Run final tone review with stakeholder approval |
 | R5 | Git workflow remains lightweight and single-maintainer | Publish history or rollback discipline may be weaker than ideal if updates are rushed | Keep regular commits and follow the publish checklist before launch changes |
 | R6 | Cloudflare settings may not fully match the documented workflow | Staging or production deploys may not behave as expected | Verify live Pages settings before final launch and record them in the deployment docs |
+| R7 | Project-tracking docs drift apart again | Team may make decisions from stale status notes | Update `single-source-of-truth.md` first, then sync supporting docs in the same commit |
 
 ## Assumptions
 
@@ -33,6 +34,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 | I4 | Resource approval is not fully final | Resource page is populated but approval/curation still needs confirmation | Content lead |
 | I5 | Volunteer page intent is unresolved | Navigation may promise more than exists today | Product owner |
 | I6 | Cloudflare Pages live configuration is not verified in this documentation pass | Deployment truth is documented, but platform settings still need direct confirmation | Maintainer |
+| I7 | Crisis CTA destination is still placeholder-level | Footer treatment exists, but the real help route is not yet approved | Product/program owner |
 
 ## Dependencies
 
@@ -43,6 +45,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 | D3 | Approved resource list | Needed to complete resources page |
 | D4 | Final Cloudflare Pages and DNS access | Needed for deployment and final checklist |
 | D5 | Final review on tone and language | Needed before publish for audience safety |
+| D6 | Approved crisis-routing decision | Needed before the footer crisis CTA can become a live emergency/support route |
 
 ## PM Guidance
 

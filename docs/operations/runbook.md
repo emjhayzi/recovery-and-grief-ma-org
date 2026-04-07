@@ -9,7 +9,8 @@ This runbook explains how to work with the Recovery and Grief website from editi
 ## Project Model
 
 - Static HTML, CSS, and JavaScript (9 public pages plus 1 internal design lab)
-- No build step required for local preview
+- No framework build step required for local preview
+- Lightweight Node-based publish build used for the deploy-ready `publish/` bundle
 - No CMS in the project folder
 - Best suited for static hosting
 - Approved direction is a custom static site rather than a full Squarespace site build
@@ -21,7 +22,8 @@ This runbook explains how to work with the Recovery and Grief website from editi
 1. Update the relevant page content or shared asset.
 2. If the change affects layout or global styling, review `assets/css/styles.css`.
 3. If the change affects navigation behavior, review `assets/js/script.js`.
-4. Update the backlog, roadmap, or RAID log if the change affects scope, priority, or risk.
+4. If the change affects project state, update `docs/agile/single-source-of-truth.md` first.
+5. Update the backlog, roadmap, RAID log, or status snapshot if the change affects scope, priority, or risk.
 
 ## Local Preview
 
@@ -72,20 +74,22 @@ Recommended process:
 1. Finalize approved content
 2. Run local QA
 3. Refresh the deploy bundle with `Prepare Cloudflare Publish.cmd` or `node scripts/build-publish.mjs`
-4. Select the final static host
-5. Upload or deploy the website files
-6. Update DNS if using the Squarespace-managed domain
-7. Test the live domain on desktop and mobile
-8. Record any post-launch fixes in `docs/agile/product-backlog.md`
+4. Commit and push the approved source changes to GitHub
+5. Verify the connected Cloudflare Pages staging project receives the latest commit
+6. If the Pages project still depends on the committed `publish/` bundle, verify the `sync-publish-bundle` GitHub Actions workflow completes successfully
+7. Review the staging URL on desktop and mobile before production changes
+8. Update DNS only when moving from approved staging to the live domain
+9. Record any post-launch fixes in `docs/agile/product-backlog.md`
 
 ## Change Control
 
 Use these documents as the operating system for project changes:
 
+- master status and decisions: `docs/agile/single-source-of-truth.md`
 - backlog changes: `docs/agile/product-backlog.md`
 - schedule changes: `docs/agile/release-roadmap.md`
 - risk or blocker changes: `docs/agile/raid-log.md`
-- status reporting: `docs/agile/project-status.md`
+- narrative status reporting: `docs/agile/project-status.md`
 
 ## Content Ownership Checklist
 

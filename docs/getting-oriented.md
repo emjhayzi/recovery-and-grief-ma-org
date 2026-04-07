@@ -8,7 +8,8 @@ This file is the fastest way to re-learn how the Recovery and Grief website is s
 
 - A static multi-page website
 - Built with plain HTML, CSS, and a small amount of JavaScript
-- No React, no Next.js, no npm, no build step, and no CMS in this folder
+- No React, no Next.js, no npm app runtime, and no CMS in this folder
+- Lightweight Node publish build for the deploy-ready `publish/` folder
 - Intended for static hosting such as Cloudflare Pages
 
 The project goal is a calm, trustworthy website for Massachusetts peer grief support for people in recovery grieving a death from alcohol or other drugs.
@@ -29,9 +30,9 @@ The project goal is a calm, trustworthy website for Massachusetts peer grief sup
 
 ### Shared Front-End Files
 
-- `assets/css/styles.css`: shared design system, layout, motion, responsive behavior, page hero styles (~2,240 lines)
+- `assets/css/styles.css`: shared design system, layout, motion, responsive behavior, and page hero styles
 - `assets/js/script.js`: mobile nav toggle, active nav highlighting, page transitions, homepage motion behavior
-- `assets/images/`: 13 hero/card background images + 2 partner logos
+- `assets/images/`: curated hero, card, and partner imagery used across the site
 
 ### Internal Tooling
 
@@ -172,7 +173,8 @@ The design lab is for internal testing and visual exploration, not final public 
 - final group schedule or sign-up process
 - final partner/resource links
 - Request Help form destination
-- video embeds for whole-person page
+- approved Tavyn media destination for the whole-person page
+- future live destination for the footer crisis CTA
 - some placeholder copy in teaser sections pending client approval
 - production hosting and DNS decisions
 - mobile view audit and responsive refinements
@@ -197,7 +199,9 @@ If you want to move the project forward in a stable way, this is the best order:
 2. Preview locally
 3. Run QA using `docs/operations/qa-smoke-checklist.md`
 4. Run `Prepare Cloudflare Publish.cmd`
-5. Deploy the `publish/` folder through Cloudflare Pages
+5. Commit and push the approved changes to GitHub
+6. Verify the connected Cloudflare Pages staging build reflects the latest commit
+7. Review the staging URL before any production change
 
 For staging details, use:
 
@@ -208,9 +212,9 @@ For staging details, use:
 If you want the shortest useful reading path:
 
 1. `docs/getting-oriented.md`
-2. `docs/agile/project-status.md`
+2. `docs/agile/single-source-of-truth.md`
 3. `docs/operations/runbook.md`
-4. `docs/product/content-inventory.md`
+4. `docs/agile/project-status.md`
 5. `docs/operations/cloudflare-pages-staging.md`
 
 ## Practical Working Rule

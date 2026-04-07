@@ -7,7 +7,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 This project is small in code footprint and moderate in launch coordination. The site already has:
 
 - 9 public HTML pages (plus 1 internal design lab)
-- 1 shared stylesheet (~2,240 lines)
+- 1 shared stylesheet
 - 1 shared JavaScript file
 - a working local preview workflow
 - a prepared `publish/` deployment copy
@@ -50,6 +50,7 @@ Must finish in this phase:
 - define first-response expectations and intake language
 - finalize group participation instructions in `groups.html`
 - align homepage and footer CTAs with the same primary contact route where needed
+- decide the future live destination for the crisis CTA
 
 Exit criteria:
 
@@ -66,7 +67,7 @@ Must finish in this phase:
 - replace placeholder team content in `who-we-are.html`
 - add approved partner framing, logos, and trust details
 - finalize curated resources in `resources.html`
-- clarify the whole-person pathway in `whole-person.html`
+- clarify the whole-person pathway in `whole-person.html` and supply any remaining approved media links
 - decide whether `help-others.html` launches now, is hidden, or is reframed
 
 Exit criteria:
@@ -85,7 +86,7 @@ Must finish in this phase:
 - complete accessibility review on final content
 - confirm final Cloudflare Pages configuration, DNS plan, and maintainer access
 - decide whether `design-lab.html` is excluded from the production build
-- test the `publish/` workflow end to end
+- test the GitHub push -> Pages staging -> `publish/` sync workflow end to end
 
 Exit criteria:
 
@@ -99,7 +100,7 @@ Exit criteria:
 
 Must finish in this phase:
 
-- deploy a staging or preview build for final review
+- deploy or confirm the latest GitHub-fed staging build for final review
 - collect one consolidated approval pass
 - deploy to the live domain
 - verify all internal links, external links, and contact routing in production
@@ -168,7 +169,7 @@ gantt
 
 ## Milestones
 
-- April 7, 2026: Stage 1 support-pathway blockers resolved
+- April 7, 2026: Stage 1 support-pathway blockers mostly resolved, with crisis CTA destination still open
 - April 10, 2026: Stage 2 trust content approved
 - April 12, 2026: Stage 3 launch-readiness checks complete
 - April 14, 2026: production deployment target

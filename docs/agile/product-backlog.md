@@ -23,6 +23,7 @@ Acceptance criteria:
 - CTA language is low-pressure and human ✅
 - homepage and footer surface the same primary route consistently
 - Request Help form destination is linked (currently placeholder)
+- crisis CTA destination is approved before the footer button becomes live
 
 ### `P0` Define one-on-one support intake
 
@@ -57,6 +58,7 @@ As a visitor in distress, I want the site to feel credible right away so that I 
 Acceptance criteria:
 
 - footer includes final contact and partner details
+- footer crisis CTA and partner/logo columns reflect approved final destinations and organization details
 - approved external links are added where relevant
 - copy is reviewed for warmth, clarity, and non-judgmental tone
 - placeholder trust language is removed from public-facing pages
@@ -105,6 +107,8 @@ As a visitor, I want to understand how grief support connects with recovery supp
 Acceptance criteria:
 
 - `whole-person.html` explains the pathway without jargon
+- approved embedded/video references are present where assets exist
+- any unresolved media destination is tracked explicitly instead of guessed
 - next steps connect logically to support options already on the site
 
 ### `P1` Decide the role of volunteer page
@@ -135,15 +139,16 @@ Acceptance criteria:
 ### `P0` Finalize hosting and deployment
 
 User story:
-As the website owner and maintainer, I want the final static host and DNS plan locked so that launch is predictable and maintainable.
+As the website owner and maintainer, I want the final Cloudflare Pages production configuration and DNS plan locked so that launch is predictable and maintainable.
 
 Acceptance criteria:
 
-- approved custom static hosting direction is documented
+- approved GitHub-backed Cloudflare Pages direction is documented
 - final production deployment configuration is selected
 - domain/DNS plan is confirmed
 - publish workflow is documented
 - Cloudflare Pages settings are verified against the documented workflow
+- a GitHub push is confirmed to feed the intended Cloudflare staging path end to end
 
 ## Epic 6: Governance And Handoff
 

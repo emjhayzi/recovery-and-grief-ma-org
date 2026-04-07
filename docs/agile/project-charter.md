@@ -56,7 +56,7 @@ The intended audience is navigating grief, recovery, stigma, and overwhelm at th
 - Backend application development
 - Stored form submissions inside the project itself
 - Analytics implementation before launch decisions are approved
-- Video embeds or media integrations before content is finalized
+- New unapproved media integrations before content is finalized
 
 ## Current Deliverable
 
@@ -75,7 +75,7 @@ An advanced-stage content and design build that is structurally complete, with r
 - Sensitive audience and tone requirements
 - Final content is still awaiting approval in several places
 - Contact workflow is not finalized
-- The custom static-site direction is approved, but the final static host is not yet locked
+- The custom static-site direction and Cloudflare Pages staging path are approved, but final production configuration and DNS are not yet locked
 - The project is still maintained as a lightweight file-based static site, so disciplined Git use and publish checks remain important
 
 ## Key Stakeholders

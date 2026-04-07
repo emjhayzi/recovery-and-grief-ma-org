@@ -370,6 +370,104 @@ textarea {
   margin: 0 auto;
 }
 
+.crisis-gallery {
+  gap: 1rem;
+}
+
+.crisis-button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.crisis-button-option {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: var(--lab-radius-md);
+  border: 1px solid var(--lab-line);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.crisis-button-option--wide {
+  grid-column: 1 / -1;
+}
+
+.crisis-button-tag {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lab-teal-deep);
+}
+
+.crisis-preview-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 3rem;
+  width: fit-content;
+  padding: 0.78rem 1.3rem;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: default;
+}
+
+.crisis-preview-btn--solid {
+  background: #3587C7;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(53, 135, 199, 0.2);
+}
+
+.crisis-preview-btn--outline {
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(53, 135, 199, 0.45);
+  color: #2f5f93;
+}
+
+.crisis-preview-btn--rose {
+  background: rgba(204, 139, 147, 0.18);
+  border-color: rgba(162, 77, 92, 0.26);
+  color: #7a2530;
+}
+
+.crisis-preview-btn--dark {
+  background: #2f3a34;
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(47, 58, 52, 0.18);
+}
+
+.crisis-preview-btn--hotline {
+  display: grid;
+  justify-items: center;
+  gap: 0.18rem;
+  min-width: 12rem;
+  background: linear-gradient(135deg, #7a2530, #9b3b49);
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(122, 37, 48, 0.22);
+}
+
+.crisis-preview-btn--hotline small {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+
+.crisis-button-note {
+  margin: 0;
+  color: var(--lab-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 1100px) {
   .lab-shell {
     grid-template-columns: 1fr;
@@ -404,5 +502,13 @@ textarea {
 
   .lab-actions button {
     width: 100%;
+  }
+
+  .crisis-button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crisis-button-option--wide {
+    grid-column: auto;
   }
 }

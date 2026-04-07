@@ -16,7 +16,7 @@ The live Cloudflare Pages settings should be verified directly before launch, in
 
 If the live Pages settings differ from this document, update both this file and `docs/agile/single-source-of-truth.md`.
 
-This is the recommended Cloudflare staging workflow for this project.
+This is the current recommended Cloudflare staging workflow for this project.
 
 ## Best Path
 
@@ -59,8 +59,8 @@ This repository also includes a GitHub Actions workflow that rebuilds and commit
 
 1. Push the latest approved changes to the existing GitHub repository.
 2. In Cloudflare, open `Pages`.
-3. Click `Create project`.
-4. Choose `Import an existing Git repository`.
+3. Open the existing project, or create one if it is not already connected.
+4. If needed, choose `Import an existing Git repository`.
 5. Select the GitHub repo.
 6. Use these build settings:
 
@@ -68,9 +68,9 @@ This repository also includes a GitHub Actions workflow that rebuilds and commit
 - Build command: `node scripts/build-publish.mjs`
 - Build output directory: `publish`
 
-7. Deploy.
+7. Deploy or save the updated project settings.
 8. Cloudflare will provide a `*.pages.dev` URL for staging.
-9. Every later push to the connected branch will trigger a fresh staging deploy automatically.
+9. Every later push to the connected branch should trigger a fresh staging deploy automatically.
 
 If the Pages project is still using the older `exit 0` plus `publish` configuration, the GitHub workflow will keep the committed `publish/` directory current so staging still receives the latest assets and pages.
 
@@ -110,14 +110,15 @@ Do not deploy:
 
 ## Client Review Flow
 
-1. Deploy to Cloudflare Pages staging.
-2. Open the `*.pages.dev` URL yourself first.
-3. Complete the browser pass in `docs/operations/qa-smoke-checklist.md`.
-4. Send the staging link to the client.
-5. Collect one consolidated round of feedback.
-6. Revise locally.
-7. Refresh `publish/`.
-8. Redeploy staging.
+1. Push the approved commit to GitHub.
+2. Confirm Cloudflare Pages staging receives the updated build.
+3. Open the `*.pages.dev` URL yourself first.
+4. Complete the browser pass in `docs/operations/qa-smoke-checklist.md`.
+5. Send the staging link to the client.
+6. Collect one consolidated round of feedback.
+7. Revise locally.
+8. Refresh `publish/`.
+9. Push again and recheck staging.
 
 ## After Approval
 
