@@ -33,7 +33,8 @@ The project is a static multi-page website with:
 - `groups.html` updated with Group Directory guidance and email support route
 - `whole-person.html` rebuilt with approved inline playable video embeds where links are available
 - `resources.html` populated with recovery resource cards
-- footer partner/logo presentation refined and restructured around a dedicated crisis CTA slot
+- homepage partnership copy simplified with inline partner/directory links
+- crisis CTA presentation refined in both the masthead and footer
 - `publish/` generated from source files
 - GitHub Actions workflows added for publish bundle validation and sync
 

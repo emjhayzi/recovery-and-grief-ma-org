@@ -75,7 +75,7 @@ The project is a folder-based static website. There is no framework or package-m
 - Layout is mobile-responsive through shared media queries
 - Navigation includes an About Us dropdown grouping Who We Are and What We Do
 - Navigation state is controlled through the `data-page` attribute on each page body
-- The header uses a three-column CSS grid with co-branded partner logos
+- The header uses a three-column CSS grid with co-branded partner logos and a compact crisis CTA beneath the SADOD logo
 - The footer currently uses a four-column layout with navigation, crisis CTA, partner logos/social links, and PSCP/legal information
 
 ## Technical Inventory

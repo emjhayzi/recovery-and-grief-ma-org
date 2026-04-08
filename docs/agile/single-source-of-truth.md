@@ -56,7 +56,8 @@ All other Agile and operations docs should support this file, not compete with i
 - `groups.html` updated with Group Directory guidance and email route
 - `resources.html` populated with recovery-path resource cards
 - `whole-person.html` rebuilt as an editorial sequence with inline embeds for approved videos
-- footer trust area now includes partner logos plus a dedicated crisis CTA slot
+- homepage partnership band now uses inline source links instead of separate pill buttons
+- crisis CTA is currently presented as a compact masthead button plus a dedicated footer CTA slot
 - `publish/` is generated from source and used for staging/deployment
 - GitHub Actions workflows exist for publish-bundle validation and sync
 
@@ -70,6 +71,8 @@ All other Agile and operations docs should support this file, not compete with i
 - Direct Connection page rebuilt into alternating image/text bands
 - primary email CTA added to `connect.html`
 - groups contact email added to `groups.html`
+- homepage partnership block simplified and linked inline
+- masthead crisis CTA compacted under the SADOD logo
 - Cloudflare Pages staging workflow documented
 - Node-based publish build added through `scripts/build-publish.mjs`
 - GitHub Actions workflows added for publish verification and publish sync
