@@ -17,10 +17,13 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 - Confirm first-response expectations are stated clearly
 - Confirm the future live destination for the footer crisis CTA
 - Confirm partner logos and partner framing are final across the public pages
+- Confirm the masthead partner logos link to the correct external destinations
 - Replace team placeholders in `who-we-are.html`
 - Finalize any remaining public-facing program content in `what-we-do.html`
 - Add final group schedule, directory, or registration instructions to `groups.html`
-- Confirm final approved resources in `resources.html`
+- Confirm `resources.html` still communicates the temporary bridge clearly
+- Confirm final approved recovery-path links in `other-paths-to-recovery.html`
+- Confirm `publish/other-paths-to-recovery.html` exists after the publish build
 - Replace the placeholder Request Help form destination
 - Confirm any remaining unresolved media links on `whole-person.html`
 - Decide whether `help-others.html` stays public, becomes hidden, or becomes an interest form
@@ -30,6 +33,8 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 - Review color contrast with final logos and any new images
 - Add alt text for all future images
 - Confirm keyboard navigation after content is finalized
+- Confirm page titles and hero banners remain fully visible beneath the masthead on desktop and mobile
+- Confirm body copy remains consistently flush left unless a specific exception is intentionally designed
 - Test mobile navigation on an actual phone
 
 ## SEO

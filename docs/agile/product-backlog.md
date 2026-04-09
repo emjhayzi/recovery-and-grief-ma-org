@@ -91,13 +91,14 @@ Acceptance criteria:
 ### `P1` Finalize resource curation
 
 User story:
-As a visitor, I want a small set of relevant resources so that I am not overwhelmed.
+As a visitor, I want a curated set of relevant recovery pathways and resources so that I am not overwhelmed.
 
 Acceptance criteria:
 
-- `resources.html` contains approved links and descriptions
+- `other-paths-to-recovery.html` contains approved links and descriptions
 - resources are curated, not bloated
 - link purpose is obvious before clicking
+- `resources.html` clearly redirects visitors to the right section during the transition
 
 ### `P1` Clarify whole-person pathway
 
@@ -131,6 +132,9 @@ As the website owner, I want confidence in the site before publishing so that vi
 Acceptance criteria:
 
 - all internal links work
+- masthead partner logos route correctly on desktop and mobile
+- page titles remain visible below the masthead at all target breakpoints
+- body-copy alignment is reviewed for consistency after the flush-left pass
 - mobile and desktop layouts are reviewed
 - content placeholders intended for removal are gone
 - accessibility checks are completed on final content

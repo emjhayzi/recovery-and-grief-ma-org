@@ -4,7 +4,7 @@ Static website draft for a Massachusetts peer grief support site focused on peop
 
 ## Project Structure
 
-- `index.html` and the other root `.html` files: 9 public pages plus the internal design lab
+- `index.html` and the other root `.html` files: 10 public pages plus the internal design lab
 - `assets/css/styles.css`: shared visual system and responsive styles
 - `assets/js/script.js`: mobile navigation and current-page state
 - `publish/`: generated deploy-ready website files for staging/hosting
@@ -64,10 +64,15 @@ The Design Lab is intended as an internal staging/design tool, not a final publi
 
 The project has:
 
-- 9 public pages with a shared visual system
+- 10 public pages with a shared visual system
 - per-page atmospheric hero backgrounds using real Unsplash photography
 - an About Us section split into Who We Are and What We Do
+- `other-paths-to-recovery.html` now holds the fuller recovery-path directory
+- `resources.html` now acts as a temporary More Resources bridge page
 - a rebuilt Direct Connections page with alternating image/text layout and a prominent email CTA
+- clickable partner logos in the masthead across desktop and mobile
+- a lighter non-sticky masthead that stays in normal document flow
+- body copy normalized to flush-left alignment across `main`
 - page transition animations and staggered reveal effects
 - basic accessibility support and page-level SEO metadata
 - a Cloudflare Pages staging pipeline

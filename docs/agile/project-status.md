@@ -4,7 +4,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 
 ## Snapshot
 
-- Date: April 7, 2026
+- Date: April 8, 2026
 - Stage: accelerated launch prep
 - Delivery state: structurally strong build with the main architecture in place, but still carrying launch-blocking content and operations decisions
 
@@ -12,7 +12,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 
 The project is a static multi-page website with:
 
-- 9 public HTML pages (plus 1 internal design lab)
+- 10 public HTML pages (plus 1 internal design lab)
 - 1 shared stylesheet
 - 1 shared JavaScript file
 - a shared image library for hero, card, and partner artwork
@@ -32,9 +32,14 @@ The project is a static multi-page website with:
 - `connect.html` rebuilt from the v3-0 copy deck with a live email CTA
 - `groups.html` updated with Group Directory guidance and email support route
 - `whole-person.html` rebuilt with approved inline playable video embeds where links are available
-- `resources.html` populated with recovery resource cards
+- `other-paths-to-recovery.html` added as the recovery-path directory under Your Path
+- `resources.html` converted into a More Resources placeholder bridge
 - homepage partnership copy simplified with inline partner/directory links
 - crisis CTA presentation refined in both the masthead and footer
+- masthead partner logos made clickable site-wide
+- masthead shifted back into normal document flow with a lighter translucent shell
+- body typography normalized to flush-left alignment in the main content areas
+- `what-we-do.html` closing section merged into a unified welcome / ready composition
 - `publish/` generated from source files
 - GitHub Actions workflows added for publish bundle validation and sync
 
@@ -47,15 +52,18 @@ The project is a static multi-page website with:
 - `connect.html`: direct connection with alternating image/text layout and email CTA
 - `groups.html`: support group overview and joining guidance
 - `whole-person.html`: whole-person recovery support framing
-- `resources.html`: curated resource path
+- `other-paths-to-recovery.html`: recovery-path directory within Your Path
+- `resources.html`: temporary More Resources transition page
 - `help-others.html`: future volunteer pathway
 
 ## What Is Working Well
 
 - clear multi-page information architecture
 - consistent design language and shared front-end architecture
+- more consistent body-copy rhythm after the flush-left typography pass
 - direct support path now has a live email CTA
 - support groups page has a clearer next-step route
+- partner logos now act as real outbound trust links in the masthead
 - basic accessibility support such as skip link and menu semantics
 - strong documentation foundation across Agile, product, and operations
 - GitHub-backed deployment model is defined
@@ -81,7 +89,7 @@ The project is a static multi-page website with:
 - shared design system
 - About Us split
 - direct connection page rebuild
-- resources page population
+- recovery-path directory rehome
 - local preview workflow
 - generated publish bundle
 - baseline project documentation
@@ -108,6 +116,7 @@ The project is a static multi-page website with:
 - GitHub is the repository of record
 - Cloudflare Pages is the preferred staging and deployment path
 - About Us is split into Who We Are and What We Do
+- the recovery-path directory now lives under Your Path while More Resources remains a bridge route
 - the primary direct-contact email on the site is `connect@recoveryandgrief-MA.org`
 - Geneva is the preferred typography direction
 - ongoing website care is handled directly by the maintainer

@@ -33,8 +33,10 @@
   <header class="site-header">
     <div class="brand-shell">
       <div class="header-tri">
-        <div class="header-logo header-logo--with-crisis">
-          <img src="assets/images/sadod-logo.png" width="1180" height="1180" fetchpriority="high" decoding="sync" alt="SADOD - Survivors of Alcohol and Drug-related Deaths">
+        <div class="header-logo header-logo--with-crisis" aria-label="SADOD logo">
+          <a href="https://sadod.org" target="_blank" rel="noopener noreferrer" aria-label="Visit SADOD website">
+            <img src="assets/images/sadod-logo.png" width="1180" height="1180" fetchpriority="high" decoding="sync" alt="SADOD - Survivors of Alcohol and Drug-related Deaths">
+          </a>
           <div class="crisis-bar">
             <a class="crisis-link" href="#" aria-label="Crisis resources"><strong>In crisis?</strong></a>
           </div>
@@ -61,8 +63,10 @@
             <a href="help-others.html">Help Others</a>
           </nav>
         </div>
-        <div class="header-logo">
-          <img src="assets/images/tswr-logo.png" width="1316" height="1200" fetchpriority="high" decoding="sync" alt="The Sun Will Rise Foundation">
+        <div class="header-logo" aria-label="The Sun Will Rise Foundation logo">
+          <a href="http://thesunwillrise.org" target="_blank" rel="noopener noreferrer" aria-label="Visit The Sun Will Rise Foundation website">
+            <img src="assets/images/tswr-logo.png" width="1316" height="1200" fetchpriority="high" decoding="sync" alt="The Sun Will Rise Foundation">
+          </a>
         </div>
       </div>
     </div>
@@ -74,208 +78,92 @@
       <h1>What We Do</h1>
     </section>
 
+    <!-- Block 1: Intro text (left) + photo (right) -->
     <section class="content-grid">
-      <article class="content-card wide-card peer-overview-section">
-        <div class="section-heading peer-overview-heading">
-          <p class="section-kicker">Peer Support Overview</p>
-          <h2>Ways We Can Support You</h2>
-          <p class="section-copy">
-            Peer grief support is not therapy or counseling. It is compassionate, trained
-            support from people who have experienced the same kind of loss and now walk
-            alongside others who are living through it.
+      <article class="content-card wide-card">
+        <div class="wwd-block wwd-block--text-left">
+          <div class="wwd-block__content">
+            <p>
+              Grief after a person dies from alcohol or other drugs is different because of
+              how the person died. People who use substances are harshly judged, and the
+              grief of those who care about them is often intensified by feelings of guilt,
+              confusion, anger, blame, shame, failure, fear, helplessness, and hopelessness.
+            </p>
+            <p>
+              Grievers commonly feel judged and that no one understands. Peer grief support
+              is delivered by people who have experienced this and who do understand and do
+              not judge the bereaved. This is what makes one griever helping another work.
+              To a bereaved person, this connection can make all of the difference in the world.
+            </p>
+          </div>
+          <div class="wwd-block__photo">
+            <img src="assets/images/card-connect.jpg" alt="Two people sharing a moment of connection" loading="lazy">
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Block 2: Photo (left) + pull quotes (right) -->
+    <section class="content-grid">
+      <article class="content-card wide-card">
+        <div class="wwd-block wwd-block--text-right">
+          <div class="wwd-block__photo">
+            <img src="assets/images/card-groups.jpg" alt="People gathered in a supportive group setting" loading="lazy">
+          </div>
+          <div class="wwd-block__content">
+            <h2>What peer grief helpers do</h2>
+            <div class="grief-helpers-list">
+              <div class="grief-helpers-item">
+                <p>Our experience of grief connects us as fellow grievers, and each person's grief is also unique.</p>
+              </div>
+              <div class="grief-helpers-divider" aria-hidden="true"></div>
+              <div class="grief-helpers-item">
+                <p>We create safe space for our conversations and listen to you wholeheartedly.</p>
+              </div>
+              <div class="grief-helpers-divider" aria-hidden="true"></div>
+              <div class="grief-helpers-item">
+                <p>We let you know that it is OK for you to feel how you feel. We see how grief touches every part of your life.</p>
+              </div>
+              <div class="grief-helpers-divider" aria-hidden="true"></div>
+              <div class="grief-helpers-item">
+                <p>We respect you as the expert on what is happening to you. We support your decisions and do not judge you.</p>
+              </div>
+              <div class="grief-helpers-divider" aria-hidden="true"></div>
+              <div class="grief-helpers-item">
+                <p>We assure you that grieving does not mean something is wrong with you. We honor your grief as part of your lifelong journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="content-card accent-card wide-card welcome-ready-card">
+        <div class="welcome-ready-card__lead">
+          <h2>You are welcome here</h2>
+          <p>
+            We are people in recovery who know firsthand the pain of grieving a death caused
+            by substance use. If you have experienced the death of someone you care about
+            from alcohol or other drugs — whatever your relationship with them, whatever your
+            recovery path — our support is for you.
+          </p>
+          <p>
+            You do not need to be in crisis to reach out. You do not need to have the right
+            words. You do not need to know what kind of help you are looking for. You just
+            need to be willing to take one step, and we will meet you there.
+          </p>
+          <p class="welcome-ready-card__affirmation">
+            All recovery paths are welcome. All kinds of loss are welcome. All of you is welcome.
           </p>
         </div>
 
-        <div class="peer-overview-grid" aria-label="Peer support offerings overview">
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6.6 4.8h3.1l1.3 3.4-1.9 1.8c1.1 2 2.8 3.6 4.8 4.8l1.8-1.9 3.4 1.3v3.1c0 .9-.7 1.6-1.6 1.6A13.6 13.6 0 0 1 4.9 6.4c0-.9.8-1.6 1.7-1.6Z"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>Direct connection</h3>
-              </div>
-            </div>
-            <p>
-              For some grievers, support begins with one simple step: sending an email or
-              making a phone call to someone who understands.
-            </p>
-            <a class="peer-overview-card__link" href="connect.html">
-              Reach out <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="8" cy="8" r="2.4"></circle>
-                  <circle cx="16" cy="8" r="2.4"></circle>
-                  <path d="M4.7 18c.9-2.3 2.6-3.5 5.3-3.5s4.4 1.2 5.3 3.5"></path>
-                  <path d="M12.4 18c.7-1.6 1.9-2.4 3.8-2.4 1.5 0 2.7.5 3.8 1.5"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>Peer grief support groups</h3>
-              </div>
-            </div>
-            <p>
-              Support groups can help people discover one quiet but powerful truth: they
-              are not alone in what they are carrying.
-            </p>
-            <a class="peer-overview-card__link" href="groups.html">
-              Learn about our groups <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="7.7" r="3"></circle>
-                  <path d="M6.5 18.8c1.1-3.1 2.9-4.7 5.5-4.7s4.4 1.6 5.5 4.7"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>One-on-one peer support</h3>
-              </div>
-            </div>
-            <p>
-              Some people heal more openly in one-to-one conversation, where support can be
-              personal, steady, and shaped around their own pace.
-            </p>
-            <a class="peer-overview-card__link" href="connect.html">
-              Connect with us <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 4.6v14.8"></path>
-                  <path d="M12 8.3c-2.6 0-4.7 1.1-6.3 3.4"></path>
-                  <path d="M12 12.1c2.6 0 4.7 1.1 6.3 3.4"></path>
-                  <path d="m8 10.8-2.3.9.9 2.3"></path>
-                  <path d="m16 14.6 2.3.9-.9 2.3"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>Whole-person recovery pathways</h3>
-              </div>
-            </div>
-            <p>
-              Grief does not stay in one corner of life. It can affect the body, mind,
-              relationships, and spirit, which is why support often needs to do the same.
-            </p>
-            <a class="peer-overview-card__link" href="whole-person.html">
-              Explore pathways <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6.2 5.2h11.6"></path>
-                  <path d="M6.2 8.9h11.6"></path>
-                  <path d="M6.2 12.6h7.6"></path>
-                  <path d="M6.2 16.3h5.6"></path>
-                  <path d="M4.8 3.8h14.4a1 1 0 0 1 1 1v14.4a1 1 0 0 1-1 1H4.8a1 1 0 0 1-1-1V4.8a1 1 0 0 1 1-1Z"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>Carefully chosen resources</h3>
-              </div>
-            </div>
-            <p>
-              The right guide, reading, or tool can feel less like information and more
-              like a handrail when grief and recovery are tangled together.
-            </p>
-            <a class="peer-overview-card__link" href="resources.html">
-              Browse resources <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <article class="peer-overview-card">
-            <div class="peer-overview-card__head">
-              <span class="peer-overview-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 4.5c1.2 2.3 3 4.1 5.3 5.4-1.1 3.3-2.9 5.4-5.3 6.3-2.4-.9-4.2-3-5.3-6.3 2.3-1.3 4.1-3.1 5.3-5.4Z"></path>
-                  <path d="M9.2 12.9 11 14.7l3.8-3.8"></path>
-                </svg>
-              </span>
-              <div>
-                <h3>Who provides support</h3>
-              </div>
-            </div>
-            <p>
-              Every staff person and volunteer offering direct support has personally
-              experienced this kind of loss and is trained to meet each griever as a
-              unique individual.
-            </p>
-            <a class="peer-overview-card__link" href="who-we-are.html#team">
-              Meet the Team <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-        </div>
-      </article>
-    </section>
-
-    <section class="content-grid">
-      <article class="content-card wide-card">
-        <h2>The RIVER model</h2>
-        <p>
-          Peer grief support is mutual aid that takes place in a safe space. It works because
-          the helper's own experience of loss is their foundation — not a textbook, not a
-          credential, but a shared understanding of what this kind of grief feels like.
-        </p>
-        <p>
-          Our peer grief helpers are guided by five core principles:
-        </p>
-        <div class="river-grid">
-          <div><strong>Relate</strong><span>You are not alone.</span></div>
-          <div><strong>Invite</strong><span>Your story is welcome.</span></div>
-          <div><strong>Validate</strong><span>Your grief reactions make sense.</span></div>
-          <div><strong>Empower</strong><span>You can find your own next step.</span></div>
-          <div><strong>Reassure</strong><span>Grief is a process, not a test.</span></div>
-        </div>
-        <p style="margin-top: 1.2rem;">
-          Healing in this model is a two-way street. The peer grief helper is not above or
-          apart from the griever — they are alongside them. This is what makes peer support
-          different from clinical care, and it is what makes it powerful.
-        </p>
-      </article>
-    </section>
-
-    <section class="content-grid">
-      <article class="content-card accent-card wide-card">
-        <h2>You are welcome here</h2>
-        <p>
-          We are people in recovery who know firsthand the pain of grieving a death caused
-          by substance use. If you have experienced the death of someone you care about
-          from alcohol or other drugs — whatever your relationship with them, whatever your
-          recovery path — our support is for you.
-        </p>
-        <p>
-          You do not need to be in crisis to reach out. You do not need to have the right
-          words. You do not need to know what kind of help you are looking for. You just
-          need to be willing to take one step, and we will meet you there.
-        </p>
-        <p>
-          All recovery paths are welcome. All kinds of loss are welcome. All of you is welcome.
-        </p>
-      </article>
-    </section>
-
-    <section class="content-grid" style="margin-top: 2rem;">
-      <article class="callout wide-card">
-        <p>Whenever you are ready, we are here.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="connect.html">Connect With Us</a>
-          <a class="button button-secondary" href="groups.html">Find a Support Group</a>
+        <div class="welcome-ready-card__actions">
+          <p class="welcome-ready-card__prompt">Whenever you're ready, we are here.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="connect.html">Connect With Us</a>
+            <a class="button button-secondary" href="groups.html">Find a Support Group</a>
+          </div>
         </div>
       </article>
     </section>
@@ -296,6 +184,13 @@
 
       <div class="footer-cta">
         <a class="footer-crisis-btn" href="#">In crisis?</a>
+        <div class="footer-legal">
+          <a href="https://sadod.org/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+          <span aria-hidden="true">|</span>
+          <a href="https://sadod.org/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <span aria-hidden="true">|</span>
+          <a href="https://sadod.org/disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+        </div>
       </div>
 
       <div class="footer-center">
@@ -321,13 +216,6 @@
           <img class="footer-pscp-logo" src="assets/images/pscp-logo-transparent.png" width="4096" height="940" alt="Peer Support Community Partners" decoding="async">
         </a>
         <p class="footer-desc">SADOD is a PSCP project funded by the Mass. Bureau of Substance Addiction Services. To learn more about our programs and services please email <a class="footer-email" href="mailto:info@pscpllc.com">info@pscpllc.com</a>.</p>
-        <div class="footer-legal">
-          <a href="https://sadod.org/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-          <span aria-hidden="true">|</span>
-          <a href="https://sadod.org/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-          <span aria-hidden="true">|</span>
-          <a href="https://sadod.org/disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>
-        </div>
       </div>
 
     </div>

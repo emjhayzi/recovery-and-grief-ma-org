@@ -8,7 +8,7 @@ All other Agile and operations docs should support this file, not compete with i
 
 ## Snapshot
 
-- Date: April 7, 2026
+- Date: April 8, 2026
 - Project: Recovery and Grief website
 - Delivery stage: accelerated launch prep
 - Primary repo: `emjhayzi/recovery-and-grief-ma-org`
@@ -46,7 +46,7 @@ All other Agile and operations docs should support this file, not compete with i
 
 ## Current Site State
 
-- 9 public HTML pages plus 1 internal design lab
+- 10 public HTML pages plus 1 internal design lab
 - Shared CSS and shared JavaScript architecture
 - About Us content split into:
   - `who-we-are.html`
@@ -54,10 +54,14 @@ All other Agile and operations docs should support this file, not compete with i
 - `about.html` retained as a legacy routing page
 - `connect.html` rebuilt from the v3-0 copy deck
 - `groups.html` updated with Group Directory guidance and email route
-- `resources.html` populated with recovery-path resource cards
+- `other-paths-to-recovery.html` now holds the recovery-path resource cards under Your Path
+- `resources.html` converted into a transition page for the More Resources route
 - `whole-person.html` rebuilt as an editorial sequence with inline embeds for approved videos
 - homepage partnership band now uses inline source links instead of separate pill buttons
 - crisis CTA is currently presented as a compact masthead button plus a dedicated footer CTA slot
+- masthead partner logos now link to the SADOD and The Sun Will Rise websites across desktop and mobile
+- masthead is visually lighter and remains in normal document flow rather than sticking over page titles
+- body copy inside `main` is currently normalized to flush-left alignment for consistency review
 - `publish/` is generated from source and used for staging/deployment
 - GitHub Actions workflows exist for publish-bundle validation and sync
 
@@ -73,6 +77,10 @@ All other Agile and operations docs should support this file, not compete with i
 - groups contact email added to `groups.html`
 - homepage partnership block simplified and linked inline
 - masthead crisis CTA compacted under the SADOD logo
+- masthead partner logos made clickable across the site
+- masthead transparency/lightness refined without covering hero/page-title content
+- `what-we-do.html` closing section consolidated into a shared welcome / ready block
+- body typography normalized to flush-left alignment across the main content areas
 - Cloudflare Pages staging workflow documented
 - Node-based publish build added through `scripts/build-publish.mjs`
 - GitHub Actions workflows added for publish verification and publish sync
@@ -113,6 +121,7 @@ All other Agile and operations docs should support this file, not compete with i
 - GitHub is the repository of record for the codebase
 - Cloudflare Pages is the preferred staging/deployment path
 - the About Us section is now a dropdown with two sub-pages
+- the recovery-path directory now lives under Your Path, while More Resources remains public as a transition route
 - Geneva is the preferred typography direction
 - the maintainer is handling ongoing site publishing directly
 

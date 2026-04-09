@@ -3,6 +3,53 @@ const menuButton = document.querySelector(".menu-toggle");
 const page = document.body.dataset.page;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 const navDropdown = document.querySelector(".nav-dropdown");
+
+// ── Scroll to top button ────────────────────────────────────────────────────
+(function () {
+  const btn = document.createElement("button");
+  btn.id = "scroll-top-btn";
+  btn.setAttribute("aria-label", "Scroll to top");
+  btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  Object.assign(btn.style, {
+    position:       "fixed",
+    bottom:         "1.5rem",
+    right:          "1.25rem",
+    zIndex:         "999",
+    width:          "2.75rem",
+    height:         "2.75rem",
+    borderRadius:   "50%",
+    border:         "1px solid rgba(52,63,58,0.18)",
+    background:     "rgba(255,253,250,0.72)",
+    backdropFilter: "blur(10px)",
+    color:          "rgba(47,58,52,0.55)",
+    cursor:         "pointer",
+    display:        "flex",
+    alignItems:     "center",
+    justifyContent: "center",
+    opacity:        "0",
+    transform:      "translateY(0.5rem)",
+    transition:     "opacity 280ms ease, transform 280ms ease",
+    pointerEvents:  "none",
+    boxShadow:      "0 4px 16px rgba(47,58,52,0.1)",
+  });
+  document.body.appendChild(btn);
+
+  let visible = false;
+  window.addEventListener("scroll", () => {
+    const shouldShow = window.scrollY > 300;
+    if (shouldShow !== visible) {
+      visible = shouldShow;
+      btn.style.opacity      = visible ? "1"   : "0";
+      btn.style.transform    = visible ? "translateY(0)" : "translateY(0.5rem)";
+      btn.style.pointerEvents = visible ? "auto" : "none";
+    }
+  }, { passive: true });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+// ── End scroll to top ────────────────────────────────────────────────────────
 const dropdownBtn = document.querySelector(".nav-dropdown-label");
 const dropdownMenu = document.querySelector(".nav-dropdown-menu");
 let navCloseTimer = null;
@@ -142,6 +189,7 @@ const navMap = {
   connect: "connect.html",
   groups: "groups.html",
   "whole-person": "whole-person.html",
+  "other-paths-to-recovery": "whole-person.html",
   resources: "resources.html",
   "help-others": "help-others.html",
 };

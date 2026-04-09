@@ -6,7 +6,7 @@ Primary tracker: `docs/agile/single-source-of-truth.md`
 
 This project is small in code footprint and moderate in launch coordination. The site already has:
 
-- 9 public HTML pages (plus 1 internal design lab)
+- 10 public HTML pages (plus 1 internal design lab)
 - 1 shared stylesheet
 - 1 shared JavaScript file
 - a working local preview workflow
@@ -66,7 +66,8 @@ Must finish in this phase:
 
 - replace placeholder team content in `who-we-are.html`
 - add approved partner framing, logos, and trust details
-- finalize curated resources in `resources.html`
+- finalize curated resources in `other-paths-to-recovery.html`
+- confirm the transition copy in `resources.html`
 - clarify the whole-person pathway in `whole-person.html` and supply any remaining approved media links
 - decide whether `help-others.html` launches now, is hidden, or is reframed
 
@@ -83,6 +84,8 @@ Exit criteria:
 Must finish in this phase:
 
 - run full mobile and desktop smoke QA
+- verify masthead behavior, title visibility, and partner-logo links across breakpoints
+- confirm the current flush-left body-copy pass reads consistently across key pages
 - complete accessibility review on final content
 - confirm final Cloudflare Pages configuration, DNS plan, and maintainer access
 - decide whether `design-lab.html` is excluded from the production build

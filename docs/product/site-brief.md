@@ -40,8 +40,9 @@ Working style: Grounded Renewal
 
 - Warm neutrals and gentle teal accents
 - Soft card-based layouts with clear calls to action
-- Calm, stable typography
+- Calm, stable typography with body copy defaulting flush left
 - Mobile-friendly, uncluttered sections
+- A light co-branded masthead that feels present without covering page titles
 
 ## Page Goals
 
@@ -65,9 +66,13 @@ Explain what group support feels like and how to join.
 
 Connect grief support to whole-person recovery resources and partner pathways.
 
+### Other Paths to Recovery
+
+Offer a curated directory of recovery fellowships, communities, and support models as part of the Your Path journey.
+
 ### More Resources
 
-Offer a small, high-value list of links and materials without overwhelming the visitor.
+Hold the top-level route as a short transition page while the section is reorganized.
 
 ### Help Others
 

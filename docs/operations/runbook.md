@@ -8,7 +8,7 @@ This runbook explains how to work with the Recovery and Grief website from editi
 
 ## Project Model
 
-- Static HTML, CSS, and JavaScript (9 public pages plus 1 internal design lab)
+- Static HTML, CSS, and JavaScript (10 public pages plus 1 internal design lab)
 - No framework build step required for local preview
 - Lightweight Node-based publish build used for the deploy-ready `publish/` bundle
 - No CMS in the project folder
@@ -50,10 +50,11 @@ Before any publish or handoff:
 1. Click every internal navigation link
 2. Check homepage CTA flow
 3. Review mobile width and desktop width
-4. Confirm logos, images, and footer details render correctly
+4. Confirm logos, masthead links, images, and footer details render correctly
 5. Review pages for placeholder language that should not remain public
-6. Complete `docs/operations/qa-smoke-checklist.md`
-7. Complete `docs/operations/publish-checklist.md`
+6. Confirm page titles stay visible beneath the masthead at each breakpoint
+7. Complete `docs/operations/qa-smoke-checklist.md`
+8. Complete `docs/operations/publish-checklist.md`
 
 ## Design Lab Workflow
 

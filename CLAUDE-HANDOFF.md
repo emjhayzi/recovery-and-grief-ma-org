@@ -8,7 +8,7 @@ Build a calm, clear, static website for Massachusetts peer grief support aimed a
 
 ## What Is In Scope Right Now
 
-- Static multi-page site (9 public pages)
+- Static multi-page site (10 public pages)
 - Shared CSS and small JavaScript file
 - Co-branded SADOD + The Sun Will Rise header/footer
 - Per-page atmospheric hero backgrounds with Unsplash photography
@@ -26,6 +26,7 @@ Build a calm, clear, static website for Massachusetts peer grief support aimed a
 - `connect.html`
 - `groups.html`
 - `whole-person.html`
+- `other-paths-to-recovery.html`
 - `resources.html`
 - `help-others.html`
 - `assets/css/styles.css`
@@ -48,16 +49,23 @@ Recent design/interaction notes from the latest pass:
 
 - the About Us section was split into Who We Are and What We Do, with a navigation dropdown
 - connect.html was rebuilt from the v3-0 Direct Connection copy deck with alternating image/text bands, a prominent email CTA, and program teaser sections
+- the fuller recovery-path directory was moved into `other-paths-to-recovery.html` under the Your Path section
+- `resources.html` was turned into a temporary bridge page for the More Resources route
 - per-page atmospheric hero backgrounds use real Unsplash photography with CSS gradient fade overlays
 - the header uses a three-column CSS grid with SADOD and TSWR logos flanking centered brand content
+- both partner logos in the masthead now link out to their respective websites across desktop and mobile
+- the masthead was lightened visually and returned to normal document flow after sticky/overlay tests obscured page titles
 - navigation was redesigned to pipe-separated links on a single row
+- body copy in `main` is currently standardized to flush-left alignment for consistency review
 - page transition animations, staggered IntersectionObserver reveals, card drift-in, and scroll parallax are all in place
 - the homepage hero was reworked as six pathway cards integrated directly into the hero stage
+- the What We Do closing area now combines the welcome and ready messaging into one shared section
 - the full-site background blends SADOD-inspired cool tones on the left with TSWRF-inspired warm sunrise tones on the right
 
 Already done:
 
-- 9-page site structure with About Us dropdown split
+- 10-page site structure with About Us dropdown split
+- recovery-path directory rehomed under Your Path
 - shared visual system with per-page hero atmospheres
 - responsive nav with pipe-separated links
 - co-branded logo integration (pixel-edited SADOD logo + TSWR logo)

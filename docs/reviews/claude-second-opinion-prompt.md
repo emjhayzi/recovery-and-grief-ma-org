@@ -21,6 +21,7 @@ Then inspect the website files:
 - connect.html
 - groups.html
 - whole-person.html
+- other-paths-to-recovery.html
 - resources.html
 - help-others.html
 - assets/css/styles.css

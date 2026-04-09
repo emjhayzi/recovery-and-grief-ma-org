@@ -20,9 +20,11 @@ Use this checklist for repeatable browser QA before staging review, client hando
   - `connect.html`
   - `groups.html`
   - `whole-person.html`
+  - `other-paths-to-recovery.html`
   - `resources.html`
   - `help-others.html`
 - Confirm header logos load correctly
+- Confirm header logos are clickable and route to the correct partner sites
 - Confirm footer logos load correctly
 - Confirm all internal nav links work
 - Confirm no page shows broken images or obvious placeholder layout artifacts
@@ -39,8 +41,11 @@ Use this checklist for repeatable browser QA before staging review, client hando
 
 - Click between pages using the header nav
 - Click between pages using CTA buttons and internal pathway links
+- Confirm the button on `whole-person.html` now lands on `other-paths-to-recovery.html`
+- Confirm the CTA on `resources.html` now routes visitors into `other-paths-to-recovery.html`
 - Confirm page switches feel like a soft fade, not a flash or hard cut
 - Confirm the header stays visually stable during page switches
+- Confirm the masthead does not stay pinned over content while scrolling
 - Confirm there is no visible flicker on staging
 
 ## Responsive Checks
@@ -49,8 +54,10 @@ Use this checklist for repeatable browser QA before staging review, client hando
 - Review around tablet width
 - Review around narrow mobile width
 - Confirm the menu toggle works on mobile
+- Confirm page titles and hero banners remain visible below the masthead at every breakpoint
 - Confirm buttons do not overflow or wrap awkwardly
 - Confirm the hero stack collapses cleanly on smaller screens
+- Confirm body copy alignment reads consistently flush left across pages
 
 ## Content And Trust Checks
 

@@ -17,6 +17,7 @@ The project is a folder-based static website. There is no framework or package-m
 - `connect.html`
 - `groups.html`
 - `whole-person.html`
+- `other-paths-to-recovery.html`
 - `resources.html`
 - `help-others.html`
 - `robots.txt`
@@ -65,17 +66,20 @@ The project is a folder-based static website. There is no framework or package-m
 | `connect.html` | Present direct connection and program options | Rebuilt from v3-0 copy deck with alternating layout | Reach out for support |
 | `groups.html` | Explain group support and how to join | Needs final schedule/process | Join or ask about a group |
 | `whole-person.html` | Frame grief support within broader recovery wellbeing | Implemented editorial page with approved inline video embeds where available; Tavyn media link still pending | Understand broader support path |
-| `resources.html` | Offer curated follow-up materials and links | Implemented, pending final approval/curation check | Explore trusted resources |
+| `other-paths-to-recovery.html` | Gather recovery fellowships, communities, and support models under Your Path | Implemented from the prior recovery-path resource directory | Explore other recovery paths |
+| `resources.html` | Hold the More Resources route as a temporary bridge page | Implemented as a transition page pointing visitors back into Your Path | Route visitors to the right section |
 | `help-others.html` | Hold a future volunteer/supporter pathway | Strategic decision pending | Volunteer or express interest |
 
 ## Design System Notes
 
 - Typography uses Geneva as the preferred face, with a local font file plus Verdana/Tahoma fallbacks
+- Body copy inside `main` is currently normalized to flush-left alignment for consistency review
 - The visual direction uses warm neutrals, teal accents, soft cards, curated downloaded photography, and CSS gradient overlays
 - Layout is mobile-responsive through shared media queries
 - Navigation includes an About Us dropdown grouping Who We Are and What We Do
 - Navigation state is controlled through the `data-page` attribute on each page body
-- The header uses a three-column CSS grid with co-branded partner logos and a compact crisis CTA beneath the SADOD logo
+- The header uses a three-column CSS grid with co-branded partner logos, a compact crisis CTA beneath the SADOD logo, and outbound partner-logo links
+- The masthead is visually light/translucent and sits in normal document flow rather than as a sticky overlay
 - The footer currently uses a four-column layout with navigation, crisis CTA, partner logos/social links, and PSCP/legal information
 
 ## Technical Inventory

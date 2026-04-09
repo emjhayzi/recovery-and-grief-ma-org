@@ -25,7 +25,8 @@ The project goal is a calm, trustworthy website for Massachusetts peer grief sup
 - `connect.html`: direct connection with alternating image/text layout and email CTA
 - `groups.html`: group support overview and joining guidance
 - `whole-person.html`: whole-person recovery framing
-- `resources.html`: curated resources and follow-up materials
+- `other-paths-to-recovery.html`: recovery-path directory under Your Path
+- `resources.html`: transition page for the More Resources section
 - `help-others.html`: future volunteer path
 
 ### Shared Front-End Files
@@ -114,7 +115,8 @@ Edit the relevant page directly:
 - contact/support flow copy: `connect.html`
 - group flow copy: `groups.html`
 - recovery framing copy: `whole-person.html`
-- resources copy: `resources.html`
+- recovery-path directory copy: `other-paths-to-recovery.html`
+- more-resources transition copy: `resources.html`
 - volunteer copy: `help-others.html`
 
 ### If You Are Changing Global Layout Or Visual Style
@@ -128,6 +130,7 @@ This file controls:
 - colors
 - spacing
 - header and footer layout
+- body copy alignment
 - responsive rules
 - cards
 - buttons
@@ -157,9 +160,12 @@ The design lab is for internal testing and visual exploration, not final public 
 
 ## What Is Already In Good Shape
 
-- 9-page site structure with About Us dropdown split
+- 10-page site structure with About Us dropdown split
 - consistent shared styling with per-page hero atmospheres
 - Direct Connections page rebuilt from v3-0 copy deck
+- Other Paths to Recovery rehomed under Your Path with More Resources left as a bridge route
+- clickable partner logos in the masthead on desktop and mobile
+- flush-left body copy pass applied across the main content areas
 - mobile navigation
 - page-level SEO title and description tags
 - basic accessibility support like skip link and menu semantics
