@@ -2,6 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 STATE_DIR="/tmp/recovery-grief-preview"
 PID_FILE="$STATE_DIR/website-preview.pid"
 PORT_FILE="$STATE_DIR/website-preview.port"
@@ -58,9 +59,9 @@ echo "Starting website preview at $target_url"
 echo "Browser will open automatically in a moment..."
 echo ""
 
-cd "$SCRIPT_DIR"
+cd "$REPO_ROOT"
 /usr/bin/python3 "$SCRIPT_DIR/preview-server.py" \
-  --root "$SCRIPT_DIR" \
+  --root "$REPO_ROOT" \
   --port "$port" \
   --start-page "$START_PAGE" \
   --pid-file "$PID_FILE" \

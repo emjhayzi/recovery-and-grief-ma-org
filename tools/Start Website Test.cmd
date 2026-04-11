@@ -2,6 +2,7 @@
 setlocal
 
 cd /d "%~dp0"
+for %%I in ("%~dp0..") do set "REPO_ROOT=%%~fI"
 set "STATE_DIR=%TEMP%\recovery-grief-preview"
 set "PID_FILE=%STATE_DIR%\website-preview.pid"
 set "PORT_FILE=%STATE_DIR%\website-preview.port"
@@ -49,7 +50,7 @@ echo Browser will open automatically in a moment...
 echo.
 title Recovery and Grief Website Preview
 
-%PYTHON_CMD% "%~dp0preview-server.py" --root "%CD%" --port %PORT% --start-page "%START_PAGE%" --pid-file "%PID_FILE%" --port-file "%PORT_FILE%" --open-browser
+%PYTHON_CMD% "%~dp0preview-server.py" --root "%REPO_ROOT%" --port %PORT% --start-page "%START_PAGE%" --pid-file "%PID_FILE%" --port-file "%PORT_FILE%" --open-browser
 exit /b %errorlevel%
 
 :find_free_port

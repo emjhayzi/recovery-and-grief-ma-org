@@ -27,7 +27,6 @@ Use this order when checking what is true:
 - `resources.html`: short bridge page into Other Paths to Recovery
 - `help-others.html`: public future-facing volunteer placeholder page
 - `crisis-support.html`: crisis support page for urgent help guidance
-- `design-lab.html`: internal design exploration page
 
 ## Shared Files
 
@@ -69,12 +68,11 @@ Then open `http://localhost:8000`.
 
 Helper scripts in the repo:
 
-- `Start Website Test.cmd`
-- `Start Website Test.command`
-- `Stop Website Test.cmd`
-- `Stop Website Test.command`
-- `Start Design Lab.cmd`
-- `Prepare Cloudflare Publish.cmd`
+- `tools/Start Website Test.cmd`
+- `tools/Start Website Test.command`
+- `tools/Stop Website Test.cmd`
+- `tools/Stop Website Test.command`
+- `tools/Prepare Cloudflare Publish.cmd`
 
 ## Publish Workflow
 

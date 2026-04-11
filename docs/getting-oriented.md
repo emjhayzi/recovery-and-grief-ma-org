@@ -32,12 +32,6 @@ This file is the fastest way to re-enter the project after time away.
 - `assets/js/script.js`: mobile nav, dropdown behavior, page transitions, homepage motion, and scroll-to-top behavior
 - `assets/images/`: partner logos, team photos, page imagery, and card imagery
 
-## Internal Tooling
-
-- `design-lab.html`: internal visual experimentation page
-- `assets/css/design-lab.css`
-- `assets/js/design-lab.js`
-
 ## Deployment Copy
 
 - `publish/`: generated deploy-ready copy of the site
@@ -66,11 +60,10 @@ Then open `http://localhost:8000`.
 
 Helper scripts:
 
-- `Start Website Test.cmd`
-- `Start Website Test.command`
-- `Stop Website Test.cmd`
-- `Stop Website Test.command`
-- `Start Design Lab.cmd`
+- `tools/Start Website Test.cmd`
+- `tools/Start Website Test.command`
+- `tools/Stop Website Test.cmd`
+- `tools/Stop Website Test.command`
 
 ## What Is Already Implemented In Source
 

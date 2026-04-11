@@ -21,15 +21,12 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 - `resources.html`
 - `help-others.html`
 - `crisis-support.html`
-- `design-lab.html`
 - `robots.txt`
 
 ## Shared Front-End Assets
 
 - `assets/css/styles.css`
-- `assets/css/design-lab.css`
 - `assets/js/script.js`
-- `assets/js/design-lab.js`
 - `assets/fonts/GENEVA.TTF`
 - `assets/images/`
 

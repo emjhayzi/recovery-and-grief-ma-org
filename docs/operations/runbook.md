@@ -21,7 +21,7 @@ Update docs after the source changes, not before.
 ## Project Model
 
 - static HTML, CSS, and JavaScript
-- 11 public pages plus `design-lab.html`
+- 11 public pages
 - local Geneva font asset instead of an external font dependency
 - Node script used to regenerate `publish/`
 - Git and GitHub-backed deployment path
@@ -46,11 +46,10 @@ Then open `http://localhost:8000`.
 
 Helper scripts:
 
-- `Start Website Test.cmd`
-- `Start Website Test.command`
-- `Stop Website Test.cmd`
-- `Stop Website Test.command`
-- `Start Design Lab.cmd`
+- `tools/Start Website Test.cmd`
+- `tools/Start Website Test.command`
+- `tools/Stop Website Test.cmd`
+- `tools/Stop Website Test.command`
 
 ## QA Workflow
 

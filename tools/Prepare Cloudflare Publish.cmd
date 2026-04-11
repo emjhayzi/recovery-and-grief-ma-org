@@ -1,7 +1,8 @@
 @echo off
 setlocal
 
-cd /d "%~dp0"
+for %%I in ("%~dp0..") do set "REPO_ROOT=%%~fI"
+cd /d "%REPO_ROOT%"
 node scripts\build-publish.mjs
 if errorlevel 1 (
   echo.
@@ -13,5 +14,5 @@ if errorlevel 1 (
 
 echo Cloudflare publish folder refreshed.
 echo Deploy the contents of:
-echo %~dp0publish
+echo %REPO_ROOT%\publish
 pause

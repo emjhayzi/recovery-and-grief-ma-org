@@ -16,7 +16,7 @@ Provide an emotionally safe, recovery-affirming website that helps grieving visi
 
 ## Current Deliverable
 
-An 11-page public website, plus one internal design-lab page, built with shared HTML, CSS, and JavaScript patterns and a generated deploy bundle.
+An 11-page public website built with shared HTML, CSS, and JavaScript patterns and a generated deploy bundle.
 
 ## In Scope
 

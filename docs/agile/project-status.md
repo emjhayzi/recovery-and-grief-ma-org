@@ -14,7 +14,6 @@ Status audited against the website source on April 12, 2026.
 The source currently contains:
 
 - 11 public HTML pages
-- 1 internal design-lab page
 - 1 shared stylesheet
 - 1 shared JavaScript file
 - a generated `publish/` bundle
