@@ -205,154 +205,160 @@ if (currentHref && nav) {
 }
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const INTERNAL_TRANSITION_KEY = "rgInternalPageTransition";
-const INTERNAL_ENTRY_CLASS = "is-page-entering";
-const ENTRY_IMAGE_WAIT_TIMEOUT_MS = 700;
-const cameFromInternalTransition = (() => {
-  try {
-    const shouldSkipEntry = window.sessionStorage.getItem(INTERNAL_TRANSITION_KEY) === "1";
+const pageTransitionDuration = 380;
+const pageTransitionStorageKey = "recovery-and-grief-page-transition";
+const supportsViewTransitions =
+  !reduceMotionQuery.matches &&
+  typeof document.startViewTransition === "function" &&
+  typeof CSS !== "undefined" &&
+  typeof CSS.supports === "function" &&
+  CSS.supports("view-transition-name: page-masthead");
 
-    if (shouldSkipEntry) {
-      window.sessionStorage.removeItem(INTERNAL_TRANSITION_KEY);
-    }
-
-    return shouldSkipEntry;
-  } catch (error) {
-    return false;
-  }
-})();
-
-const waitForImageReady = (image) => {
-  if (!image) {
-    return Promise.resolve();
-  }
-
-  if (image.complete && image.naturalWidth > 0) {
-    if (typeof image.decode === "function") {
-      return image.decode().catch(() => {});
-    }
-
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve) => {
-    const finish = () => {
-      image.removeEventListener("load", finish);
-      image.removeEventListener("error", finish);
-      resolve();
-    };
-
-    image.addEventListener("load", finish, { once: true });
-    image.addEventListener("error", finish, { once: true });
-  });
-};
-
-const getCriticalEntryImages = () => {
-  const topBoundary = window.innerHeight * 1.15;
-
-  return [...document.querySelectorAll("main img")]
-    .filter((image) => {
-      const rect = image.getBoundingClientRect();
-
-      return rect.top < topBoundary && rect.bottom > -48;
-    })
-    .slice(0, 2);
-};
-
-const waitForCriticalEntryImages = () => {
-  const criticalImages = getCriticalEntryImages();
-
-  if (!criticalImages.length) {
-    return Promise.resolve();
-  }
-
-  return Promise.race([
-    Promise.all(criticalImages.map(waitForImageReady)),
-    new Promise((resolve) => {
-      window.setTimeout(resolve, ENTRY_IMAGE_WAIT_TIMEOUT_MS);
-    }),
-  ]);
-};
-
-const setupPageTransitions = () => {
-  if (reduceMotionQuery.matches) {
+const setTransitionName = (element, name) => {
+  if (!element || reduceMotionQuery.matches) {
     return;
   }
 
-  const links = [...document.querySelectorAll('a[href]')];
+  element.style.viewTransitionName = name;
+};
 
-  links.forEach((link) => {
-    link.addEventListener("click", (event) => {
+const setupSharedElementTransitions = () => {
+  setTransitionName(document.querySelector(".brand-shell"), "site-chrome");
+  setTransitionName(document.querySelector(".page-hero, .hero-stage"), "page-masthead");
+
+  const featureMedia = document.querySelector(
+    [
+      ".connect-band__image img",
+      ".team-hero-collage__frame--primary img",
+      ".path-feature-media",
+      ".content-card.wide-card",
+      ".hero-path-grid",
+    ].join(", ")
+  );
+
+  setTransitionName(featureMedia, "page-feature-media");
+};
+
+const getStoredTransitionState = () => {
+  try {
+    return JSON.parse(sessionStorage.getItem(pageTransitionStorageKey) || "null");
+  } catch {
+    return null;
+  }
+};
+
+const clearStoredTransitionState = () => {
+  try {
+    sessionStorage.removeItem(pageTransitionStorageKey);
+  } catch {}
+};
+
+const setupPageTransitionFallback = () => {
+  document.body.classList.remove(
+    "has-page-transition-fallback",
+    "is-page-entering",
+    "is-page-enter-active",
+    "is-page-leaving"
+  );
+
+  if (reduceMotionQuery.matches || supportsViewTransitions) {
+    clearStoredTransitionState();
+    return;
+  }
+
+  document.body.classList.add("has-page-transition-fallback");
+
+  const storedState = getStoredTransitionState();
+  const isFreshTransition =
+    storedState &&
+    typeof storedState.timestamp === "number" &&
+    Date.now() - storedState.timestamp < 2500;
+
+  if (isFreshTransition) {
+    document.body.classList.add("is-page-entering");
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        document.body.classList.add("is-page-enter-active");
+      });
+    });
+
+    window.setTimeout(() => {
+      document.body.classList.remove("is-page-entering", "is-page-enter-active");
+    }, pageTransitionDuration + 180);
+  }
+
+  clearStoredTransitionState();
+
+  let isNavigating = false;
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      const link = event.target.closest("a[href]");
+
+      if (!link || isNavigating || event.defaultPrevented) {
+        return;
+      }
+
       if (
-        event.defaultPrevented ||
         event.button !== 0 ||
         event.metaKey ||
         event.ctrlKey ||
         event.shiftKey ||
-        event.altKey
+        event.altKey ||
+        link.target === "_blank" ||
+        link.hasAttribute("download")
       ) {
-        return;
-      }
-
-      const href = link.getAttribute("href");
-
-      if (!href || href.startsWith("#") || link.target === "_blank" || link.hasAttribute("download")) {
         return;
       }
 
       const destination = new URL(link.href, window.location.href);
-      const current = new URL(window.location.href);
+      const isPageNavigation =
+        destination.pathname.endsWith(".html") || destination.pathname.endsWith("/");
+      const isSamePageAnchor =
+        destination.pathname === window.location.pathname &&
+        destination.search === window.location.search &&
+        Boolean(destination.hash);
 
       if (
-        destination.origin !== current.origin ||
-        destination.pathname === current.pathname && destination.hash ||
-        !destination.pathname.endsWith(".html")
+        destination.origin !== window.location.origin ||
+        !["http:", "https:"].includes(destination.protocol) ||
+        !isPageNavigation ||
+        isSamePageAnchor ||
+        (destination.pathname === window.location.pathname &&
+          destination.search === window.location.search) ||
+        link.getAttribute("href")?.startsWith("#")
       ) {
         return;
       }
 
+      isNavigating = true;
       event.preventDefault();
+
       try {
-        window.sessionStorage.setItem(INTERNAL_TRANSITION_KEY, "1");
-      } catch (error) {
-        // Ignore storage errors and continue with the transition.
-      }
-      document.body.classList.add("is-page-exiting");
+        sessionStorage.setItem(
+          pageTransitionStorageKey,
+          JSON.stringify({
+            timestamp: Date.now(),
+          })
+        );
+      } catch {}
+
+      document.body.classList.add("is-page-leaving");
+
       window.setTimeout(() => {
-        window.location.href = destination.href;
-      }, 240);
-    });
-  });
-};
+        window.location.assign(destination.href);
+      }, pageTransitionDuration - 20);
+    },
+    true
+  );
 
-const setupPageReveals = () => {
-  if (reduceMotionQuery.matches || cameFromInternalTransition) {
-    return;
-  }
-
-  const revealTargets = [
-    ...document.querySelectorAll("main > *"),
-    ...document.querySelectorAll(".site-footer"),
-  ];
-
-  revealTargets.forEach((element, index) => {
-    element.classList.add("page-reveal");
-    element.style.setProperty("--reveal-delay", `${80 + index * 70}ms`);
-  });
-};
-
-const setupInternalEntryTransition = () => {
-  if (reduceMotionQuery.matches || !cameFromInternalTransition) {
-    document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
-    return;
-  }
-
-  window.requestAnimationFrame(() => {
-    window.requestAnimationFrame(() => {
-      waitForCriticalEntryImages().finally(() => {
-        document.documentElement.classList.remove(INTERNAL_ENTRY_CLASS);
-      });
-    });
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      document.body.classList.remove("is-page-leaving");
+      isNavigating = false;
+    }
   });
 };
 
@@ -411,9 +417,8 @@ const syncSiteNavWidth = () => {
   document.documentElement.style.setProperty("--site-nav-width", `${width}px`);
 };
 
-setupInternalEntryTransition();
-setupPageTransitions();
-setupPageReveals();
+setupSharedElementTransitions();
+setupPageTransitionFallback();
 setupHomeMotion();
 syncSiteNavWidth();
 

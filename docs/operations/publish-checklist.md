@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Local Testing
 
@@ -12,26 +12,26 @@ Audited against the website source on April 11, 2026.
 
 ## Content And Routing
 
-- Confirm homepage "Explore More Resources" card routes to `resources.html`
+- Confirm homepage "Explore More Resources" still routes to `resources.html`
 - Confirm `resources.html` still routes visitors into `other-paths-to-recovery.html`
-- Confirm `connect.html` still links to both email and the Request Help form
-- Confirm `groups.html` still links to both the Support Group Directory and group-support email
-- Replace all intended public `href="#"` destinations before launch
-- Resolve the Tavyn media placeholder or intentionally reframe it
-- Replace Leslie's `202x` placeholder
-- Decide the final public role of `help-others.html`
+- Confirm `connect.html` still links to both email and the SADOD Request Help form
+- Confirm the global "Request Grief Support" links still point where intended
+- Confirm `groups.html` still presents the support-group pathway clearly
+- Confirm `crisis-support.html` still routes urgent visitors to 911 or 988 guidance
+- Replace Leslie's `202x` before production if approved copy is available
+- Confirm `help-others.html` still matches the current product decision
 
 ## Footer And Trust Signals
 
 - Confirm SADOD and TSWR masthead logos point to the correct sites
-- Confirm footer partner/social links are either real or intentionally removed
+- Confirm TSWR social links use the intended public destinations
 - Confirm PSCP contact text remains accurate
 
 ## Accessibility And Responsive Review
 
 - Check desktop, tablet, and mobile widths
 - Confirm keyboard navigation and visible focus states
-- Confirm no buttons or card labels overflow awkwardly
+- Confirm transitions feel calm and do not break reduced-motion mode
 - Confirm page titles and hero sections remain readable at all breakpoints
 
 ## Build And Deployment

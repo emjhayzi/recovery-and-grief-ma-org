@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Purpose
 
@@ -21,16 +21,16 @@ Update docs after the source changes, not before.
 ## Project Model
 
 - static HTML, CSS, and JavaScript
-- 10 public pages plus `design-lab.html`
-- local Geneva font asset instead of a required Google Fonts dependency
+- 11 public pages plus `design-lab.html`
+- local Geneva font asset instead of an external font dependency
 - Node script used to regenerate `publish/`
-- Git/GitHub-backed deployment path
+- Git and GitHub-backed deployment path
 
 ## Editing Workflow
 
 1. Edit the relevant page or shared asset.
 2. If the change affects site-wide layout or styling, update `assets/css/styles.css`.
-3. If the change affects navigation or transitions, update `assets/js/script.js`.
+3. If the change affects navigation, motion, or transitions, update `assets/js/script.js`.
 4. If the change affects project state, update `docs/agile/single-source-of-truth.md`.
 5. Sync any affected supporting docs in the same workstream.
 
@@ -58,9 +58,9 @@ Before publishing:
 
 1. click all internal links
 2. test the homepage pathway cards
-3. test the Request Help and support-group routes
-4. review mobile and desktop layouts
-5. check current public placeholder/destination gaps
+3. test the support-request, support-group, and crisis routes
+4. review desktop, tablet, and mobile layouts
+5. review page transitions and reduced-motion behavior
 6. complete `docs/operations/qa-smoke-checklist.md`
 7. complete `docs/operations/publish-checklist.md`
 
@@ -75,16 +75,8 @@ Before publishing:
 
 ## Current Watch Items
 
-- crisis CTA placeholders
-- TSWR social placeholders
-- Tavyn video placeholder
-- Leslie `202x` placeholder
+- Leslie's `202x`
 - final decision on `help-others.html`
-
-## Handoff Minimum
-
-- website source files
-- this runbook
-- publish checklist
-- QA checklist
-- single-source-of-truth tracker
+- support-request route consistency
+- TSWR TikTok and LinkedIn validation
+- staging and production deployment settings

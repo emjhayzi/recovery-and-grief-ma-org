@@ -1,6 +1,6 @@
 # Site Brief
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Site Purpose
 
@@ -28,17 +28,17 @@ The site should feel:
 
 ## Visual Direction
 
-- warm neutrals and teal accents
-- soft cards and editorial blocks
-- co-branded partner presence without overwhelming the page
-- clear route choices from the homepage
+- warm neutrals with blue and teal accents
+- editorial cards and image-led content bands
+- co-branded partner presence without overpowering the site
+- subtle page transitions instead of hard page cuts
 - stable, mobile-friendly layouts
 
 ## Current Page Goals
 
 ### Home
 
-Confirm "you are not alone" quickly and route visitors into six clear choices:
+Confirm "You Are Not Alone" quickly and route visitors into six clear choices:
 
 - Learn About Peer Grief Support
 - Connect with a Peer Grief Helper
@@ -47,23 +47,21 @@ Confirm "you are not alone" quickly and route visitors into six clear choices:
 - Explore More Resources
 - Volunteer to Help Others
 
-The Explore More Resources card should first land on `resources.html`, then route visitors into `other-paths-to-recovery.html`.
-
 ### Who We Are
 
-Build trust through team stories, lived experience, and partner context.
+Build trust through lived experience, team stories, and partner context.
 
 ### What We Do
 
-Explain what peer grief support is and invite visitors into direct connection or group support.
+Explain how peer grief support works and why lived experience matters.
 
 ### Direct Connection
 
-Offer the clearest route to one-on-one support through email and the Request Help form.
+Offer the clearest route to one-on-one support through email and the SADOD Request Help form.
 
 ### Support Groups
 
-Explain what support groups feel like and point visitors either to the live directory or the group-support email route.
+Explain what support groups feel like and help visitors understand what happens in a group.
 
 ### Your Path
 
@@ -79,12 +77,15 @@ Stay public as a short bridge page while the fuller resource directory lives und
 
 ### Help Others
 
-Hold space for a future volunteer pathway without pretending the workflow is live yet.
+Signal a future volunteer pathway without pretending the workflow is live yet.
 
-## Current Open Content Gaps
+### Crisis Support
 
-- crisis CTA destination
-- TSWR social destinations
-- Tavyn video destination
-- Leslie bio year placeholder
-- final public decision on the volunteer placeholder page
+Provide immediate, clear guidance for urgent situations and route people to 911 or 988 when appropriate.
+
+## Current Open Content Questions
+
+- Leslie's `202x` year in `who-we-are.html`
+- whether `help-others.html` should stay public in its current state
+- whether the Google document support route and the SADOD Request Help form should be unified
+- whether the current TSWR TikTok and LinkedIn URLs are the intended public destinations

@@ -1,13 +1,13 @@
 # Single Source Of Truth
 
-Implementation audit date: April 11, 2026
+Implementation audit date: April 12, 2026
 
 This file is the master planning record for the Recovery and Grief website.
 
 Important rule:
 
 - the website source files are the source of truth for implemented behavior, copy, routes, and UI
-- this file is the source of truth for project status, open issues, and next priorities
+- this file is the source of truth for current project status, open questions, and next priorities
 
 ## Snapshot
 
@@ -15,7 +15,7 @@ Important rule:
 - Delivery model: custom static multi-page site
 - Repo: `emjhayzi/recovery-and-grief-ma-org`
 - Deployment model: GitHub-backed Cloudflare Pages using generated `publish/`
-- Current stage: source-verified refinement and launch-readiness cleanup
+- Current stage: source-aligned refinement with staging-ready publishing workflow
 
 ## Implementation Truth
 
@@ -23,33 +23,32 @@ Current public site structure in source:
 
 - `index.html`: homepage with six pathway cards
 - `about.html`: redirect page
-- `who-we-are.html`: team/story page with five profiles
+- `who-we-are.html`: team and lived-experience page with five profiles
 - `what-we-do.html`: peer grief support explanation page
-- `connect.html`: direct connection page with email plus Request Help form
-- `groups.html`: support groups page with directory button plus email route
-- `whole-person.html`: New Form / recovery page with two live video embeds and one pending Tavyn placeholder
-- `other-paths-to-recovery.html`: recovery-path directory
-- `resources.html`: short bridge page to the recovery-path directory
-- `help-others.html`: intentional placeholder page for a future volunteer path
+- `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `groups.html`: support groups page with three editorial content bands
+- `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn image/story block
+- `other-paths-to-recovery.html`: recovery-path directory page
+- `resources.html`: short bridge page into Other Paths to Recovery
+- `help-others.html`: intentional public future-state volunteer page
+- `crisis-support.html`: crisis support route for urgent help guidance
 
 Current shared behavior in source:
 
 - co-branded masthead with clickable SADOD and TSWR logos
 - shared stylesheet and shared JavaScript file
-- homepage hero headline reads "You are not alone" on one line
-- homepage partnership section is stacked vertically
-- footer is styled as a structured four-part row
+- calm page-to-page transitions with reduced-motion support
+- homepage hero headline reads "You Are Not Alone" on one line
+- shared footer support links route to a Google document and the crisis page
 - local Geneva font is used through `assets/fonts/GENEVA.TTF`
 - `publish/` is generated from source with `node scripts/build-publish.mjs`
 
 ## Open Items Confirmed In Source
 
-- crisis CTA links still use `href="#"`
-- TSWR social links in the footer still use `href="#"`
-- Tavyn story video on `whole-person.html` still needs a real URL or embed
-- Leslie bio in `who-we-are.html` still includes a `202x` placeholder year
-- `help-others.html` is still intentionally a future-state placeholder
-- `groups.html` still contains a source comment about a future Group Readings block
+- Leslie's bio in `who-we-are.html` still includes `202x`
+- `help-others.html` is still intentionally a public placeholder-style page
+- the global "Request Grief Support" link uses a Google document while `connect.html` separately links to `https://sadod.org/request-help`
+- TSWR social links are populated, but the TikTok and LinkedIn destinations should be verified before production use
 
 ## Status Summary
 
@@ -57,29 +56,29 @@ What is in good shape:
 
 - site architecture and navigation
 - homepage pathway-based entry points
-- direct support/contact route
-- support-group directory route
+- direct support, support-group, and crisis routes
 - populated Who We Are page
+- whole-person and recovery resource pathways
+- calm shared motion system
 - generated publish workflow
-- baseline operations and planning docs
+- supporting docs realigned to implemented behavior
 
 What is not final:
 
-- crisis-routing destination
-- TSWR social destinations
-- final Tavyn media
-- at least one remaining bio placeholder
-- final decision on the public volunteer page
-- final production launch/DNS lock
+- one visible `202x` content placeholder
+- final product decision on the public volunteer page
+- support-request route consistency
+- validation of TSWR social destinations
+- final staging and production verification
 
 ## Working Priorities
 
-1. Replace all `href="#"` destinations that are meant to go live
-2. Resolve the Tavyn story media block on `whole-person.html`
-3. Clear the remaining `202x` placeholder and any similar public placeholders
-4. Decide the final public role of `help-others.html`
-5. Run final QA on mobile, desktop, accessibility, and staging
-6. Confirm production hosting and DNS settings
+1. clear the remaining `202x` placeholder in Leslie's bio when the approved year is known
+2. decide whether `help-others.html` stays public, is hidden, or is fully built out
+3. decide whether the Google document support route and the SADOD Request Help form should be unified
+4. validate TSWR TikTok and LinkedIn URLs for public use
+5. run full staging QA after each significant website change
+6. confirm production hosting and DNS settings
 
 ## Current Decisions
 

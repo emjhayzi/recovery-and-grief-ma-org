@@ -24,6 +24,7 @@ Then inspect the website files:
 - other-paths-to-recovery.html
 - resources.html
 - help-others.html
+- crisis-support.html
 - assets/css/styles.css
 - assets/js/script.js
 
@@ -31,16 +32,17 @@ Please focus on:
 - information architecture
 - mobile layout risks
 - accessibility issues
-- trust/safety issues for a grieving audience
-- broken or placeholder destinations
-- footer/contact-route consistency
+- trust and safety issues for a grieving audience
+- transition polish and reduced-motion behavior
+- footer and contact-route consistency
 - anything that should be fixed before launch
 
 Important context:
 - The root website files are the implementation source of truth.
 - `resources.html` is intentionally a bridge page that routes into `other-paths-to-recovery.html`.
-- `help-others.html` is intentionally still a placeholder/future-state page.
-- Some public gaps remain, including placeholder crisis/TSWR social links and one pending Tavyn media block.
+- `help-others.html` is intentionally still a future-state public page.
+- The global support links currently use a Google document, while `connect.html` also links to the SADOD Request Help form.
+- Leslie's bio still contains `202x`.
 
 Please prioritize findings, risks, and practical recommendations over compliments.
 ```

@@ -1,6 +1,6 @@
 # Recovery and Grief Website
 
-Audited against the website source files on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 This repository contains the current custom static website for Recovery and Grief, a Massachusetts peer grief support site for people in recovery grieving a death caused by alcohol or other drugs.
 
@@ -9,31 +9,53 @@ This repository contains the current custom static website for Recovery and Grie
 Use this order when checking what is true:
 
 1. Root website files such as `index.html`, the other public `.html` pages, `assets/css/styles.css`, and `assets/js/script.js`
-2. `docs/agile/single-source-of-truth.md` for current project status and open items
-3. The rest of the docs for operations, product context, and planning
+2. `docs/agile/single-source-of-truth.md` for current project status, open questions, and operating guidance
+3. The rest of the docs for product context, operations, and planning support
 
 `publish/` is generated from the root source files. Do not hand-edit it.
 
 ## Current Site Map
 
-- `index.html`: homepage with a one-line "You are not alone" hero and six pathway cards
-- `about.html`: legacy redirect to `who-we-are.html`
-- `who-we-are.html`: team/story page with five profile sections
-- `what-we-do.html`: peer grief support explanation and welcome/ready CTA block
-- `connect.html`: direct connection page with email plus Request Help form links
-- `groups.html`: support group page with directory link plus email help route
-- `whole-person.html`: New Form / whole-person recovery page with two live video embeds and one pending Tavyn video placeholder
-- `other-paths-to-recovery.html`: recovery-path directory under Your Path
-- `resources.html`: short More Resources bridge page that routes visitors into Other Paths to Recovery
-- `help-others.html`: intentionally visible placeholder page for a future volunteer path
-- `design-lab.html`: internal design tool
+- `index.html`: homepage with the "You Are Not Alone" hero and six pathway cards
+- `about.html`: redirect to `who-we-are.html`
+- `who-we-are.html`: team and lived-experience page
+- `what-we-do.html`: peer grief support explanation page
+- `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `groups.html`: support groups page
+- `whole-person.html`: Your Path / NewForm page with two YouTube embeds and a Tavyn story image block
+- `other-paths-to-recovery.html`: recovery-path directory page
+- `resources.html`: short bridge page into Other Paths to Recovery
+- `help-others.html`: public future-facing volunteer placeholder page
+- `crisis-support.html`: crisis support page for urgent help guidance
+- `design-lab.html`: internal design exploration page
 
 ## Shared Files
 
-- `assets/css/styles.css`: shared design system, layout, motion, responsive rules, and page styling
-- `assets/js/script.js`: mobile navigation, page transitions, and homepage motion behavior
-- `assets/images/`: logos, hero photography, pathway cards, team images, and support imagery
+- `assets/css/styles.css`: shared design system, responsive layout, typography, motion, and component styling
+- `assets/js/script.js`: mobile navigation, dropdown behavior, homepage motion, scroll-to-top button, and page-to-page transitions
+- `assets/images/`: logos, hero photography, pathway cards, team photos, and editorial imagery
 - `scripts/build-publish.mjs`: regenerates `publish/` from the root website files
+
+## Current Website State
+
+Implemented in source right now:
+
+- shared co-branded masthead with outbound SADOD and TSWR logo links
+- homepage hero with six clear pathway cards
+- homepage partnership section beneath the hero
+- shared footer with support links, social links, and PSCP attribution
+- page-to-page transitions via the shared JavaScript/CSS motion layer
+- dedicated `crisis-support.html` route used by the global crisis links
+- whole-person page with two live YouTube embeds plus a Tavyn story image block
+- recovery directory page under `other-paths-to-recovery.html`
+- generated `publish/` build for Cloudflare Pages
+
+Still open in the source:
+
+- Leslie's bio on `who-we-are.html` still contains `202x`
+- `help-others.html` is still intentionally a public placeholder page
+- the global "Request Grief Support" link goes to a Google document, while `connect.html` also points to `https://sadod.org/request-help`
+- TSWR social links are populated, but the public TikTok and LinkedIn URLs should be validated before production use
 
 ## Preview
 
@@ -54,29 +76,6 @@ Helper scripts in the repo:
 - `Start Design Lab.cmd`
 - `Prepare Cloudflare Publish.cmd`
 
-## Current Website State
-
-Implemented in source right now:
-
-- shared co-branded masthead with clickable SADOD and TSWR logos
-- homepage hero rebuilt around six pathway cards
-- homepage partnership section stacked vertically
-- four-part footer layout styled as one structured row
-- direct connection page with live `connect@recoveryandgrief-MA.org` mailto and `https://sadod.org/request-help`
-- support group directory button plus `groups@recoveryandgrief-MA.org` route
-- resources bridge page pointing to `other-paths-to-recovery.html`
-- two live New Form / recovery video embeds on `whole-person.html`
-- generated `publish/` build for Cloudflare Pages
-
-Still unresolved in the source:
-
-- crisis CTA links still use `href="#"`
-- TSWR social links in the footer still use `href="#"`
-- Tavyn video block on `whole-person.html` still needs a real destination
-- `who-we-are.html` still contains a `202x` year placeholder in Leslie's bio
-- `help-others.html` is still a deliberate placeholder page
-- `groups.html` still carries a commented note for a future Group Readings block
-
 ## Publish Workflow
 
 Rebuild the deploy bundle from source with:
@@ -94,11 +93,3 @@ For the operational workflow, start with:
 - `docs/operations/runbook.md`
 - `docs/operations/publish-checklist.md`
 - `docs/operations/cloudflare-pages-staging.md`
-
-## Review Context
-
-For a second-opinion pass, use:
-
-- `CLAUDE-HANDOFF.md`
-- `docs/README.md`
-- `docs/reviews/claude-second-opinion-prompt.md`

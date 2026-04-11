@@ -2,13 +2,13 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Current Deployment Truth
 
 - root HTML files plus `assets/` are the source
 - `publish/` is generated from that source by `node scripts/build-publish.mjs`
-- Cloudflare Pages is the preferred staging/production platform
+- Cloudflare Pages is the preferred staging and production platform
 
 ## Recommended Build Settings
 
@@ -30,7 +30,7 @@ If the root website files change:
 
 1. Push the approved source changes
 2. Confirm Cloudflare Pages receives the new build
-3. Review the staging URL yourself first
+3. Review the staging URL first
 4. Run the smoke checklist
 5. Share staging for review
 6. Repeat until approved

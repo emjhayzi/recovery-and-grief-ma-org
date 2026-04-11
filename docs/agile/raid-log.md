@@ -2,17 +2,17 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Risks
 
 | ID | Risk | Impact | Mitigation |
 | --- | --- | --- | --- |
-| R1 | Crisis CTA stays unresolved | Visitors may hit a dead end in a sensitive moment | Replace all crisis placeholder links with the approved destination before launch |
-| R2 | TSWR social links remain placeholders | Footer trust may drop or feel unfinished | Add real destinations or remove the links intentionally |
-| R3 | Public placeholders remain too long | Site can feel incomplete or less trustworthy | Clear the Tavyn media gap and the remaining bio placeholder before launch |
-| R4 | Volunteer placeholder page causes confusion | Visitors may expect a workflow that does not exist yet | Make an explicit keep/hide/reframe decision for `help-others.html` |
-| R5 | Docs drift away from implementation again | Team may make decisions from stale assumptions | Update docs immediately after source changes |
+| R1 | The remaining `202x` stays public too long | The team page can feel unfinished | Replace it once the approved year is known |
+| R2 | The split between the Google document support route and the SADOD form confuses maintainers or visitors | Future edits may create inconsistent calls to action | Decide whether the split is intentional and document or unify it |
+| R3 | TSWR social URLs are not the intended public destinations | Footer trust may be weakened or links may go to the wrong place | Validate the current TikTok and LinkedIn URLs before production |
+| R4 | `help-others.html` stays in limbo | Visitors may expect a workflow that does not exist yet | Make an explicit keep, hide, or build-out decision |
+| R5 | Docs drift away from implementation again | Team decisions may be based on stale assumptions | Update docs immediately after source changes |
 
 ## Assumptions
 
@@ -27,19 +27,18 @@ Audited against the website source on April 11, 2026.
 
 | ID | Issue | Current Effect | Owner Needed |
 | --- | --- | --- | --- |
-| I1 | Crisis CTA destination not implemented | Public support CTA is not live yet | Product/program owner |
-| I2 | TSWR footer social links still use placeholders | Footer trust/social block is incomplete | Content/partner owner |
-| I3 | Tavyn media destination still missing | Whole-person page contains a visible placeholder block | Content owner |
-| I4 | Leslie bio still contains `202x` | Who We Are page still has a visible placeholder detail | Content owner |
-| I5 | Volunteer page intent is still open | Navigation includes a future-state page | Product owner |
-| I6 | Production deployment settings still need final verification | Launch path is documented but not yet locked | Maintainer |
+| I1 | Leslie bio still contains `202x` | One public section still reads as incomplete | Content owner |
+| I2 | Support-request routes are split | Global support links and `connect.html` do not point to the same destination | Product/content owner |
+| I3 | TSWR TikTok and LinkedIn URLs need confirmation | Footer social block may not be finalized for production use | Content/partner owner |
+| I4 | Volunteer page intent is still open | Navigation includes a future-state page | Product owner |
+| I5 | Production deployment settings still need final verification | Launch path is documented but not yet locked | Maintainer |
 
 ## Dependencies
 
 | ID | Dependency | Why It Matters |
 | --- | --- | --- |
-| D1 | Approved crisis-routing destination | Needed to replace the current placeholder CTA |
-| D2 | Approved TSWR social destinations or removal decision | Needed to finalize footer trust links |
-| D3 | Approved Tavyn media | Needed to complete `whole-person.html` |
-| D4 | Final content approval pass | Needed to clear remaining public placeholders |
-| D5 | Final Cloudflare/DNS access and configuration | Needed for production deployment |
+| D1 | Approved year for Leslie's bio | Needed to clear the visible placeholder |
+| D2 | Decision on support-request route strategy | Needed to keep CTAs consistent |
+| D3 | Confirmed TSWR public social URLs | Needed to finalize footer trust links |
+| D4 | Product decision on `help-others.html` | Needed to finalize navigation and page intent |
+| D5 | Final Cloudflare and DNS access/configuration | Needed for production deployment |

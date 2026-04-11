@@ -1,6 +1,6 @@
 # Website Maintenance Pricing Research
 
-Reference note updated on April 11, 2026.
+Reference note reviewed on April 12, 2026.
 
 This file is supporting market research only. It is not a source of truth for website implementation state.
 
@@ -15,7 +15,7 @@ Most publicly listed maintenance pricing online is still centered around WordPre
 That matters because a custom static website usually has:
 
 - fewer moving parts
-- fewer plugin/plugin-update issues
+- fewer plugin or update issues
 - lower security overhead
 - simpler hosting needs
 
