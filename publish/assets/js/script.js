@@ -393,10 +393,36 @@ const setupHomeMotion = () => {
   });
 };
 
+const syncSiteNavWidth = () => {
+  const siteNav = document.querySelector(".site-nav");
+
+  if (!siteNav || mobileNavQuery.matches) {
+    document.documentElement.style.removeProperty("--site-nav-width");
+    return;
+  }
+
+  const { width } = siteNav.getBoundingClientRect();
+
+  if (!width) {
+    document.documentElement.style.removeProperty("--site-nav-width");
+    return;
+  }
+
+  document.documentElement.style.setProperty("--site-nav-width", `${width}px`);
+};
+
 setupInternalEntryTransition();
 setupPageTransitions();
 setupPageReveals();
 setupHomeMotion();
+syncSiteNavWidth();
+
+window.addEventListener("resize", syncSiteNavWidth);
+window.addEventListener("load", syncSiteNavWidth);
+
+if (document.fonts?.ready) {
+  document.fonts.ready.then(syncSiteNavWidth).catch(() => {});
+}
 
 if (dropdownBtn && navDropdown && dropdownMenu) {
   dropdownBtn.addEventListener("click", (e) => {

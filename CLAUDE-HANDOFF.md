@@ -1,26 +1,25 @@
 # Claude Handoff
 
-Use this file as the starting point for a second-opinion review of the website project.
+Audited against the website source files on April 11, 2026.
+
+Use this file as the fastest orientation pass before reviewing the project.
 
 ## Project Goal
 
-Build a calm, clear, static website for Massachusetts peer grief support aimed at people in recovery grieving a death caused by alcohol or other drugs.
+Maintain and refine a calm, trustworthy static website for people in recovery grieving a substance-use-related death.
 
-## What Is In Scope Right Now
+## What The Website Currently Is
 
-- Static multi-page site (10 public pages)
-- Shared CSS and small JavaScript file
-- Co-branded SADOD + The Sun Will Rise header/footer
-- Per-page atmospheric hero backgrounds with Unsplash photography
-- An About Us section split into Who We Are and What We Do sub-pages
-- A rebuilt Direct Connections page with alternating image/text layout
-- Content drafts informed by v3-0 copy decks in the References folder
-- Local preview/testing through Python
+- Custom static multi-page site
+- Plain HTML, CSS, and a small amount of JavaScript
+- 10 public HTML pages plus `design-lab.html`
+- Shared co-branded masthead and shared footer styling
+- Git-tracked source with a generated `publish/` bundle
 
-## Main Files
+## Public Pages
 
 - `index.html`
-- `about.html`
+- `about.html` redirect
 - `who-we-are.html`
 - `what-we-do.html`
 - `connect.html`
@@ -29,107 +28,66 @@ Build a calm, clear, static website for Massachusetts peer grief support aimed a
 - `other-paths-to-recovery.html`
 - `resources.html`
 - `help-others.html`
+
+## Current Source Truth Highlights
+
+- homepage hero uses a one-line "You are not alone" heading and six pathway cards
+- homepage partnership section is stacked, not side-by-side
+- homepage footer is structured as four columns with centered column content
+- `connect.html` offers both `connect@recoveryandgrief-MA.org` and the live SADOD Request Help form
+- `groups.html` offers both a live Support Group Directory link and `groups@recoveryandgrief-MA.org`
+- `what-we-do.html` ends with a combined welcome / ready CTA block
+- `who-we-are.html` includes five team/profile sections with real images and long-form copy
+- `whole-person.html` contains two live YouTube embeds plus one preserved Tavyn placeholder block
+- `resources.html` is intentionally a short bridge page into `other-paths-to-recovery.html`
+- `help-others.html` is intentionally still a placeholder/future-state page
+
+## Known Gaps In The Source
+
+- crisis CTA links still point to `#`
+- TSWR social links in the footer still point to `#`
+- Tavyn story video destination is still missing on `whole-person.html`
+- Leslie's bio still includes a `202x` placeholder year on `who-we-are.html`
+- `help-others.html` still needs a final publish/hide/reframe decision
+- `groups.html` still contains a comment about a future Group Readings block
+
+## Main Files
+
 - `assets/css/styles.css`
 - `assets/js/script.js`
+- `scripts/build-publish.mjs`
+- `docs/agile/single-source-of-truth.md`
+- `docs/operations/runbook.md`
+- `docs/product/content-inventory.md`
 
-## Source Material
-
-Planning docs and original source assets are in `References/`.
-
-The two active website logos are copied into:
-
-- `assets/images/sadod-logo.png`
-- `assets/images/tswr-logo.png`
-
-## Current State
-
-The site is intentionally a first structured draft, not a finished launch build.
-
-Recent design/interaction notes from the latest pass:
-
-- the About Us section was split into Who We Are and What We Do, with a navigation dropdown
-- connect.html was rebuilt from the v3-0 Direct Connection copy deck with alternating image/text bands, a prominent email CTA, and program teaser sections
-- the fuller recovery-path directory was moved into `other-paths-to-recovery.html` under the Your Path section
-- `resources.html` was turned into a temporary bridge page for the More Resources route
-- per-page atmospheric hero backgrounds use real Unsplash photography with CSS gradient fade overlays
-- the header uses a three-column CSS grid with SADOD and TSWR logos flanking centered brand content
-- both partner logos in the masthead now link out to their respective websites across desktop and mobile
-- the masthead was lightened visually and returned to normal document flow after sticky/overlay tests obscured page titles
-- navigation was redesigned to pipe-separated links on a single row
-- body copy in `main` is currently standardized to flush-left alignment for consistency review
-- page transition animations, staggered IntersectionObserver reveals, card drift-in, and scroll parallax are all in place
-- the homepage hero was reworked as six pathway cards integrated directly into the hero stage
-- the What We Do closing area now combines the welcome and ready messaging into one shared section
-- the full-site background blends SADOD-inspired cool tones on the left with TSWRF-inspired warm sunrise tones on the right
-
-Already done:
-
-- 10-page site structure with About Us dropdown split
-- recovery-path directory rehomed under Your Path
-- shared visual system with per-page hero atmospheres
-- responsive nav with pipe-separated links
-- co-branded logo integration (pixel-edited SADOD logo + TSWR logo)
-- alternating image/text layout on Direct Connections page
-- page-to-page transitions and staggered section reveals
-- basic accessibility support
-- basic SEO meta tags
-- Python-based local preview workflow
-- Cloudflare Pages staging pipeline
-
-Still intentionally unfinished:
-
-- final team bios and photos
-- final support-group schedule or registration flow
-- final outbound resource links
-- video embeds for whole-person page
-- some placeholder copy in teaser sections pending client approval
-- production hosting/domain setup
-- Request Help form destination
-
-## What Needs Review
-
-Please review for:
-
-- broken or weak information architecture
-- visual inconsistencies
-- layout issues on mobile
-- accessibility issues
-- misleading placeholder language
-- missing trust signals
-- copy that feels unclear, clinical, or too generic
-- SEO gaps for a simple static site
-- anything that should be reorganized before more content is added
-
-## How To Preview Locally
-
-From the project root:
+## How To Preview
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
-There are also two clickable helper scripts in the project root:
+Helper scripts also exist for quick start/stop.
 
-- `Start Website Test.cmd`
-- `Stop Website Test.cmd`
+## What To Review
 
-## Helpful Project Docs
+Please prioritize:
+
+- broken or misleading information architecture
+- mobile layout issues
+- accessibility risks
+- trust/safety issues for a grieving audience
+- placeholder content that should not remain public
+- footer / CTA / contact-route inconsistencies
+- copy that feels generic, clinical, or unclear
+
+## Best Context Docs
 
 - `README.md`
 - `docs/README.md`
+- `docs/agile/single-source-of-truth.md`
 - `docs/agile/project-status.md`
 - `docs/product/site-brief.md`
-- `docs/product/content-inventory.md`
 - `docs/operations/publish-checklist.md`
 - `docs/operations/qa-smoke-checklist.md`
-
-## Important Context
-
-Some sections are placeholders on purpose. Please distinguish between:
-
-- true problems or regressions
-- acceptable placeholders that are waiting on real content
-
-The most valuable feedback will focus on structure, clarity, usability, accessibility, and whether the site feels trustworthy and emotionally safe.

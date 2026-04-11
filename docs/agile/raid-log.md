@@ -2,51 +2,44 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
+Audited against the website source on April 11, 2026.
+
 ## Risks
 
 | ID | Risk | Impact | Mitigation |
 | --- | --- | --- | --- |
-| R1 | Contact workflow is not finalized | Visitors may hit a dead end at the most important moment | Lock one primary contact path before launch |
-| R2 | Placeholder content remains visible too long | Trust may drop and the site may feel unfinished | Track all placeholders in backlog and remove before launch |
-| R3 | Final deployment configuration stays unresolved | Launch timing may slip late in the process | Confirm Cloudflare Pages, GitHub, and DNS settings during launch-readiness sprint |
-| R4 | Sensitive audience may be affected by unclear language | Confusing or clinical wording could reduce engagement | Run final tone review with stakeholder approval |
-| R5 | Git workflow remains lightweight and single-maintainer | Publish history or rollback discipline may be weaker than ideal if updates are rushed | Keep regular commits and follow the publish checklist before launch changes |
-| R6 | Cloudflare settings may not fully match the documented workflow | Staging or production deploys may not behave as expected | Verify live Pages settings before final launch and record them in the deployment docs |
-| R7 | Project-tracking docs drift apart again | Team may make decisions from stale status notes | Update `single-source-of-truth.md` first, then sync supporting docs in the same commit |
+| R1 | Crisis CTA stays unresolved | Visitors may hit a dead end in a sensitive moment | Replace all crisis placeholder links with the approved destination before launch |
+| R2 | TSWR social links remain placeholders | Footer trust may drop or feel unfinished | Add real destinations or remove the links intentionally |
+| R3 | Public placeholders remain too long | Site can feel incomplete or less trustworthy | Clear the Tavyn media gap and the remaining bio placeholder before launch |
+| R4 | Volunteer placeholder page causes confusion | Visitors may expect a workflow that does not exist yet | Make an explicit keep/hide/reframe decision for `help-others.html` |
+| R5 | Docs drift away from implementation again | Team may make decisions from stale assumptions | Update docs immediately after source changes |
 
 ## Assumptions
 
 | ID | Assumption | Validation Needed |
 | --- | --- | --- |
-| A1 | A static site is sufficient for the current program phase | Confirm no advanced workflow requires a backend |
-| A2 | Squarespace can remain the registrar while the website is hosted as a custom static build | Validate once the final DNS records are configured |
-| A3 | Final program content will be approved in manageable batches | Confirm approval owner and turnaround time |
-| A4 | Current page structure does not need a major redesign | Validate after stakeholder walkthrough |
-| A5 | Cloudflare Pages is still the preferred production path | Validate once final deployment settings are confirmed |
+| A1 | Static hosting remains the right platform | Confirm no late-stage feature requires a backend |
+| A2 | `resources.html` should remain a bridge page for now | Validate after stakeholder review |
+| A3 | `help-others.html` can remain visible until a final decision is made | Validate before launch |
+| A4 | Cloudflare Pages remains the production path | Validate against live project settings before deployment |
 
 ## Issues
 
 | ID | Issue | Current Effect | Owner Needed |
 | --- | --- | --- | --- |
-| I1 | Direct contact details are partially implemented | Email CTA is live on connect.html; phone/text/form path still undecided | Product/program owner |
-| I2 | Team bios and real trust details are missing | Who We Are page has placeholders | Content lead |
-| I3 | Group schedule or registration path is still not final | Group page has a clearer route but still lacks locked participation guidance | Program lead |
-| I4 | Resource approval is not fully final | Resource page is populated but approval/curation still needs confirmation | Content lead |
-| I5 | Volunteer page intent is unresolved | Navigation may promise more than exists today | Product owner |
-| I6 | Cloudflare Pages live configuration is not verified in this documentation pass | Deployment truth is documented, but platform settings still need direct confirmation | Maintainer |
-| I7 | Crisis CTA destination is still placeholder-level | Footer treatment exists, but the real help route is not yet approved | Product/program owner |
+| I1 | Crisis CTA destination not implemented | Public support CTA is not live yet | Product/program owner |
+| I2 | TSWR footer social links still use placeholders | Footer trust/social block is incomplete | Content/partner owner |
+| I3 | Tavyn media destination still missing | Whole-person page contains a visible placeholder block | Content owner |
+| I4 | Leslie bio still contains `202x` | Who We Are page still has a visible placeholder detail | Content owner |
+| I5 | Volunteer page intent is still open | Navigation includes a future-state page | Product owner |
+| I6 | Production deployment settings still need final verification | Launch path is documented but not yet locked | Maintainer |
 
 ## Dependencies
 
 | ID | Dependency | Why It Matters |
 | --- | --- | --- |
-| D1 | Approved contact details and response workflow | Needed to complete homepage, connect page, and footer |
-| D2 | Approved bios, logos, and partner details | Needed to complete trust signals and about page |
-| D3 | Approved resource list | Needed to complete resources page |
-| D4 | Final Cloudflare Pages and DNS access | Needed for deployment and final checklist |
-| D5 | Final review on tone and language | Needed before publish for audience safety |
-| D6 | Approved crisis-routing decision | Needed before the footer crisis CTA can become a live emergency/support route |
-
-## PM Guidance
-
-Review this log at least once per sprint. If any item changes scope, ownership, or urgency, update both this log and the product backlog.
+| D1 | Approved crisis-routing destination | Needed to replace the current placeholder CTA |
+| D2 | Approved TSWR social destinations or removal decision | Needed to finalize footer trust links |
+| D3 | Approved Tavyn media | Needed to complete `whole-person.html` |
+| D4 | Final content approval pass | Needed to clear remaining public placeholders |
+| D5 | Final Cloudflare/DNS access and configuration | Needed for production deployment |

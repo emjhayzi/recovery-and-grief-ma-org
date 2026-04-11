@@ -1,111 +1,104 @@
 # Recovery and Grief Website
 
-Static website draft for a Massachusetts peer grief support site focused on people in recovery grieving a death from alcohol or other drugs.
+Audited against the website source files on April 11, 2026.
 
-## Project Structure
+This repository contains the current custom static website for Recovery and Grief, a Massachusetts peer grief support site for people in recovery grieving a death caused by alcohol or other drugs.
 
-- `index.html` and the other root `.html` files: 10 public pages plus the internal design lab
-- `assets/css/styles.css`: shared visual system and responsive styles
-- `assets/js/script.js`: mobile navigation and current-page state
-- `publish/`: generated deploy-ready website files for staging/hosting
-- `scripts/build-publish.mjs`: cross-platform publish build for Cloudflare Pages and local staging prep
-- `CLAUDE-HANDOFF.md`: concise review context for a second-opinion pass
-- `docs/README.md`: documentation hub for Agile, product, operations, and review docs
-- `docs/agile/`: project charter, status, backlog, roadmap, and RAID log
-- `docs/product/`: site brief and content inventory
-- `docs/operations/`: runbook, publish checklist, hosting recommendation, and Cloudflare staging guide
-- `docs/reviews/`: external review prompt
-- `docs/research/`: supporting research
-- `References/`: source planning documents, v3-0 copy decks, and visual reference material
+## Source Of Truth
+
+Use this order when checking what is true:
+
+1. Root website files such as `index.html`, the other public `.html` pages, `assets/css/styles.css`, and `assets/js/script.js`
+2. `docs/agile/single-source-of-truth.md` for current project status and open items
+3. The rest of the docs for operations, product context, and planning
+
+`publish/` is generated from the root source files. Do not hand-edit it.
+
+## Current Site Map
+
+- `index.html`: homepage with a one-line "You are not alone" hero and six pathway cards
+- `about.html`: legacy redirect to `who-we-are.html`
+- `who-we-are.html`: team/story page with five profile sections
+- `what-we-do.html`: peer grief support explanation and welcome/ready CTA block
+- `connect.html`: direct connection page with email plus Request Help form links
+- `groups.html`: support group page with directory link plus email help route
+- `whole-person.html`: New Form / whole-person recovery page with two live video embeds and one pending Tavyn video placeholder
+- `other-paths-to-recovery.html`: recovery-path directory under Your Path
+- `resources.html`: short More Resources bridge page that routes visitors into Other Paths to Recovery
+- `help-others.html`: intentionally visible placeholder page for a future volunteer path
+- `design-lab.html`: internal design tool
+
+## Shared Files
+
+- `assets/css/styles.css`: shared design system, layout, motion, responsive rules, and page styling
+- `assets/js/script.js`: mobile navigation, page transitions, and homepage motion behavior
+- `assets/images/`: logos, hero photography, pathway cards, team images, and support imagery
+- `scripts/build-publish.mjs`: regenerates `publish/` from the root website files
 
 ## Preview
 
-For a quick file preview, open [index.html](index.html) in a browser.
-
-For a more realistic local website preview:
+Quick local preview:
 
 ```powershell
-cd "<project-root>"
 python -m http.server 8000
 ```
 
-Then open [http://localhost:8000](http://localhost:8000).
+Then open `http://localhost:8000`.
 
-Press `Ctrl+C` in that terminal to stop the local server.
+Helper scripts in the repo:
 
-If you want clickable shortcuts instead of typing commands, use:
+- `Start Website Test.cmd`
+- `Start Website Test.command`
+- `Stop Website Test.cmd`
+- `Stop Website Test.command`
+- `Start Design Lab.cmd`
+- `Prepare Cloudflare Publish.cmd`
 
-- [Start Website Test.cmd](Start%20Website%20Test.cmd)
-- [Start Design Lab.cmd](Start%20Design%20Lab.cmd)
-- [Stop Website Test.cmd](Stop%20Website%20Test.cmd)
-- [Prepare Cloudflare Publish.cmd](Prepare%20Cloudflare%20Publish.cmd)
+## Current Website State
 
-To refresh the deploy-ready staging bundle directly from source files, you can also run:
+Implemented in source right now:
+
+- shared co-branded masthead with clickable SADOD and TSWR logos
+- homepage hero rebuilt around six pathway cards
+- homepage partnership section stacked vertically
+- four-part footer layout styled as one structured row
+- direct connection page with live `connect@recoveryandgrief-MA.org` mailto and `https://sadod.org/request-help`
+- support group directory button plus `groups@recoveryandgrief-MA.org` route
+- resources bridge page pointing to `other-paths-to-recovery.html`
+- two live New Form / recovery video embeds on `whole-person.html`
+- generated `publish/` build for Cloudflare Pages
+
+Still unresolved in the source:
+
+- crisis CTA links still use `href="#"`
+- TSWR social links in the footer still use `href="#"`
+- Tavyn video block on `whole-person.html` still needs a real destination
+- `who-we-are.html` still contains a `202x` year placeholder in Leslie's bio
+- `help-others.html` is still a deliberate placeholder page
+- `groups.html` still carries a commented note for a future Group Readings block
+
+## Publish Workflow
+
+Rebuild the deploy bundle from source with:
 
 ```powershell
 node scripts/build-publish.mjs
 ```
 
-The `publish/` folder is generated from source. It should not be hand-edited directly.
+That refreshes `publish/` from the current root HTML files plus `assets/`.
 
-## Design Lab
+For the operational workflow, start with:
 
-For visual tuning without editing the main CSS directly, open:
-
-- [design-lab.html](design-lab.html)
-
-For the best live-preview behavior, use:
-
-- [Start Design Lab.cmd](Start%20Design%20Lab.cmd)
-
-The Design Lab is intended as an internal staging/design tool, not a final public-facing page.
-
-## Current Status
-
-The project has:
-
-- 10 public pages with a shared visual system
-- per-page atmospheric hero backgrounds using real Unsplash photography
-- an About Us section split into Who We Are and What We Do
-- `other-paths-to-recovery.html` now holds the fuller recovery-path directory
-- `resources.html` now acts as a temporary More Resources bridge page
-- a rebuilt Direct Connections page with alternating image/text layout and a prominent email CTA
-- clickable partner logos in the masthead across desktop and mobile
-- a lighter non-sticky masthead that stays in normal document flow
-- body copy normalized to flush-left alignment across `main`
-- page transition animations and staggered reveal effects
-- basic accessibility support and page-level SEO metadata
-- a Cloudflare Pages staging pipeline
-
-The project still needs final team bios, group schedules, resource links, some placeholder copy approvals, and production hosting/domain decisions.
-
-## GitHub To Cloudflare Staging
-
-The repo is set up so Cloudflare Pages can rebuild `publish/` from source on every Git push.
-
-There is also a GitHub Actions fallback that rebuilds and commits the `publish/` bundle after source changes. This keeps staging assets current even if the connected Cloudflare Pages project is still deploying the committed `publish/` folder.
-
-Recommended Cloudflare Pages settings:
-
-- Framework preset: `None`
-- Production branch: `main` or your chosen staging branch
-- Build command: `node scripts/build-publish.mjs`
-- Build output directory: `publish`
-
-With the repo connected in Cloudflare Pages, each push to the configured branch will trigger a fresh staging deploy automatically.
-
-For the current PM-style status snapshot, start with:
-
-- `docs/agile/project-status.md`
-- `docs/agile/product-backlog.md`
+- `docs/getting-oriented.md`
+- `docs/agile/single-source-of-truth.md`
 - `docs/operations/runbook.md`
+- `docs/operations/publish-checklist.md`
 - `docs/operations/cloudflare-pages-staging.md`
-- `docs/operations/qa-smoke-checklist.md`
 
-## Second Opinion
+## Review Context
 
-If you want another model to review the project quickly, start with:
+For a second-opinion pass, use:
 
-- [CLAUDE-HANDOFF.md](CLAUDE-HANDOFF.md)
-- [docs/README.md](docs/README.md)
-- [docs/reviews/claude-second-opinion-prompt.md](docs/reviews/claude-second-opinion-prompt.md)
+- `CLAUDE-HANDOFF.md`
+- `docs/README.md`
+- `docs/reviews/claude-second-opinion-prompt.md`

@@ -2,142 +2,54 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
+Status audited against the website source on April 11, 2026.
+
 ## Snapshot
 
-- Date: April 8, 2026
-- Stage: accelerated launch prep
-- Delivery state: structurally strong build with the main architecture in place, but still carrying launch-blocking content and operations decisions
+- Stage: refinement and launch-readiness cleanup
+- Delivery state: the website is structurally complete, with the remaining work concentrated in a small number of content and destination gaps
 
 ## Current Build Summary
 
-The project is a static multi-page website with:
+The source currently contains:
 
-- 10 public HTML pages (plus 1 internal design lab)
+- 10 public HTML pages
+- 1 internal design-lab page
 - 1 shared stylesheet
 - 1 shared JavaScript file
-- a shared image library for hero, card, and partner artwork
-- a generated `publish/` bundle for deployment
-- local preview scripts for browser testing
-- supporting docs for launch, hosting, QA, and review
-- GitHub as the repository of record
-- Cloudflare Pages as the preferred staging and deployment path
+- a generated `publish/` bundle
+- local helper scripts and a Node publish build
 
-## Confirmed Implemented Changes
+## What The Website Already Does
 
-- homepage hero reworked into integrated pathway cards
-- page transitions softened and stabilized
-- staggered reveal effects added
-- About Us split into `who-we-are.html` and `what-we-do.html`
-- `about.html` retained as a legacy routing page
-- `connect.html` rebuilt from the v3-0 copy deck with a live email CTA
-- `groups.html` updated with Group Directory guidance and email support route
-- `whole-person.html` rebuilt with approved inline playable video embeds where links are available
-- `other-paths-to-recovery.html` added as the recovery-path directory under Your Path
-- `resources.html` converted into a More Resources placeholder bridge
-- homepage partnership copy simplified with inline partner/directory links
-- crisis CTA presentation refined in both the masthead and footer
-- masthead partner logos made clickable site-wide
-- masthead shifted back into normal document flow with a lighter translucent shell
-- body typography normalized to flush-left alignment in the main content areas
-- `what-we-do.html` closing section merged into a unified welcome / ready composition
-- `publish/` generated from source files
-- GitHub Actions workflows added for publish bundle validation and sync
+- routes visitors from the homepage into six clear pathways
+- offers direct support through email and a live Request Help form
+- offers support-group discovery through a live directory and a group-support email
+- explains peer grief support through What We Do and Who We Are
+- provides a populated team/story page with real images and long-form profiles
+- provides whole-person/recovery context through New Form plus two live videos
+- keeps More Resources available as a bridge route during reorganization
 
-## Current Site Map
+## What Still Needs Attention
 
-- `index.html`: homepage and primary pathway selection
-- `about.html`: legacy about page (retained for routing)
-- `who-we-are.html`: who we are — team, mission, peer grief support model
-- `what-we-do.html`: what we do — programs, RIVER model, support options
-- `connect.html`: direct connection with alternating image/text layout and email CTA
-- `groups.html`: support group overview and joining guidance
-- `whole-person.html`: whole-person recovery support framing
-- `other-paths-to-recovery.html`: recovery-path directory within Your Path
-- `resources.html`: temporary More Resources transition page
-- `help-others.html`: future volunteer pathway
-
-## What Is Working Well
-
-- clear multi-page information architecture
-- consistent design language and shared front-end architecture
-- more consistent body-copy rhythm after the flush-left typography pass
-- direct support path now has a live email CTA
-- support groups page has a clearer next-step route
-- partner logos now act as real outbound trust links in the masthead
-- basic accessibility support such as skip link and menu semantics
-- strong documentation foundation across Agile, product, and operations
-- GitHub-backed deployment model is defined
-
-## What Is Not Finished Yet
-
-- final team bios, names, and optional photos
-- final trust-building details and partner framing
-- first-response expectations for direct contact
-- Request Help form destination
 - crisis CTA destination
-- final group joining process and exact participation path
-- final outbound resource approval
-- approved Tavyn media link or asset for `whole-person.html`
-- final production hosting and DNS confirmation
-- mobile audit, accessibility QA, and production smoke test
+- TSWR footer social destinations
+- Tavyn video destination on `whole-person.html`
+- Leslie bio year placeholder
+- final decision on the public volunteer placeholder page
+- final production deployment and DNS confirmation
 
-## Current Completion View
+## Current Assessment
 
-### Completed Or Mostly Complete
+The biggest risks are no longer layout or architecture. The main remaining issues are:
 
-- site structure
-- shared design system
-- About Us split
-- direct connection page rebuild
-- recovery-path directory rehome
-- local preview workflow
-- generated publish bundle
-- baseline project documentation
-
-### Partially Complete
-
-- trust signals
-- contact workflow
-- group workflow
-- launch operations
-- handoff and maintenance clarity
-
-### Not Yet Complete
-
-- production deployment
-- final contact/form workflow
-- final DNS and production validation
-- analytics/search-console decision
-- final external link verification
-
-## Recently Resolved Decisions
-
-- custom static-site direction is approved
-- GitHub is the repository of record
-- Cloudflare Pages is the preferred staging and deployment path
-- About Us is split into Who We Are and What We Do
-- the recovery-path directory now lives under Your Path while More Resources remains a bridge route
-- the primary direct-contact email on the site is `connect@recoveryandgrief-MA.org`
-- Geneva is the preferred typography direction
-- ongoing website care is handled directly by the maintainer
-
-## Open Decisions
-
-- whether the support path remains email-only or expands to form, text, or phone
-- what exact destination should power the crisis CTA once it goes live
-- whether `help-others.html` remains public before a real volunteer workflow exists
-- whether `design-lab.html` remains staging-only or is excluded from production
-- exact production branch and final Cloudflare Pages configuration to treat as locked
+- unresolved live destinations
+- a small number of public placeholders
+- final launch operations and QA
 
 ## Recommended Next Focus
 
-1. Finalize direct contact workflow language and response expectations
-2. Finalize group participation instructions
-3. Replace placeholder bios and trust content
-4. Confirm final resources and partner details
-5. Complete mobile, accessibility, and launch QA
-6. Lock hosting and DNS details
-
-## PM Note
-
-The project is healthy structurally. The main risk is not architecture anymore; it is allowing unresolved content and deployment decisions to stay split across too many documents or too close to launch.
+1. replace the remaining `#` destinations intended for public use
+2. resolve the remaining visible placeholder content
+3. complete full browser/device QA
+4. lock the production publish path

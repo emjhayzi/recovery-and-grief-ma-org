@@ -59,7 +59,8 @@ def main() -> int:
     pid_file.parent.mkdir(parents=True, exist_ok=True)
 
     server = ThreadingHTTPServer(("127.0.0.1", args.port), build_handler(root, args.start_page))
-    url = f"http://127.0.0.1:{args.port}/{args.start_page.lstrip('/\\\\')}"
+    start_page = args.start_page.lstrip("/\\")
+    url = f"http://127.0.0.1:{args.port}/{start_page}"
 
     pid_file.write_text(str(os.getpid()), encoding="ascii")
     port_file.write_text(str(args.port), encoding="ascii")

@@ -9,9 +9,9 @@ Start with:
 - README.md
 - CLAUDE-HANDOFF.md
 - docs/README.md
+- docs/agile/single-source-of-truth.md
 - docs/agile/project-status.md
-- docs/product/site-brief.md
-- docs/operations/publish-checklist.md
+- docs/product/content-inventory.md
 
 Then inspect the website files:
 - index.html
@@ -29,19 +29,18 @@ Then inspect the website files:
 
 Please focus on:
 - information architecture
-- page clarity
 - mobile layout risks
 - accessibility issues
-- SEO gaps
-- branding consistency
-- areas where the current draft may feel generic, confusing, or emotionally off-tone
-- anything that should be fixed before adding more content
+- trust/safety issues for a grieving audience
+- broken or placeholder destinations
+- footer/contact-route consistency
+- anything that should be fixed before launch
 
 Important context:
-- This is a first structured draft, not a final launch build.
-- Some content is intentionally placeholder content.
-- Planning/source material lives in the References folder.
-- The goal is a calm, trustworthy site for people in recovery grieving a death caused by alcohol or other drugs.
+- The root website files are the implementation source of truth.
+- `resources.html` is intentionally a bridge page that routes into `other-paths-to-recovery.html`.
+- `help-others.html` is intentionally still a placeholder/future-state page.
+- Some public gaps remain, including placeholder crisis/TSWR social links and one pending Tavyn media block.
 
-Please prioritize findings, risks, missing pieces, and practical recommendations over compliments.
+Please prioritize findings, risks, and practical recommendations over compliments.
 ```

@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: "Geneva";
+  src: url("../fonts/GENEVA.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 :root {
   --lab-bg: #f7f2eb;
@@ -27,7 +33,7 @@ body {
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
   color: var(--lab-ink);
   background:
     radial-gradient(circle at 10% 12%, rgba(79, 143, 147, 0.14), transparent 24%),
@@ -118,7 +124,7 @@ textarea {
 .lab-brand h1,
 .preview-toolbar h2 {
   margin: 0;
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
   font-weight: 400;
   line-height: 0.98;
 }

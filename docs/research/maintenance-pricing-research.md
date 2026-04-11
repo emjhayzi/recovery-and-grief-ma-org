@@ -1,5 +1,9 @@
 # Website Maintenance Pricing Research
 
+Reference note updated on April 11, 2026.
+
+This file is supporting market research only. It is not a source of truth for website implementation state.
+
 Market snapshot prepared for positioning website maintenance services.
 
 Date of snapshot: March 25, 2026

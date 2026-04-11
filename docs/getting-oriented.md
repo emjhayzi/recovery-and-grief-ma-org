@@ -1,230 +1,100 @@
 # Getting Oriented
 
-Primary tracker: `docs/agile/single-source-of-truth.md`
+Primary planning tracker: `docs/agile/single-source-of-truth.md`
 
-This file is the fastest way to re-learn how the Recovery and Grief website is set up and how to keep building it.
+This file is the fastest way to re-enter the project after time away.
 
 ## What This Project Is
 
-- A static multi-page website
-- Built with plain HTML, CSS, and a small amount of JavaScript
-- No React, no Next.js, no npm app runtime, and no CMS in this folder
-- Lightweight Node publish build for the deploy-ready `publish/` folder
-- Intended for static hosting such as Cloudflare Pages
+- Static multi-page website
+- Plain HTML, CSS, and JavaScript
+- No framework app, CMS runtime, or database in this repo
+- Node script used only to regenerate `publish/`
+- Best suited to static hosting such as Cloudflare Pages
 
-The project goal is a calm, trustworthy website for Massachusetts peer grief support for people in recovery grieving a death from alcohol or other drugs.
+## Current Public Pages
 
-## The Main Files
+- `index.html`: homepage with six support/resource pathway cards
+- `about.html`: legacy redirect to `who-we-are.html`
+- `who-we-are.html`: team/story page
+- `what-we-do.html`: peer grief support explanation page
+- `connect.html`: direct connection page
+- `groups.html`: support groups page
+- `whole-person.html`: Your Path / New Form page
+- `other-paths-to-recovery.html`: recovery-path directory
+- `resources.html`: bridge page into Other Paths to Recovery
+- `help-others.html`: placeholder future volunteer page
 
-### Public Pages
+## Shared Files
 
-- `index.html`: homepage and main entry point
-- `about.html`: legacy about page (retained for routing)
-- `who-we-are.html`: team, mission, and peer grief support model
-- `what-we-do.html`: programs, RIVER model, and support options
-- `connect.html`: direct connection with alternating image/text layout and email CTA
-- `groups.html`: group support overview and joining guidance
-- `whole-person.html`: whole-person recovery framing
-- `other-paths-to-recovery.html`: recovery-path directory under Your Path
-- `resources.html`: transition page for the More Resources section
-- `help-others.html`: future volunteer path
+- `assets/css/styles.css`: layout, typography, responsive rules, motion, and component styling
+- `assets/js/script.js`: mobile nav, page transitions, and homepage motion behavior
+- `assets/images/`: partner logos, team photos, page imagery, and card imagery
 
-### Shared Front-End Files
+## Internal Tooling
 
-- `assets/css/styles.css`: shared design system, layout, motion, responsive behavior, and page hero styles
-- `assets/js/script.js`: mobile nav toggle, active nav highlighting, page transitions, homepage motion behavior
-- `assets/images/`: curated hero, card, and partner imagery used across the site
+- `design-lab.html`: internal visual experimentation page
+- `assets/css/design-lab.css`
+- `assets/js/design-lab.js`
 
-### Internal Tooling
+## Deployment Copy
 
-- `design-lab.html`: internal visual tuning page
-- `assets/css/design-lab.css`: design lab styling
-- `assets/js/design-lab.js`: design lab interactions
-
-### Deployment Copy
-
-- `publish/`: deploy-ready copy of the site for Cloudflare Pages staging
-
-This folder is refreshed from the main site files by running:
-
-- `Prepare Cloudflare Publish.cmd`
+- `publish/`: generated deploy-ready copy of the site
+- `scripts/build-publish.mjs`: rebuilds `publish/` from the root website files
 
 ## How The Site Is Structured
 
-Each page is a standalone HTML file. The pages all share:
+Each public page is a standalone HTML file using:
 
-- the same header
-- the same footer
-- the same stylesheet
-- the same JavaScript file
+- the same masthead pattern
+- the same footer class structure
+- the same shared stylesheet
+- the same shared JavaScript file
 
-The body on each page has a `data-page` attribute such as:
+Each page body has a `data-page` value used for page-specific styling and navigation state.
 
-- `data-page="home"`
-- `data-page="about"`
-- `data-page="who-we-are"`
-- `data-page="what-we-do"`
-- `data-page="connect"`
+## Local Preview
 
-That value is used by the shared JavaScript and CSS to:
-
-- highlight the current navigation item
-- apply page-specific hero imagery and atmosphere
-- enable homepage-only motion behavior
-
-The navigation includes an "About Us" dropdown that groups the Who We Are and What We Do sub-pages.
-
-## How To Preview The Site
-
-### Fastest Option
-
-Use:
-
-- `Start Website Test.cmd`
-
-Then open:
-
-- `http://localhost:8000`
-
-When finished, use:
-
-- `Stop Website Test.cmd`
-
-### Manual Option
-
-Run this from the project root:
+Manual preview:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then open:
+Then open `http://localhost:8000`.
 
-- `http://localhost:8000`
+Helper scripts:
 
-## How To Make Changes Safely
+- `Start Website Test.cmd`
+- `Start Website Test.command`
+- `Stop Website Test.cmd`
+- `Stop Website Test.command`
+- `Start Design Lab.cmd`
 
-### If You Are Changing Copy
+## What Is Already Implemented In Source
 
-Edit the relevant page directly:
+- co-branded SADOD + TSWR masthead with outbound logo links
+- homepage hero with six pathway cards
+- homepage partnership section stacked vertically
+- four-part footer styling
+- live direct-contact email and Request Help form links
+- live support-group directory link and group-support email
+- populated team page with five profile sections
+- two live YouTube embeds on `whole-person.html`
+- More Resources bridge page
+- generated Cloudflare-ready `publish/` bundle
 
-- homepage copy: `index.html`
-- about page copy: `about.html`
-- who we are copy: `who-we-are.html`
-- what we do copy: `what-we-do.html`
-- contact/support flow copy: `connect.html`
-- group flow copy: `groups.html`
-- recovery framing copy: `whole-person.html`
-- recovery-path directory copy: `other-paths-to-recovery.html`
-- more-resources transition copy: `resources.html`
-- volunteer copy: `help-others.html`
+## What Is Still Open In Source
 
-### If You Are Changing Global Layout Or Visual Style
+- crisis CTA links still point to `#`
+- TSWR social links still point to `#`
+- one Tavyn video block still needs a real destination
+- Leslie bio still contains a `202x` placeholder year
+- `help-others.html` is still intentionally a placeholder page
+- `groups.html` still references a future Group Readings block in a comment
 
-Edit:
+## Working Rule
 
-- `assets/css/styles.css`
+Treat the root HTML files and `assets/` as the implementation truth.
 
-This file controls:
-
-- colors
-- spacing
-- header and footer layout
-- body copy alignment
-- responsive rules
-- cards
-- buttons
-- hero sections
-- motion and transitions
-
-### If You Are Changing Navigation Or Shared Interaction
-
-Edit:
-
-- `assets/js/script.js`
-
-This file controls:
-
-- mobile menu open/close behavior
-- `aria-current` nav state
-- internal page fade transitions
-- homepage section reveal behavior
-
-### If You Want To Experiment Before Touching The Main CSS
-
-Use:
-
-- `design-lab.html`
-
-The design lab is for internal testing and visual exploration, not final public content.
-
-## What Is Already In Good Shape
-
-- 10-page site structure with About Us dropdown split
-- consistent shared styling with per-page hero atmospheres
-- Direct Connections page rebuilt from v3-0 copy deck
-- Other Paths to Recovery rehomed under Your Path with More Resources left as a bridge route
-- clickable partner logos in the masthead on desktop and mobile
-- flush-left body copy pass applied across the main content areas
-- mobile navigation
-- page-level SEO title and description tags
-- basic accessibility support like skip link and menu semantics
-- page-to-page transitions and reveal animations
-- organized project docs for product, operations, and launch planning
-- Cloudflare Pages staging pipeline
-
-## What Is Still Not Final
-
-- final team bios and photos
-- final group schedule or sign-up process
-- final partner/resource links
-- Request Help form destination
-- approved Tavyn media destination for the whole-person page
-- future live destination for the footer crisis CTA
-- some placeholder copy in teaser sections pending client approval
-- production hosting and DNS decisions
-- mobile view audit and responsive refinements
-- final decision on whether `help-others.html` should stay public before a real workflow exists
-
-## Recommended Build Order From Here
-
-If you want to move the project forward in a stable way, this is the best order:
-
-1. Lock the direct support/contact workflow
-2. Replace placeholder copy with approved real content
-3. Finalize group participation instructions
-4. Review the site on mobile and desktop
-5. Refresh `publish/`
-6. Deploy staging on Cloudflare Pages
-7. Collect one consolidated review round
-8. Polish and prepare production launch
-
-## Publish Workflow
-
-1. Make your approved edits in the main project files
-2. Preview locally
-3. Run QA using `docs/operations/qa-smoke-checklist.md`
-4. Run `Prepare Cloudflare Publish.cmd`
-5. Commit and push the approved changes to GitHub
-6. Verify the connected Cloudflare Pages staging build reflects the latest commit
-7. Review the staging URL before any production change
-
-For staging details, use:
-
-- `docs/operations/cloudflare-pages-staging.md`
-
-## Best Docs To Read Next
-
-If you want the shortest useful reading path:
-
-1. `docs/getting-oriented.md`
-2. `docs/agile/single-source-of-truth.md`
-3. `docs/operations/runbook.md`
-4. `docs/agile/project-status.md`
-5. `docs/operations/cloudflare-pages-staging.md`
-
-## Practical Working Rule
-
-Treat the root HTML files and `assets/` as the real source of truth for the website.
-
-Treat `publish/` as the deployment copy that gets regenerated when you are ready to stage or ship.
+Treat the docs as support material that must stay aligned to the implementation truth.

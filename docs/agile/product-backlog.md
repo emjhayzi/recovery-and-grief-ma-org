@@ -2,198 +2,138 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
+Backlog audited against the website source on April 11, 2026.
+
 Prioritization key:
 
-- `P0`: launch-blocking
-- `P1`: high-value next
-- `P2`: important but can follow launch
+- `P0`: public-facing gap or launch blocker
+- `P1`: important next refinement
+- `P2`: can follow launch
 
-## Epic 1: Direct Support Access
+## Epic 1: Live Destinations
 
-### `P0` Finalize contact pathway
+### `P0` Replace crisis CTA placeholders
 
-User story:
-As a grieving visitor, I want one clear way to reach a real person so that I do not feel lost or delayed.
+Current source truth:
 
-Acceptance criteria:
+- masthead crisis links still use `href="#"`
+- footer crisis links still use `href="#"`
 
-- `connect.html` contains a prominent email CTA to `connect@recoveryandgrief-MA.org` ✅
-- connect.html presents Get Help Soon and Get Ongoing Help program options ✅
-- first-response expectation is described clearly
-- CTA language is low-pressure and human ✅
-- homepage and footer surface the same primary route consistently
-- Request Help form destination is linked (currently placeholder)
-- crisis CTA destination is approved before the footer button becomes live
+Done when:
 
-### `P0` Define one-on-one support intake
+- the approved crisis destination replaces every placeholder crisis link
+- the destination is consistent across pages
+- QA confirms it works on desktop and mobile
 
-User story:
-As a visitor exploring ongoing support, I want to know what happens after I reach out so that I can decide whether it feels safe to continue.
+### `P0` Replace TSWR social placeholders
 
-Acceptance criteria:
+Current source truth:
 
-- the one-on-one section explains the process plainly
-- matching or referral expectations are defined
-- any intake limitations are described without sounding clinical
-- the live support path still feels human rather than institutional
+- TSWR Facebook, YouTube, Instagram, and X links in the footer still use `href="#"`
 
-## Epic 2: Trust, Credibility, And Safety
+Done when:
 
-### `P0` Replace placeholder team content
+- each TSWR social link has a real approved destination or is intentionally removed
+- footer behavior is consistent across the site
 
-User story:
-As a visitor, I want to see who is behind the program so that the site feels real and trustworthy.
+## Epic 2: Clear Remaining Public Placeholders
 
-Acceptance criteria:
+### `P0` Resolve whole-person Tavyn media gap
 
-- `who-we-are.html` includes approved names, roles, short bios, and optional images
-- partner relationship is clearly explained
-- placeholder copy is removed from public view
+Current source truth:
 
-### `P1` Strengthen trust signals site-wide
+- `whole-person.html` contains a preserved Tavyn story block with a TODO comment and placeholder state
 
-User story:
-As a visitor in distress, I want the site to feel credible right away so that I feel safer taking the next step.
+Done when:
 
-Acceptance criteria:
+- a real Tavyn URL or embed is added
+- or the block is intentionally reframed without pretending the media exists
 
-- footer includes final contact and partner details
-- footer crisis CTA and partner/logo columns reflect approved final destinations and organization details
-- approved external links are added where relevant
-- copy is reviewed for warmth, clarity, and non-judgmental tone
-- placeholder trust language is removed from public-facing pages
+### `P0` Clear remaining bio placeholder text
 
-## Epic 3: Support Group Experience
+Current source truth:
 
-### `P0` Finalize group access details
+- Leslie's bio on `who-we-are.html` still includes `202x`
 
-User story:
-As a visitor considering a group, I want to know how to join and what to expect so that I can decide without uncertainty.
+Done when:
 
-Acceptance criteria:
+- all visible placeholder years/text are removed from public pages
 
-- `groups.html` includes final directory, schedule, interest form, or registration instructions
-- virtual or in-person format is stated if known
-- recurring questions are answered in plain language
+## Epic 3: Public Page Decisions
 
-### `P1` Add group reassurance content
+### `P1` Decide final role of `help-others.html`
 
-User story:
-As a first-time attendee, I want to know what group participation feels like so that anxiety is reduced.
+Current source truth:
 
-Acceptance criteria:
+- the page is visible in navigation and intentionally framed as future content
 
-- page addresses common fears or hesitations
-- privacy and participation expectations are explained appropriately
+Done when:
 
-## Epic 4: Resource And Program Pathways
+- the page is either finalized, hidden, or intentionally kept as a public future-state page
+- navigation and docs reflect that decision
 
-### `P1` Finalize resource curation
+### `P1` Decide whether the Group Readings note becomes real content
 
-User story:
-As a visitor, I want a curated set of relevant recovery pathways and resources so that I am not overwhelmed.
+Current source truth:
 
-Acceptance criteria:
+- `groups.html` still contains a source comment about a future Group Readings block
 
-- `other-paths-to-recovery.html` contains approved links and descriptions
-- resources are curated, not bloated
-- link purpose is obvious before clicking
-- `resources.html` clearly redirects visitors to the right section during the transition
+Done when:
 
-### `P1` Clarify whole-person pathway
+- approved content is added
+- or the note is removed as out of scope
 
-User story:
-As a visitor, I want to understand how grief support connects with recovery support so that the broader program makes sense.
+## Epic 4: Pathway Clarity
 
-Acceptance criteria:
+### `P1` Keep More Resources routing intentional
 
-- `whole-person.html` explains the pathway without jargon
-- approved embedded/video references are present where assets exist
-- any unresolved media destination is tracked explicitly instead of guessed
-- next steps connect logically to support options already on the site
+Current source truth:
 
-### `P1` Decide the role of volunteer page
+- homepage "Explore More Resources" card points to `resources.html`
+- `resources.html` bridges visitors into `other-paths-to-recovery.html`
 
-User story:
-As a stakeholder, I want the volunteer page to either support a real workflow or stay out of the way so that it does not create confusion.
+Done when:
 
-Acceptance criteria:
+- homepage, bridge page, and Your Path routes remain logically aligned
+- QA confirms visitors can reach the recovery-path directory without confusion
 
-- `help-others.html` is either finalized, hidden, or reframed as future interest only
-- navigation reflects the decision consistently
+### `P1` Keep support routes consistent
+
+Current source truth:
+
+- `connect.html` uses email plus Request Help form
+- `groups.html` uses directory plus email
+
+Done when:
+
+- homepage, What We Do, Connect, Groups, and footer messaging stay consistent about where visitors should go next
 
 ## Epic 5: Launch Readiness
 
-### `P0` Complete pre-launch QA
+### `P0` Run final QA
 
-User story:
-As the website owner, I want confidence in the site before publishing so that visitors do not encounter broken or confusing experiences.
-
-Acceptance criteria:
+Done when:
 
 - all internal links work
-- masthead partner logos route correctly on desktop and mobile
-- page titles remain visible below the masthead at all target breakpoints
-- body-copy alignment is reviewed for consistency after the flush-left pass
-- mobile and desktop layouts are reviewed
-- content placeholders intended for removal are gone
-- accessibility checks are completed on final content
-- production smoke test is completed after deployment
+- placeholder destinations are gone or intentionally documented
+- mobile and desktop layouts are checked
+- accessibility smoke checks are complete
+- staging review passes
 
-### `P0` Finalize hosting and deployment
+### `P0` Lock production deployment
 
-User story:
-As the website owner and maintainer, I want the final Cloudflare Pages production configuration and DNS plan locked so that launch is predictable and maintainable.
+Done when:
 
-Acceptance criteria:
+- Cloudflare Pages settings are verified
+- production branch is confirmed
+- DNS/domain plan is confirmed
+- maintainer access is confirmed
 
-- approved GitHub-backed Cloudflare Pages direction is documented
-- final production deployment configuration is selected
-- domain/DNS plan is confirmed
-- publish workflow is documented
-- Cloudflare Pages settings are verified against the documented workflow
-- a GitHub push is confirmed to feed the intended Cloudflare staging path end to end
+## Epic 6: Documentation Discipline
 
-## Epic 6: Governance And Handoff
+### `P1` Keep docs synced to implemented behavior
 
-### `P1` Document maintenance ownership
+Done when:
 
-User story:
-As the maintainer, I want the update and publishing workflow documented so that the site can be sustained after launch.
-
-Acceptance criteria:
-
-- maintenance workflow is documented
-- website maintainer is clearly identified
-- ownership for content approvals is identified
-- owner-managed maintenance expectations are documented
-
-### `P2` Add measurement and iteration plan
-
-User story:
-As the program owner, I want a simple way to learn from website use so that future improvements are guided by real signals.
-
-Acceptance criteria:
-
-- analytics/search-console decision is documented
-- post-launch review cadence is defined
-
-## Suggested Sprint Ordering
-
-### Sprint 1
-
-- finalize contact workflow
-- finalize group access information
-- replace high-visibility placeholders
-
-### Sprint 2
-
-- complete bios, resources, and footer trust signals
-- finalize volunteer-page decision
-- complete mobile and accessibility review
-
-### Sprint 3
-
-- verify Cloudflare Pages production settings
-- deploy staging and production
-- complete handoff and maintenance setup
+- website source changes are reflected in the supporting docs in the same workstream
+- docs no longer describe removed homepage layouts, outdated contact assumptions, or old dependencies

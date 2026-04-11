@@ -1,25 +1,21 @@
 # Documentation Hub
 
-This folder is now organized as a lightweight Agile project workspace for the Recovery and Grief website.
+Audited against the website source files on April 11, 2026.
 
-## How To Use This Folder
+This folder supports the website source of truth. It should never override what is actually implemented in the root HTML/CSS/JS files.
 
-- Start with `docs/agile/single-source-of-truth.md` for the master project tracker
-- Start with `docs/getting-oriented.md` for the fastest project re-entry
-- Use `docs/agile/project-status.md` for the current narrative snapshot
-- Use `docs/agile/project-charter.md` for goals, scope, stakeholders, and success criteria
-- Use `docs/agile/product-backlog.md` to manage prioritized work
-- Use `docs/agile/release-roadmap.md` to plan delivery phases
-- Use `docs/agile/raid-log.md` to track risks, assumptions, issues, and dependencies
-- Use `docs/product/content-inventory.md` for a page-by-page and folder-by-folder project inventory
-- Use `docs/operations/runbook.md` for editing, preview, QA, publishing, and maintenance workflow
-- Use `docs/operations/qa-smoke-checklist.md` for repeatable browser QA and staging checks
+## Read Order
+
+1. Website source files in the project root and `assets/`
+2. `docs/agile/single-source-of-truth.md`
+3. `docs/getting-oriented.md`
+4. The rest of the docs by topic
 
 ## Folder Map
 
 ### `docs/agile/`
 
-Project management and delivery control documents.
+Planning, status, priorities, and risk tracking.
 
 - `single-source-of-truth.md`
 - `project-charter.md`
@@ -31,14 +27,14 @@ Project management and delivery control documents.
 
 ### `docs/product/`
 
-Product, audience, and content definition.
+Audience, page intent, and inventory.
 
 - `site-brief.md`
 - `content-inventory.md`
 
 ### `docs/operations/`
 
-Launch, hosting, publishing, and ongoing support documents.
+Editing, QA, publishing, hosting, and launch workflow.
 
 - `runbook.md`
 - `cloudflare-pages-staging.md`
@@ -49,30 +45,28 @@ Launch, hosting, publishing, and ongoing support documents.
 
 ### `docs/research/`
 
-Supporting research that informs pricing or future decisions.
+Supporting pricing/reference research.
 
 - `maintenance-pricing-research.md`
 
 ### `docs/reviews/`
 
-Review prompts and external review support material.
+External review support.
 
 - `claude-second-opinion-prompt.md`
 
-## Source Of Truth Guidance
+## Working Rule
 
-- Master project tracker: `docs/agile/single-source-of-truth.md`
-- Quick re-entry: `docs/getting-oriented.md`
-- Product intent: `docs/product/site-brief.md`
-- Current delivery snapshot: `docs/agile/project-status.md`
-- Current work priorities: `docs/agile/product-backlog.md`
-- Launch readiness: `docs/operations/publish-checklist.md`
-- Browser QA: `docs/operations/qa-smoke-checklist.md`
-- Operating workflow: `docs/operations/runbook.md`
+When the website changes:
 
-## Recommended Agile Cadence
+1. update the implemented source files first
+2. update `docs/agile/single-source-of-truth.md`
+3. update any supporting docs that describe the changed behavior
 
-- Weekly backlog review
-- Weekly stakeholder content approval check
-- End-of-sprint QA and publish-readiness review
-- RAID log update whenever scope, risk, or dependencies change
+## Fastest Useful Reading Path
+
+1. `docs/getting-oriented.md`
+2. `docs/agile/single-source-of-truth.md`
+3. `docs/product/content-inventory.md`
+4. `docs/operations/runbook.md`
+5. `docs/operations/publish-checklist.md`

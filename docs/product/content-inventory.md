@@ -2,13 +2,13 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
+Inventory audited against the website source on April 11, 2026.
+
 ## Project Format
 
-The project is a folder-based static website. There is no framework or package-manager-driven app runtime in the current setup, but the workspace is tracked in Git and mirrored into a deploy-ready `publish/` folder for Cloudflare Pages staging and deployment.
+The project is a folder-based static website. Root HTML files and `assets/` are the implementation truth. `publish/` is the generated deployment copy.
 
-## Top-Level Inventory
-
-### Public Website Files
+## Top-Level Website Files
 
 - `index.html`
 - `about.html`
@@ -20,125 +20,62 @@ The project is a folder-based static website. There is no framework or package-m
 - `other-paths-to-recovery.html`
 - `resources.html`
 - `help-others.html`
+- `design-lab.html`
 - `robots.txt`
 
-### Shared Front-End Assets
+## Shared Front-End Assets
 
-- `assets/css/styles.css`: full visual system, layout, responsive behavior, and page atmosphere styling
-- `assets/css/design-lab.css`: internal design-lab interface styles
-- `assets/js/script.js`: mobile navigation toggle, active-page state, page transitions, and homepage motion
-- `assets/js/design-lab.js`: internal live preview and override tooling for the design lab
-- `assets/images/sadod-logo.png`
-- `assets/images/tswr-logo.png`
-- `assets/images/pscp-logo-transparent.png`
-- `assets/images/hero-*.jpg`: per-page atmospheric hero backgrounds
-- `assets/images/card-*.jpg`: shared card and section imagery
+- `assets/css/styles.css`
+- `assets/css/design-lab.css`
+- `assets/js/script.js`
+- `assets/js/design-lab.js`
+- `assets/fonts/GENEVA.TTF`
+- `assets/images/`
 
-### Internal Tooling
+## Current Page Inventory
 
-- `design-lab.html`
+| Page | Current role in source | Primary outcome |
+| --- | --- | --- |
+| `index.html` | Homepage with one-line hero and six pathway cards | Route visitors into the right next step |
+| `about.html` | Redirect page | Preserve legacy route |
+| `who-we-are.html` | Team/story page with five profile sections | Build trust |
+| `what-we-do.html` | Peer grief support explanation plus CTA block | Explain the offer and invite next steps |
+| `connect.html` | Direct support page with email and Request Help form | Reach a real person |
+| `groups.html` | Group support page with directory and email route | Find or ask about a group |
+| `whole-person.html` | New Form / whole-person page with two live videos and one pending Tavyn block | Connect grief support with recovery context |
+| `other-paths-to-recovery.html` | Recovery-path directory page | Explore fellowships and support models |
+| `resources.html` | Bridge page | Route visitors into Other Paths to Recovery |
+| `help-others.html` | Future-state placeholder page | Signal a possible future volunteer path |
 
-### Local Preview Scripts
+## Homepage Pathways
 
-- `Start Website Test.cmd`: starts a Python-based local server on port 8000 and opens the browser
-- `Start Design Lab.cmd`: starts the local server and opens the design lab at `http://localhost:8000/design-lab.html`
-- `Stop Website Test.cmd`: stops the local server on port 8000
-- `Prepare Cloudflare Publish.cmd`: refreshes the deploy-ready `publish/` folder from the current site files
+Current homepage cards route to:
 
-### Project And Handoff Docs
+- `who-we-are.html`
+- `connect.html`
+- `groups.html`
+- `whole-person.html`
+- `resources.html`
+- `help-others.html`
 
-- `README.md`
-- `CLAUDE-HANDOFF.md`
-- `docs/README.md`
+## Design And Layout Notes
 
-### Source Material
+- shared co-branded masthead with outbound partner-logo links
+- homepage partnership block is stacked vertically
+- footer is styled as a four-part row
+- homepage currently adds footer column labels in markup
+- local Geneva font is loaded from `assets/fonts/GENEVA.TTF`
+- body copy inside `main` is left-aligned by default
 
-- `References/`: planning documents, PDFs, logo experiments, and image-processing outputs used during design exploration
+## Current Public Gaps Visible In Source
 
-## Page Inventory
+- crisis CTA links still use `href="#"`
+- TSWR social links still use `href="#"`
+- Tavyn video block is still in placeholder state
+- Leslie bio still contains `202x`
+- `help-others.html` is intentionally unfinished
 
-| Page | Purpose | Current Status | Main CTA / Outcome |
-| --- | --- | --- | --- |
-| `index.html` | Introduce the program and route visitors into support pathways | Strong draft with hero pathway cards | Talk to someone now |
-| `about.html` | Legacy about page retained for routing | Redirect candidate | Build trust and understanding |
-| `who-we-are.html` | Team, mission, and peer grief support model | Draft with placeholders for bios | Build trust and understanding |
-| `what-we-do.html` | Programs, RIVER model, and support options | Good draft with approved content | Understand available support |
-| `connect.html` | Present direct connection and program options | Rebuilt from v3-0 copy deck with alternating layout | Reach out for support |
-| `groups.html` | Explain group support and how to join | Needs final schedule/process | Join or ask about a group |
-| `whole-person.html` | Frame grief support within broader recovery wellbeing | Implemented editorial page with approved inline video embeds where available; Tavyn media link still pending | Understand broader support path |
-| `other-paths-to-recovery.html` | Gather recovery fellowships, communities, and support models under Your Path | Implemented from the prior recovery-path resource directory | Explore other recovery paths |
-| `resources.html` | Hold the More Resources route as a temporary bridge page | Implemented as a transition page pointing visitors back into Your Path | Route visitors to the right section |
-| `help-others.html` | Hold a future volunteer/supporter pathway | Strategic decision pending | Volunteer or express interest |
+## Deployment Inventory
 
-## Design System Notes
-
-- Typography uses Geneva as the preferred face, with a local font file plus Verdana/Tahoma fallbacks
-- Body copy inside `main` is currently normalized to flush-left alignment for consistency review
-- The visual direction uses warm neutrals, teal accents, soft cards, curated downloaded photography, and CSS gradient overlays
-- Layout is mobile-responsive through shared media queries
-- Navigation includes an About Us dropdown grouping Who We Are and What We Do
-- Navigation state is controlled through the `data-page` attribute on each page body
-- The header uses a three-column CSS grid with co-branded partner logos, a compact crisis CTA beneath the SADOD logo, and outbound partner-logo links
-- The masthead is visually light/translucent and sits in normal document flow rather than as a sticky overlay
-- The footer currently uses a four-column layout with navigation, crisis CTA, partner logos/social links, and PSCP/legal information
-
-## Technical Inventory
-
-### Dependencies
-
-- Browser support for HTML/CSS/JavaScript
-- local Geneva font asset plus the current stylesheet imports
-- Python available locally for `python -m http.server 8000` or the start script
-- Node available locally for `node scripts/build-publish.mjs`
-- Git-based deployment workflow using the `publish/` directory for GitHub-backed Cloudflare Pages staging
-
-### No-Build Characteristics
-
-- no npm
-- no bundler
-- no database
-- no framework
-- no server-side rendering
-
-## Documentation Inventory
-
-### Agile
-
-- `docs/agile/single-source-of-truth.md`
-- `docs/agile/project-charter.md`
-- `docs/agile/project-status.md`
-- `docs/agile/product-backlog.md`
-- `docs/agile/release-roadmap.md`
-- `docs/agile/raid-log.md`
-
-### Product
-
-- `docs/product/site-brief.md`
-- `docs/product/content-inventory.md`
-
-### Operations
-
-- `docs/getting-oriented.md`
-- `docs/operations/runbook.md`
-- `docs/operations/publish-checklist.md`
-- `docs/operations/qa-smoke-checklist.md`
-- `docs/operations/client-hosting-recommendation.md`
-- `docs/operations/cloudflare-pages-staging.md`
-
-### Research
-
-- `docs/research/maintenance-pricing-research.md`
-
-### Reviews
-
-- `docs/reviews/claude-second-opinion-prompt.md`
-
-## Current Gaps Visible From Inventory
-
-- team bios and photos are still placeholder
-- several pages still contain placeholder language pending client approval
-- Request Help form destination is not yet linked
-- approved Tavyn media destination is still missing on the whole-person page
-- crisis CTA destination is not yet approved
-- production launch details still need final confirmation even though staging is set up
-- the design lab is still an internal tool and needs a final decision before public launch
+- `scripts/build-publish.mjs`: regenerates `publish/`
+- `publish/`: deploy-ready copy of the site

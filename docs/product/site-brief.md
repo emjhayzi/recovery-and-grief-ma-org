@@ -1,29 +1,22 @@
 # Site Brief
 
+Audited against the website source on April 11, 2026.
+
 ## Site Purpose
 
 Create a clear, emotionally safe website that helps people in recovery quickly find grief support after a death caused by alcohol or other drugs.
 
 ## Primary Audience
 
-People in recovery in Massachusetts who are grieving the death of someone they care about from alcohol or other drugs.
+People in recovery in Massachusetts grieving the death of someone they care about from alcohol or other drugs.
 
 ## Secondary Audiences
 
-- Family and community members helping someone find support
-- Recovery and grief-support partners who may refer people to the site
-- Future collaborators using this site as a prototype for similar regional programs
+- family and community members helping someone find support
+- partner organizations and referral sources
+- future maintainers or collaborators
 
-## Core User Need
-
-Visitors should be able to understand within a few seconds:
-
-- this site is for people in recovery
-- grief support is available
-- support is peer-led and non-clinical
-- taking the next step is simple and safe
-
-## Tone and Messaging
+## Tone
 
 The site should feel:
 
@@ -31,68 +24,67 @@ The site should feel:
 - direct
 - non-judgmental
 - recovery-affirming
-- grief-centered
 - human rather than institutional
 
 ## Visual Direction
 
-Working style: Grounded Renewal
+- warm neutrals and teal accents
+- soft cards and editorial blocks
+- co-branded partner presence without overwhelming the page
+- clear route choices from the homepage
+- stable, mobile-friendly layouts
 
-- Warm neutrals and gentle teal accents
-- Soft card-based layouts with clear calls to action
-- Calm, stable typography with body copy defaulting flush left
-- Mobile-friendly, uncluttered sections
-- A light co-branded masthead that feels present without covering page titles
-
-## Page Goals
+## Current Page Goals
 
 ### Home
 
-Introduce the site, confirm the audience, and guide people toward their next step quickly.
+Confirm "you are not alone" quickly and route visitors into six clear choices:
 
-### About Us (Who We Are / What We Do)
+- Learn About Peer Grief Support
+- Connect with a Peer Grief Helper
+- Attend a Grief Support Group
+- Find Your Recovery Path
+- Explore More Resources
+- Volunteer to Help Others
 
-Explain what peer grief support is, who is behind it, what programs exist, and how the RIVER model works. Split into two sub-pages accessible through a navigation dropdown.
+The Explore More Resources card should first land on `resources.html`, then route visitors into `other-paths-to-recovery.html`.
+
+### Who We Are
+
+Build trust through team stories, lived experience, and partner context.
+
+### What We Do
+
+Explain what peer grief support is and invite visitors into direct connection or group support.
 
 ### Direct Connection
 
-Offer the easiest path to immediate human support, present program options (Get Help Soon / Get Ongoing Help), and provide a clear email CTA.
+Offer the clearest route to one-on-one support through email and the Request Help form.
 
 ### Support Groups
 
-Explain what group support feels like and how to join.
+Explain what support groups feel like and point visitors either to the live directory or the group-support email route.
 
 ### Your Path
 
-Connect grief support to whole-person recovery resources and partner pathways.
+Connect grief support with broader recovery and whole-person healing.
 
-### Other Paths to Recovery
+### Other Paths To Recovery
 
-Offer a curated directory of recovery fellowships, communities, and support models as part of the Your Path journey.
+Provide the fuller directory of fellowships, communities, and support models.
 
 ### More Resources
 
-Hold the top-level route as a short transition page while the section is reorganized.
+Stay public as a short bridge page while the fuller resource directory lives under Your Path.
 
 ### Help Others
 
-Hold space for a future volunteer pathway without overstating what is already available.
+Hold space for a future volunteer pathway without pretending the workflow is live yet.
 
-## Content Still Needed
+## Current Open Content Gaps
 
-- final team bios and headshots
-- support group schedule or signup flow
-- final resources and outbound links
-- video embeds for whole-person page
-- Request Help form destination
-- some placeholder copy in teaser sections pending client approval
-
-## Success Criteria
-
-The first publishable version should:
-
-- feel trustworthy and emotionally safe
-- work cleanly on mobile and desktop
-- make direct support easy to find
-- avoid clutter and jargon
-- be easy to update as the program grows
+- crisis CTA destination
+- TSWR social destinations
+- Tavyn video destination
+- Leslie bio year placeholder
+- final public decision on the volunteer placeholder page

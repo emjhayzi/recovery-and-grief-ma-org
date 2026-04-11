@@ -1,195 +1,113 @@
 # Single Source Of Truth
 
-This file is the master project tracker for the Recovery and Grief website.
+Implementation audit date: April 11, 2026
 
-Use this document as the first place to check project status, decisions, platform state, launch blockers, and next actions.
+This file is the master planning record for the Recovery and Grief website.
 
-All other Agile and operations docs should support this file, not compete with it.
+Important rule:
+
+- the website source files are the source of truth for implemented behavior, copy, routes, and UI
+- this file is the source of truth for project status, open issues, and next priorities
 
 ## Snapshot
 
-- Date: April 8, 2026
 - Project: Recovery and Grief website
-- Delivery stage: accelerated launch prep
-- Primary repo: `emjhayzi/recovery-and-grief-ma-org`
-- Working model: static multi-page website with GitHub-backed Cloudflare Pages staging
-
-## Tracking Rule
-
-- Local repo file is the working source of truth
-- GitHub should mirror this exact file at the same path
-- Cloudflare is a deployment platform, not a planning board
-- Cloudflare should mirror deployment state from GitHub, not carry separate project-management records
-
-## Platform Truth
-
-### Local File
-
-- Location: `docs/agile/single-source-of-truth.md`
-- Role: primary planning and status record
-- Owner: website designer-developer / maintainer
-- Use for: current status, launch blockers, decisions, next steps, platform sync notes
-
-### GitHub
-
+- Delivery model: custom static multi-page site
 - Repo: `emjhayzi/recovery-and-grief-ma-org`
-- Mirror target: `docs/agile/single-source-of-truth.md`
-- Role: shared remote copy of the same planning truth
-- Use for: collaboration, version history, branch/PR review, and Cloudflare-connected deployment source
+- Deployment model: GitHub-backed Cloudflare Pages using generated `publish/`
+- Current stage: source-verified refinement and launch-readiness cleanup
 
-### Cloudflare
+## Implementation Truth
 
-- Applicability: yes for deployment status, no for project-tracking boards
-- Platform role: staging and production hosting through Cloudflare Pages
-- Recommended truth source: GitHub repo contents and Cloudflare Pages project settings
-- Rule: do not create a separate Cloudflare-only planning document unless Cloudflare-specific operational settings change
+Current public site structure in source:
 
-## Current Site State
+- `index.html`: homepage with six pathway cards
+- `about.html`: redirect page
+- `who-we-are.html`: team/story page with five profiles
+- `what-we-do.html`: peer grief support explanation page
+- `connect.html`: direct connection page with email plus Request Help form
+- `groups.html`: support groups page with directory button plus email route
+- `whole-person.html`: New Form / recovery page with two live video embeds and one pending Tavyn placeholder
+- `other-paths-to-recovery.html`: recovery-path directory
+- `resources.html`: short bridge page to the recovery-path directory
+- `help-others.html`: intentional placeholder page for a future volunteer path
 
-- 10 public HTML pages plus 1 internal design lab
-- Shared CSS and shared JavaScript architecture
-- About Us content split into:
-  - `who-we-are.html`
-  - `what-we-do.html`
-- `about.html` retained as a legacy routing page
-- `connect.html` rebuilt from the v3-0 copy deck
-- `groups.html` updated with Group Directory guidance and email route
-- `other-paths-to-recovery.html` now holds the recovery-path resource cards under Your Path
-- `resources.html` converted into a transition page for the More Resources route
-- `whole-person.html` rebuilt as an editorial sequence with inline embeds for approved videos
-- homepage partnership band now uses inline source links instead of separate pill buttons
-- crisis CTA is currently presented as a compact masthead button plus a dedicated footer CTA slot
-- masthead partner logos now link to the SADOD and The Sun Will Rise websites across desktop and mobile
-- masthead is visually lighter and remains in normal document flow rather than sticking over page titles
-- body copy inside `main` is currently normalized to flush-left alignment for consistency review
-- `publish/` is generated from source and used for staging/deployment
-- GitHub Actions workflows exist for publish-bundle validation and sync
+Current shared behavior in source:
 
-## Confirmed Implemented Changes
+- co-branded masthead with clickable SADOD and TSWR logos
+- shared stylesheet and shared JavaScript file
+- homepage hero headline reads "You are not alone" on one line
+- homepage partnership section is stacked vertically
+- footer is styled as a structured four-part row
+- local Geneva font is used through `assets/fonts/GENEVA.TTF`
+- `publish/` is generated from source with `node scripts/build-publish.mjs`
 
-- homepage hero reworked into integrated pathway cards
-- page-to-page transitions softened and stabilized
-- staggered reveal effects added
-- header rebuilt as a three-column co-branded layout
-- About Us split into Who We Are and What We Do
-- Direct Connection page rebuilt into alternating image/text bands
-- primary email CTA added to `connect.html`
-- groups contact email added to `groups.html`
-- homepage partnership block simplified and linked inline
-- masthead crisis CTA compacted under the SADOD logo
-- masthead partner logos made clickable across the site
-- masthead transparency/lightness refined without covering hero/page-title content
-- `what-we-do.html` closing section consolidated into a shared welcome / ready block
-- body typography normalized to flush-left alignment across the main content areas
-- Cloudflare Pages staging workflow documented
-- Node-based publish build added through `scripts/build-publish.mjs`
-- GitHub Actions workflows added for publish verification and publish sync
-- documentation hub and orientation docs expanded
+## Open Items Confirmed In Source
 
-## Current Launch Blockers
+- crisis CTA links still use `href="#"`
+- TSWR social links in the footer still use `href="#"`
+- Tavyn story video on `whole-person.html` still needs a real URL or embed
+- Leslie bio in `who-we-are.html` still includes a `202x` placeholder year
+- `help-others.html` is still intentionally a future-state placeholder
+- `groups.html` still contains a source comment about a future Group Readings block
 
-### Content And Trust
+## Status Summary
 
-- final team bios, names, and optional photos are not complete
-- some trust-building details still need approval
-- some teaser/program copy remains in placeholder or draft-approved state
-- final outbound resource approval still needs confirmation
+What is in good shape:
 
-### Support Workflow
+- site architecture and navigation
+- homepage pathway-based entry points
+- direct support/contact route
+- support-group directory route
+- populated Who We Are page
+- generated publish workflow
+- baseline operations and planning docs
 
-- direct contact flow still needs final policy clarity beyond the email CTA
-- first-response expectations still need to be stated clearly
-- Request Help form destination is still placeholder
-- one-on-one intake expectations need tighter explanation
-- crisis CTA destination is still unresolved
+What is not final:
 
-### Group Workflow
-
-- final group joining process still needs to be locked
-- schedule, registration, or exact participation path still needs final confirmation
-
-### Launch Operations
-
-- current Cloudflare Pages project settings still need to be confirmed against the documented GitHub-connected workflow
-- DNS plan needs confirmation
-- mobile audit and final responsive QA still need completion
-- final production smoke test is still pending
-
-## Current Decisions Already Made
-
-- the project will remain a custom static site rather than moving back into a full Squarespace site build
-- GitHub is the repository of record for the codebase
-- Cloudflare Pages is the preferred staging/deployment path
-- the About Us section is now a dropdown with two sub-pages
-- the recovery-path directory now lives under Your Path, while More Resources remains public as a transition route
-- Geneva is the preferred typography direction
-- the maintainer is handling ongoing site publishing directly
-
-## Current Open Decisions
-
-- is the primary support path email only, or email plus form/text/phone
-- what exact destination should power the crisis CTA once it is made live
-- does `help-others.html` stay public before a real volunteer workflow exists
-- should `design-lab.html` remain available in staging only or also be excluded from production
-- what exact production branch / Cloudflare Pages configuration should be treated as final
+- crisis-routing destination
+- TSWR social destinations
+- final Tavyn media
+- at least one remaining bio placeholder
+- final decision on the public volunteer page
+- final production launch/DNS lock
 
 ## Working Priorities
 
-1. finalize contact workflow language and response expectations
-2. finalize group participation instructions
-3. replace placeholder bios and trust content
-4. confirm final resources and partner details
-5. complete mobile, accessibility, and launch QA
-6. lock hosting and DNS details
-7. deploy staging, review, then launch
+1. Replace all `href="#"` destinations that are meant to go live
+2. Resolve the Tavyn story media block on `whole-person.html`
+3. Clear the remaining `202x` placeholder and any similar public placeholders
+4. Decide the final public role of `help-others.html`
+5. Run final QA on mobile, desktop, accessibility, and staging
+6. Confirm production hosting and DNS settings
 
-## Supporting Docs
+## Current Decisions
 
-These remain useful, but they should be treated as supporting views:
+- the website remains a custom static build
+- GitHub is the repository of record
+- Cloudflare Pages is the preferred deployment path
+- About Us is split into Who We Are and What We Do
+- the fuller recovery-path directory lives in `other-paths-to-recovery.html`
+- `resources.html` remains public as a bridge route
+- helper scripts and the Node publish build remain part of the workflow
 
-- `docs/agile/project-status.md`: narrative status snapshot
-- `docs/agile/product-backlog.md`: backlog and acceptance criteria
-- `docs/agile/release-roadmap.md`: timing and delivery windows
-- `docs/agile/raid-log.md`: risks, assumptions, issues, dependencies
-- `docs/operations/runbook.md`: workflow
-- `docs/operations/publish-checklist.md`: release checklist
-- `docs/product/content-inventory.md`: page and asset inventory
-
-## Documents That Need To Stay In Sync With This File
+## Supporting Docs That Must Stay In Sync
 
 - `docs/agile/project-status.md`
 - `docs/agile/product-backlog.md`
 - `docs/agile/release-roadmap.md`
 - `docs/agile/raid-log.md`
-- `docs/operations/publish-checklist.md`
-- `docs/operations/runbook.md`
+- `docs/product/site-brief.md`
 - `docs/product/content-inventory.md`
+- `docs/operations/runbook.md`
+- `docs/operations/publish-checklist.md`
+- `docs/operations/qa-smoke-checklist.md`
 - `docs/getting-oriented.md`
 
-## GitHub And Cloudflare Sync Notes
+## Operating Rule
 
-### GitHub
+When site behavior changes:
 
-- This file should live in the repo and be committed like any other source document
-- A push to the connected staging branch should feed Cloudflare Pages automatically
-- GitHub Actions already rebuild the `publish/` directory after source changes when that compatibility path is needed
-
-### Cloudflare
-
-- Cloudflare Pages should continue reading from GitHub
-- Cloudflare does not need a duplicate planning board
-- The Cloudflare-side operational truth should be limited to:
-  - connected repository
-  - production branch
-  - build command
-  - build output directory
-  - domains / DNS
-
-## Recommended Operating Rule Going Forward
-
-When project management changes happen:
-
-1. update this file first
-2. update any supporting board that is affected
-3. commit and push the change to GitHub
-4. verify the Cloudflare staging project receives the updated repo state through the normal deployment flow
+1. update the implemented source files first
+2. update this file
+3. update the supporting docs affected by that change
