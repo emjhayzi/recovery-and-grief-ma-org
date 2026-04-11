@@ -6,20 +6,18 @@ If a GitHub Project is used for ongoing coordination, it should track the curren
 
 ## Suggested Project
 
-- Name: `Recovery and Grief Launch`
-- Type: board/table views are enough
-- Scope: content cleanup, QA, deployment, and launch blockers
+- Name: `Recovery and Grief Refinement`
+- Type: board or table views are enough
+- Scope: content validation, QA, deployment, and remaining product decisions
 
 ## Suggested First Issues
 
-1. Replace crisis CTA placeholder links across the site
-2. Replace or remove TSWR footer social placeholder links
-3. Resolve the Tavyn media placeholder on `whole-person.html`
-4. Replace the `202x` placeholder in Leslie's bio
-5. Decide the final role of `help-others.html`
-6. Decide whether the Group Readings note becomes real content
-7. Run full mobile/desktop/accessibility QA
-8. Confirm Cloudflare production branch, DNS, and maintainer access
+1. Replace Leslie's `202x` year in `who-we-are.html`
+2. Decide whether the Google document support route and the SADOD Request Help form should stay split
+3. Validate TSWR TikTok and LinkedIn URLs
+4. Decide the final role of `help-others.html`
+5. Run full mobile, desktop, reduced-motion, and accessibility QA
+6. Confirm Cloudflare production branch, DNS, and maintainer access
 
 ## Working Rule
 
@@ -28,4 +26,4 @@ Issue titles and acceptance criteria should be derived from:
 1. the implemented source files
 2. `docs/agile/single-source-of-truth.md`
 
-and not from older snapshots that describe removed layouts or already-resolved routes.
+and not from older snapshots that describe removed placeholders or resolved routes.

@@ -2,18 +2,18 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Status audited against the website source on April 11, 2026.
+Status audited against the website source on April 12, 2026.
 
 ## Snapshot
 
-- Stage: refinement and launch-readiness cleanup
-- Delivery state: the website is structurally complete, with the remaining work concentrated in a small number of content and destination gaps
+- Stage: refinement, documentation cleanup, and staging validation
+- Delivery state: the website is structurally complete and publishable, with the remaining work focused on a few content and route-validation questions
 
 ## Current Build Summary
 
 The source currently contains:
 
-- 10 public HTML pages
+- 11 public HTML pages
 - 1 internal design-lab page
 - 1 shared stylesheet
 - 1 shared JavaScript file
@@ -23,33 +23,34 @@ The source currently contains:
 ## What The Website Already Does
 
 - routes visitors from the homepage into six clear pathways
-- offers direct support through email and a live Request Help form
-- offers support-group discovery through a live directory and a group-support email
+- offers direct support through email and the SADOD Request Help form
+- offers support-group context through an editorial explainer page
+- provides crisis guidance through `crisis-support.html`
 - explains peer grief support through What We Do and Who We Are
-- provides a populated team/story page with real images and long-form profiles
-- provides whole-person/recovery context through New Form plus two live videos
+- provides a populated team page with real images and long-form profiles
+- provides whole-person and recovery context through NewForm plus two live videos
 - keeps More Resources available as a bridge route during reorganization
+- uses shared page transitions that stay subtle and respect reduced motion
 
 ## What Still Needs Attention
 
-- crisis CTA destination
-- TSWR footer social destinations
-- Tavyn video destination on `whole-person.html`
-- Leslie bio year placeholder
-- final decision on the public volunteer placeholder page
-- final production deployment and DNS confirmation
+- Leslie's `202x` year on `who-we-are.html`
+- final decision on the public `help-others.html` page
+- whether the global Google document support route and the SADOD Request Help form should stay split
+- whether the TSWR TikTok and LinkedIn URLs are the intended final public destinations
+- final staging and production deployment verification
 
 ## Current Assessment
 
-The biggest risks are no longer layout or architecture. The main remaining issues are:
+The main risks are no longer layout or routing architecture. The remaining work is concentrated in:
 
-- unresolved live destinations
-- a small number of public placeholders
-- final launch operations and QA
+- one visible public content placeholder
+- a few link and destination validation questions
+- final staging and deployment checks
 
 ## Recommended Next Focus
 
-1. replace the remaining `#` destinations intended for public use
-2. resolve the remaining visible placeholder content
-3. complete full browser/device QA
-4. lock the production publish path
+1. clear the remaining public `202x` placeholder once the approved year is known
+2. decide the product role of `help-others.html`
+3. confirm support-request routing and TSWR social destinations
+4. run full staging QA after publishing

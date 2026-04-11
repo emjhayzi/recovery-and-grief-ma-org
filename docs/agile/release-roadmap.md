@@ -2,62 +2,49 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Roadmap audited against the website source on April 11, 2026.
+Roadmap audited against the website source on April 12, 2026.
 
 No production launch date is locked in the source files, so this roadmap is phase-based rather than date-based.
 
 ## Current Position
 
-The site is already structurally complete. Remaining work is concentrated in:
+The site is structurally complete. Remaining work is concentrated in:
 
-- unresolved live destinations
-- a small number of public placeholders
-- final QA and deployment confirmation
+- one visible public placeholder year
+- a few route and social-link validation questions
+- final staging and deployment confirmation
 
-## Phase 1: Destination Cleanup
-
-Focus:
-
-- replace crisis CTA placeholder links
-- replace TSWR social placeholder links
-
-Exit criteria:
-
-- no intended public destination still uses `href="#"`
-
-## Phase 2: Placeholder Cleanup
+## Phase 1: Content And Link Validation
 
 Focus:
 
-- resolve the Tavyn video placeholder on `whole-person.html`
-- clear the `202x` placeholder in Leslie's bio
-- decide the final role of the `help-others.html` placeholder page
-- decide whether the Group Readings note becomes real content or is removed
+- replace Leslie's `202x` with approved copy
+- confirm whether the support-request routes should stay split
+- validate TSWR TikTok and LinkedIn destinations
 
 Exit criteria:
 
-- all remaining public placeholders are either resolved or intentionally reframed
+- public-facing text and public-facing routes are approved for staging review
 
-## Phase 3: Pathway And Content Validation
+## Phase 2: Public Path Decision
 
 Focus:
 
-- verify homepage pathway logic, including the More Resources bridge route
-- verify direct support and support-group routes remain clear
-- confirm copy and trust signals still feel emotionally safe and human
+- decide the final role of `help-others.html`
 
 Exit criteria:
 
-- key visitor pathways remain clear from homepage through destination pages
+- the volunteer path is either finalized, intentionally public, or removed from public navigation
 
-## Phase 4: QA And Deployment Lock
+## Phase 3: QA And Deployment Lock
 
 Focus:
 
 - mobile and desktop QA
+- reduced-motion and page-transition verification
 - accessibility smoke pass
 - staging verification
-- production branch / DNS / Cloudflare settings confirmation
+- production branch and DNS confirmation
 
 Exit criteria:
 

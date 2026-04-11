@@ -1,6 +1,6 @@
 # Project Charter
 
-Audited against the website source on April 11, 2026.
+Audited against the website source on April 12, 2026.
 
 ## Project Name
 
@@ -12,37 +12,39 @@ Custom static multi-page website for a Massachusetts peer grief support program.
 
 ## Vision
 
-Provide an emotionally safe, recovery-affirming website that helps grieving visitors quickly find human support, group support, and related recovery resources.
+Provide an emotionally safe, recovery-affirming website that helps grieving visitors quickly find human support, group support, crisis guidance, and related recovery resources.
 
 ## Current Deliverable
 
-A 10-page public website, plus one internal design-lab page, built with shared HTML/CSS/JS patterns and a generated deploy bundle.
+An 11-page public website, plus one internal design-lab page, built with shared HTML, CSS, and JavaScript patterns and a generated deploy bundle.
 
 ## In Scope
 
-- public marketing/support website
+- public marketing and support website
 - shared masthead, footer, styling, and interaction patterns
-- direct-support, group-support, and resource pathways
+- direct-support, group-support, recovery-resource, and crisis pathways
 - project documentation, QA workflow, and deployment workflow
 
 ## Out Of Scope For This Phase
 
-- CMS/dashboard inside this repo
+- CMS or dashboard inside this repo
 - backend application development
 - advanced form-processing logic inside the project itself
-- new features that are not already supported by the current static build direction
+- new platform migration away from the static build direction
 
 ## Success Criteria
 
 - visitors understand the audience and purpose quickly
 - the next-step pathways feel safe and clear
 - the site works well on mobile and desktop
-- public placeholders are removed or intentionally framed
+- transitions feel calm and accessible rather than distracting
+- public unfinished content is either resolved or intentionally framed
 - the publish path is repeatable and documented
 
 ## Current Constraints
 
 - sensitive audience and tone requirements
-- a few public destinations are still unresolved
-- one visible bio placeholder and one media placeholder remain
+- one visible public content placeholder remains
+- support-request routes are not fully unified
+- TSWR public social destinations still need validation
 - production hosting settings still need final verification

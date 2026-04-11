@@ -6,29 +6,30 @@ This file is the fastest way to re-enter the project after time away.
 
 ## What This Project Is
 
-- Static multi-page website
-- Plain HTML, CSS, and JavaScript
-- No framework app, CMS runtime, or database in this repo
+- static multi-page website
+- plain HTML, CSS, and JavaScript
+- no framework app, CMS runtime, or database in this repo
 - Node script used only to regenerate `publish/`
-- Best suited to static hosting such as Cloudflare Pages
+- best suited to static hosting such as Cloudflare Pages
 
 ## Current Public Pages
 
-- `index.html`: homepage with six support/resource pathway cards
+- `index.html`: homepage with six pathway cards
 - `about.html`: legacy redirect to `who-we-are.html`
-- `who-we-are.html`: team/story page
+- `who-we-are.html`: team and story page
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page
 - `groups.html`: support groups page
-- `whole-person.html`: Your Path / New Form page
+- `whole-person.html`: Your Path / NewForm page
 - `other-paths-to-recovery.html`: recovery-path directory
 - `resources.html`: bridge page into Other Paths to Recovery
-- `help-others.html`: placeholder future volunteer page
+- `help-others.html`: visible future-state volunteer page
+- `crisis-support.html`: crisis support page
 
 ## Shared Files
 
-- `assets/css/styles.css`: layout, typography, responsive rules, motion, and component styling
-- `assets/js/script.js`: mobile nav, page transitions, and homepage motion behavior
+- `assets/css/styles.css`: layout, typography, responsive rules, and motion
+- `assets/js/script.js`: mobile nav, dropdown behavior, page transitions, homepage motion, and scroll-to-top behavior
 - `assets/images/`: partner logos, team photos, page imagery, and card imagery
 
 ## Internal Tooling
@@ -47,7 +48,7 @@ This file is the fastest way to re-enter the project after time away.
 Each public page is a standalone HTML file using:
 
 - the same masthead pattern
-- the same footer class structure
+- the same footer structure
 - the same shared stylesheet
 - the same shared JavaScript file
 
@@ -75,10 +76,10 @@ Helper scripts:
 
 - co-branded SADOD + TSWR masthead with outbound logo links
 - homepage hero with six pathway cards
-- homepage partnership section stacked vertically
-- four-part footer styling
-- live direct-contact email and Request Help form links
-- live support-group directory link and group-support email
+- shared footer with support, social, and PSCP sections
+- global crisis route via `crisis-support.html`
+- calm page-to-page transitions with reduced-motion handling
+- live direct-contact email and SADOD Request Help form on `connect.html`
 - populated team page with five profile sections
 - two live YouTube embeds on `whole-person.html`
 - More Resources bridge page
@@ -86,12 +87,10 @@ Helper scripts:
 
 ## What Is Still Open In Source
 
-- crisis CTA links still point to `#`
-- TSWR social links still point to `#`
-- one Tavyn video block still needs a real destination
-- Leslie bio still contains a `202x` placeholder year
-- `help-others.html` is still intentionally a placeholder page
-- `groups.html` still references a future Group Readings block in a comment
+- Leslie's bio still contains `202x`
+- `help-others.html` is still intentionally a placeholder-style public page
+- the global request link and the `connect.html` request link use different URLs
+- TSWR TikTok and LinkedIn URLs should be validated before production
 
 ## Working Rule
 
