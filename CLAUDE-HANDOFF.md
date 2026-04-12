@@ -41,7 +41,7 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 - `what-is-a-peer-grief-ally.html` is a simple explainer page linked from `connect.html`
 - `what-we-do.html` is now a two-band explanation page with editorial imagery
 - `who-we-are.html` includes six team/profile sections with real images and long-form copy
-- `whole-person.html` contains two live YouTube embeds plus a Tavyn story image block
+- `whole-person.html` contains two live YouTube embeds plus a Tavyn title-slide image block
 - `resources.html` is intentionally a short bridge page into `other-paths-to-recovery.html`
 - `help-others.html` is intentionally still a visible future-state page
 - `assets/js/script.js` now handles site navigation plus calm page transitions

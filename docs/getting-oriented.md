@@ -78,7 +78,7 @@ Helper scripts:
 - dedicated Peer Grief Ally explainer page linked from `connect.html`
 - dedicated printable group directory page linked from `groups.html`
 - populated team page with six profile sections
-- two live YouTube embeds on `whole-person.html`
+- two live YouTube embeds on `whole-person.html` plus a Tavyn title-slide image block
 - More Resources bridge page
 - generated Cloudflare-ready `publish/` bundle
 

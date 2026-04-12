@@ -24,7 +24,7 @@ Use this order when checking what is true:
 - `what-is-a-peer-grief-ally.html`: simple explainer page linked from `connect.html`
 - `groups.html`: support groups page
 - `groups-directory.html`: printable support-group directory page
-- `whole-person.html`: Your Path / NewForm page with two YouTube embeds and a Tavyn story image block
+- `whole-person.html`: Your Path / NewForm page with two YouTube embeds, path imagery, and a Tavyn title-slide image block
 - `other-paths-to-recovery.html`: recovery-path directory page
 - `resources.html`: short bridge page into Other Paths to Recovery
 - `help-others.html`: public future-facing volunteer placeholder page
@@ -49,7 +49,7 @@ Implemented in source right now:
 - dedicated `crisis-support.html` route used by the global crisis links
 - dedicated `what-is-a-peer-grief-ally.html` route linked from `connect.html`
 - dedicated `groups-directory.html` route linked from `groups.html`
-- whole-person page with two live YouTube embeds plus a Tavyn story image block
+- whole-person page with two live YouTube embeds plus a Tavyn title-slide image block
 - recovery directory page under `other-paths-to-recovery.html`
 - generated `publish/` build for Cloudflare Pages
 
