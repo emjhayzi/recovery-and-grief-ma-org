@@ -15,7 +15,9 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 - `who-we-are.html`
 - `what-we-do.html`
 - `connect.html`
+- `what-is-a-peer-grief-ally.html`
 - `groups.html`
+- `groups-directory.html`
 - `whole-person.html`
 - `other-paths-to-recovery.html`
 - `resources.html`
@@ -36,12 +38,14 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 | --- | --- | --- |
 | `index.html` | Homepage with one-line hero and six pathway cards | Route visitors into the right next step |
 | `about.html` | Redirect page | Preserve legacy route |
-| `who-we-are.html` | Team and story page with five profile sections | Build trust |
+| `who-we-are.html` | Team and story page with six profile sections | Build trust |
 | `what-we-do.html` | Peer grief support explanation page | Explain the offer |
 | `connect.html` | Direct support page with email and SADOD Request Help form | Reach a real person |
+| `what-is-a-peer-grief-ally.html` | Short explainer page linked from Direct Connection | Clarify the Ally role |
 | `groups.html` | Group support explainer page | Understand groups and choose that path |
+| `groups-directory.html` | Printable group directory page | Give visitors the full group list |
 | `whole-person.html` | NewForm / whole-person page with two videos and one image-led story section | Connect grief support with recovery context |
-| `other-paths-to-recovery.html` | Recovery-path directory page | Explore fellowships and support models |
+| `other-paths-to-recovery.html` | Text-forward recovery-path directory page | Explore fellowships and support models |
 | `resources.html` | Bridge page | Route visitors into Other Paths to Recovery |
 | `help-others.html` | Future-state public page | Signal a possible future volunteer path |
 | `crisis-support.html` | Crisis route page | Route urgent visitors to immediate help |
@@ -69,8 +73,8 @@ Current homepage cards route to:
 
 - Leslie bio still contains `202x`
 - `help-others.html` is intentionally unfinished as a public pathway
-- global support links use a Google document while `connect.html` also links to the SADOD Request Help form
-- TSWR TikTok and LinkedIn URLs should be validated for final public use
+- global support links use a Google Form while `connect.html` also links to the SADOD Request Help form
+- TSWR TikTok should be validated and the TSWR YouTube footer link is still a blank placeholder
 
 ## Deployment Inventory
 

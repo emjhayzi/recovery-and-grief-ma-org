@@ -19,7 +19,9 @@ Then inspect the website files:
 - who-we-are.html
 - what-we-do.html
 - connect.html
+- what-is-a-peer-grief-ally.html
 - groups.html
+- groups-directory.html
 - whole-person.html
 - other-paths-to-recovery.html
 - resources.html
@@ -41,7 +43,7 @@ Important context:
 - The root website files are the implementation source of truth.
 - `resources.html` is intentionally a bridge page that routes into `other-paths-to-recovery.html`.
 - `help-others.html` is intentionally still a future-state public page.
-- The global support links currently use a Google document, while `connect.html` also links to the SADOD Request Help form.
+- The global support links currently use a Google Form, while `connect.html` also links to the SADOD Request Help form.
 - Leslie's bio still contains `202x`.
 
 Please prioritize findings, risks, and practical recommendations over compliments.

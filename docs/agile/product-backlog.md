@@ -29,7 +29,7 @@ Done when:
 
 Current source truth:
 
-- the global "Request Grief Support" links point to a Google document
+- the global "Request Grief Support" links point to a Google Form
 - `connect.html` separately links to `https://sadod.org/request-help`
 
 Done when:
@@ -44,7 +44,8 @@ Done when:
 Current source truth:
 
 - TSWR footer links are populated
-- the current TikTok and LinkedIn URLs should be confirmed for final public use
+- the current TikTok URL should be confirmed for final public use
+- the YouTube footer link is still blank in source
 
 Done when:
 

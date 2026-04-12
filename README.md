@@ -21,7 +21,9 @@ Use this order when checking what is true:
 - `who-we-are.html`: team and lived-experience page
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `what-is-a-peer-grief-ally.html`: simple explainer page linked from `connect.html`
 - `groups.html`: support groups page
+- `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: Your Path / NewForm page with two YouTube embeds and a Tavyn story image block
 - `other-paths-to-recovery.html`: recovery-path directory page
 - `resources.html`: short bridge page into Other Paths to Recovery
@@ -45,6 +47,8 @@ Implemented in source right now:
 - shared footer with support links, social links, and PSCP attribution
 - page-to-page transitions via the shared JavaScript/CSS motion layer
 - dedicated `crisis-support.html` route used by the global crisis links
+- dedicated `what-is-a-peer-grief-ally.html` route linked from `connect.html`
+- dedicated `groups-directory.html` route linked from `groups.html`
 - whole-person page with two live YouTube embeds plus a Tavyn story image block
 - recovery directory page under `other-paths-to-recovery.html`
 - generated `publish/` build for Cloudflare Pages
@@ -53,8 +57,8 @@ Still open in the source:
 
 - Leslie's bio on `who-we-are.html` still contains `202x`
 - `help-others.html` is still intentionally a public placeholder page
-- the global "Request Grief Support" link goes to a Google document, while `connect.html` also points to `https://sadod.org/request-help`
-- TSWR social links are populated, but the public TikTok and LinkedIn URLs should be validated before production use
+- the global "Request Grief Support" links point to a Google Form, while `connect.html` separately points to `https://sadod.org/request-help`
+- the TSWR TikTok destination should be validated and the TSWR YouTube footer link is still a blank placeholder
 
 ## Preview
 

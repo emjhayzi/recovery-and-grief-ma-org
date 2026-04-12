@@ -19,7 +19,9 @@ This file is the fastest way to re-enter the project after time away.
 - `who-we-are.html`: team and story page
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page
+- `what-is-a-peer-grief-ally.html`: explainer page linked from Direct Connection
 - `groups.html`: support groups page
+- `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: Your Path / NewForm page
 - `other-paths-to-recovery.html`: recovery-path directory
 - `resources.html`: bridge page into Other Paths to Recovery
@@ -73,7 +75,9 @@ Helper scripts:
 - global crisis route via `crisis-support.html`
 - calm page-to-page transitions with reduced-motion handling
 - live direct-contact email and SADOD Request Help form on `connect.html`
-- populated team page with five profile sections
+- dedicated Peer Grief Ally explainer page linked from `connect.html`
+- dedicated printable group directory page linked from `groups.html`
+- populated team page with six profile sections
 - two live YouTube embeds on `whole-person.html`
 - More Resources bridge page
 - generated Cloudflare-ready `publish/` bundle
@@ -83,7 +87,7 @@ Helper scripts:
 - Leslie's bio still contains `202x`
 - `help-others.html` is still intentionally a placeholder-style public page
 - the global request link and the `connect.html` request link use different URLs
-- TSWR TikTok and LinkedIn URLs should be validated before production
+- TSWR TikTok should be validated and the TSWR YouTube link still needs its final URL
 
 ## Working Rule
 

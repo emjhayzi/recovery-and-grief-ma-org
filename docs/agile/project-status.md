@@ -13,7 +13,7 @@ Status audited against the website source on April 12, 2026.
 
 The source currently contains:
 
-- 11 public HTML pages
+- 13 public HTML pages
 - 1 shared stylesheet
 - 1 shared JavaScript file
 - a generated `publish/` bundle
@@ -23,7 +23,8 @@ The source currently contains:
 
 - routes visitors from the homepage into six clear pathways
 - offers direct support through email and the SADOD Request Help form
-- offers support-group context through an editorial explainer page
+- offers a Peer Grief Ally explainer linked from Direct Connection
+- offers support-group context through an editorial explainer page plus a printable directory page
 - provides crisis guidance through `crisis-support.html`
 - explains peer grief support through What We Do and Who We Are
 - provides a populated team page with real images and long-form profiles
@@ -35,8 +36,8 @@ The source currently contains:
 
 - Leslie's `202x` year on `who-we-are.html`
 - final decision on the public `help-others.html` page
-- whether the global Google document support route and the SADOD Request Help form should stay split
-- whether the TSWR TikTok and LinkedIn URLs are the intended final public destinations
+- whether the global Google Form support route and the SADOD Request Help form should stay split
+- whether the TSWR TikTok URL is correct and what final URL should replace the blank TSWR YouTube footer link
 - final staging and production deployment verification
 
 ## Current Assessment

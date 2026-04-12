@@ -10,7 +10,9 @@ Audited against the website source on April 12, 2026.
   - `who-we-are.html`
   - `what-we-do.html`
   - `connect.html`
+  - `what-is-a-peer-grief-ally.html`
   - `groups.html`
+  - `groups-directory.html`
   - `whole-person.html`
   - `other-paths-to-recovery.html`
   - `resources.html`
@@ -30,8 +32,10 @@ Audited against the website source on April 12, 2026.
 ## Support Path Checks
 
 - Confirm `connect.html` email and SADOD Request Help form links work
+- Confirm `what-is-a-peer-grief-ally.html` loads and reads cleanly
 - Confirm the global "Request Grief Support" links work as currently intended
 - Confirm `groups.html` reads clearly and loads all three editorial image bands
+- Confirm `groups-directory.html` loads and prints in portrait cleanly
 - Confirm `resources.html` CTA leads into `other-paths-to-recovery.html`
 - Confirm `whole-person.html` links to Other Paths to Recovery correctly
 - Confirm `crisis-support.html` 988 links work
@@ -41,6 +45,7 @@ Audited against the website source on April 12, 2026.
 - Confirm Leslie's bio still matches the approved source text
 - Confirm `help-others.html` still matches the current product decision
 - Confirm TSWR social links use the intended public URLs
+- Confirm the blank TSWR YouTube footer link is still acceptable if no destination has been approved
 - Confirm footer support and partner text still feels accurate and trustworthy
 
 ## Motion Checks

@@ -205,7 +205,7 @@ if (currentHref && nav) {
 }
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const pageTransitionDuration = 380;
+const pageTransitionDuration = 320;
 const pageTransitionStorageKey = "recovery-and-grief-page-transition";
 const supportsViewTransitions =
   !reduceMotionQuery.matches &&
@@ -254,39 +254,53 @@ const clearStoredTransitionState = () => {
 };
 
 const setupPageTransitionFallback = () => {
-  document.body.classList.remove(
-    "has-page-transition-fallback",
-    "is-page-entering",
-    "is-page-enter-active",
-    "is-page-leaving"
-  );
+  document.body.classList.remove("has-page-transition-fallback");
 
   if (reduceMotionQuery.matches || supportsViewTransitions) {
     clearStoredTransitionState();
     return;
   }
 
-  document.body.classList.add("has-page-transition-fallback");
+  // Create the overlay element once
+  const overlay = document.createElement("div");
+  overlay.className = "page-transition-overlay";
+  document.body.appendChild(overlay);
 
+  // If arriving from a transition, start covered then reveal
   const storedState = getStoredTransitionState();
   const isFreshTransition =
     storedState &&
     typeof storedState.timestamp === "number" &&
-    Date.now() - storedState.timestamp < 2500;
+    Date.now() - storedState.timestamp < 1800;
 
   if (isFreshTransition) {
-    document.body.classList.add("is-page-entering");
+    overlay.classList.add("is-fading-in");
+    document.documentElement.classList.remove("ptr-mask");
 
-    window.requestAnimationFrame(() => {
+    // Wait for fonts + layout to fully settle before revealing
+    const reveal = () => {
       window.requestAnimationFrame(() => {
-        document.body.classList.add("is-page-enter-active");
-      });
-    });
+        window.requestAnimationFrame(() => {
+          overlay.classList.remove("is-fading-in");
+          overlay.classList.add("is-revealing");
 
-    window.setTimeout(() => {
-      document.body.classList.remove("is-page-entering", "is-page-enter-active");
-    }, pageTransitionDuration + 180);
+          const cleanup = () => {
+            overlay.classList.remove("is-revealing");
+          };
+          overlay.addEventListener("transitionend", cleanup, { once: true });
+          window.setTimeout(cleanup, 1000);
+        });
+      });
+    };
+
+    // Hold overlay until fonts are ready + a minimum settle time
+    const minDelay = new Promise((r) => window.setTimeout(r, 250));
+    const fontsReady = document.fonts?.ready || Promise.resolve();
+    Promise.all([minDelay, fontsReady]).then(reveal).catch(reveal);
   }
+
+  // Safety: always remove ptr-mask even if transition state was stale
+  document.documentElement.classList.remove("ptr-mask");
 
   clearStoredTransitionState();
 
@@ -339,24 +353,27 @@ const setupPageTransitionFallback = () => {
       try {
         sessionStorage.setItem(
           pageTransitionStorageKey,
-          JSON.stringify({
-            timestamp: Date.now(),
-          })
+          JSON.stringify({ timestamp: Date.now() })
         );
       } catch {}
 
-      document.body.classList.add("is-page-leaving");
+      // Fade the overlay in (covers the page)
+      overlay.classList.add("is-fading-out");
 
-      window.setTimeout(() => {
+      // Navigate once fully faded
+      const navigate = () => {
         window.location.assign(destination.href);
-      }, pageTransitionDuration - 20);
+      };
+      overlay.addEventListener("transitionend", navigate, { once: true });
+      // Safety fallback in case transitionend doesn't fire
+      window.setTimeout(navigate, 900);
     },
     true
   );
 
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) {
-      document.body.classList.remove("is-page-leaving");
+      overlay.classList.remove("is-fading-out");
       isNavigating = false;
     }
   });

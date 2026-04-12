@@ -13,8 +13,8 @@ If a GitHub Project is used for ongoing coordination, it should track the curren
 ## Suggested First Issues
 
 1. Replace Leslie's `202x` year in `who-we-are.html`
-2. Decide whether the Google document support route and the SADOD Request Help form should stay split
-3. Validate TSWR TikTok and LinkedIn URLs
+2. Decide whether the Google Form support route and the SADOD Request Help form should stay split
+3. Validate the TSWR TikTok URL and replace the blank TSWR YouTube link
 4. Decide the final role of `help-others.html`
 5. Run full mobile, desktop, reduced-motion, and accessibility QA
 6. Confirm Cloudflare production branch, DNS, and maintainer access

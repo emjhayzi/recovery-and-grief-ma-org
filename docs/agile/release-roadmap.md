@@ -20,7 +20,7 @@ Focus:
 
 - replace Leslie's `202x` with approved copy
 - confirm whether the support-request routes should stay split
-- validate TSWR TikTok and LinkedIn destinations
+- validate the TSWR TikTok destination and set the final TSWR YouTube URL
 
 Exit criteria:
 

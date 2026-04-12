@@ -23,12 +23,14 @@ Current public site structure in source:
 
 - `index.html`: homepage with six pathway cards
 - `about.html`: redirect page
-- `who-we-are.html`: team and lived-experience page with five profiles
+- `who-we-are.html`: team and lived-experience page with six profiles
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
 - `groups.html`: support groups page with three editorial content bands
+- `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn image/story block
-- `other-paths-to-recovery.html`: recovery-path directory page
+- `other-paths-to-recovery.html`: text-forward recovery-path directory page
 - `resources.html`: short bridge page into Other Paths to Recovery
 - `help-others.html`: intentional public future-state volunteer page
 - `crisis-support.html`: crisis support route for urgent help guidance
@@ -39,7 +41,7 @@ Current shared behavior in source:
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
 - homepage hero headline reads "You Are Not Alone" on one line
-- shared footer support links route to a Google document and the crisis page
+- shared footer support links route to a Google Form and the crisis page
 - local Geneva font is used through `assets/fonts/GENEVA.TTF`
 - `publish/` is generated from source with `node scripts/build-publish.mjs`
 
@@ -47,8 +49,8 @@ Current shared behavior in source:
 
 - Leslie's bio in `who-we-are.html` still includes `202x`
 - `help-others.html` is still intentionally a public placeholder-style page
-- the global "Request Grief Support" link uses a Google document while `connect.html` separately links to `https://sadod.org/request-help`
-- TSWR social links are populated, but the TikTok and LinkedIn destinations should be verified before production use
+- the global "Request Grief Support" link uses a Google Form while `connect.html` separately links to `https://sadod.org/request-help`
+- the TSWR TikTok destination should be verified and the TSWR YouTube footer link is still blank in source
 
 ## Status Summary
 
@@ -75,8 +77,8 @@ What is not final:
 
 1. clear the remaining `202x` placeholder in Leslie's bio when the approved year is known
 2. decide whether `help-others.html` stays public, is hidden, or is fully built out
-3. decide whether the Google document support route and the SADOD Request Help form should be unified
-4. validate TSWR TikTok and LinkedIn URLs for public use
+3. decide whether the Google Form support route and the SADOD Request Help form should be unified
+4. validate the TSWR TikTok URL and set the final TSWR YouTube destination
 5. run full staging QA after each significant website change
 6. confirm production hosting and DNS settings
 

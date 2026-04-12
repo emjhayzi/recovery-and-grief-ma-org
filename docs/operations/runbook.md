@@ -21,7 +21,7 @@ Update docs after the source changes, not before.
 ## Project Model
 
 - static HTML, CSS, and JavaScript
-- 11 public pages
+- 13 public pages
 - local Geneva font asset instead of an external font dependency
 - Node script used to regenerate `publish/`
 - Git and GitHub-backed deployment path
@@ -77,5 +77,5 @@ Before publishing:
 - Leslie's `202x`
 - final decision on `help-others.html`
 - support-request route consistency
-- TSWR TikTok and LinkedIn validation
+- TSWR TikTok validation and TSWR YouTube destination
 - staging and production deployment settings

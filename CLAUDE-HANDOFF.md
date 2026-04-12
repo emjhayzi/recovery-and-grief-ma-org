@@ -12,7 +12,7 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 
 - custom static multi-page site
 - plain HTML, CSS, and a small amount of JavaScript
-- 11 public HTML pages plus `design-lab.html`
+- 13 public HTML pages
 - shared co-branded masthead and shared footer patterns
 - Git-tracked source with a generated `publish/` bundle
 
@@ -23,7 +23,9 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 - `who-we-are.html`
 - `what-we-do.html`
 - `connect.html`
+- `what-is-a-peer-grief-ally.html`
 - `groups.html`
+- `groups-directory.html`
 - `whole-person.html`
 - `other-paths-to-recovery.html`
 - `resources.html`
@@ -33,11 +35,12 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 ## Current Source Truth Highlights
 
 - homepage hero uses a one-line "You Are Not Alone" heading and six pathway cards
-- the global support links include a Google document request route plus a dedicated crisis page
+- the global support links include a Google Form request route plus a dedicated crisis page
 - `connect.html` offers both `connect@recoveryandgrief-MA.org` and the live SADOD Request Help form
-- `groups.html` explains the support-group experience with three editorial bands
+- `groups.html` now links to a printable `groups-directory.html` page
+- `what-is-a-peer-grief-ally.html` is a simple explainer page linked from `connect.html`
 - `what-we-do.html` is now a two-band explanation page with editorial imagery
-- `who-we-are.html` includes five team/profile sections with real images and long-form copy
+- `who-we-are.html` includes six team/profile sections with real images and long-form copy
 - `whole-person.html` contains two live YouTube embeds plus a Tavyn story image block
 - `resources.html` is intentionally a short bridge page into `other-paths-to-recovery.html`
 - `help-others.html` is intentionally still a visible future-state page
@@ -48,7 +51,7 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 - Leslie's bio still includes a `202x` placeholder year on `who-we-are.html`
 - `help-others.html` still needs a keep/hide/finalize decision
 - the global request route and the `connect.html` request route are not the same URL
-- TSWR TikTok and LinkedIn URLs should be confirmed before a production push
+- the TSWR TikTok URL should be confirmed and the TSWR YouTube footer link still needs its final destination
 
 ## Main Files
 

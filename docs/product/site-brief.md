@@ -42,7 +42,7 @@ Confirm "You Are Not Alone" quickly and route visitors into six clear choices:
 
 - Learn About Peer Grief Support
 - Connect with a Peer Grief Helper
-- Attend a Grief Support Group
+- Attend a Peer Grief Support Group
 - Find Your Recovery Path
 - Explore More Resources
 - Volunteer to Help Others
@@ -57,11 +57,11 @@ Explain how peer grief support works and why lived experience matters.
 
 ### Direct Connection
 
-Offer the clearest route to one-on-one support through email and the SADOD Request Help form.
+Offer the clearest route to one-on-one support through email, the SADOD Request Help form, and a clear Peer Grief Ally explainer.
 
 ### Support Groups
 
-Explain what support groups feel like and help visitors understand what happens in a group.
+Explain what support groups feel like and help visitors understand what happens in a group, then provide a printable directory.
 
 ### Your Path
 
@@ -69,7 +69,7 @@ Connect grief support with broader recovery and whole-person healing.
 
 ### Other Paths To Recovery
 
-Provide the fuller directory of fellowships, communities, and support models.
+Provide the fuller directory of fellowships, communities, and support models in a simple text-forward format.
 
 ### More Resources
 
@@ -87,5 +87,5 @@ Provide immediate, clear guidance for urgent situations and route people to 911 
 
 - Leslie's `202x` year in `who-we-are.html`
 - whether `help-others.html` should stay public in its current state
-- whether the Google document support route and the SADOD Request Help form should be unified
-- whether the current TSWR TikTok and LinkedIn URLs are the intended public destinations
+- whether the Google Form support route and the SADOD Request Help form should be unified
+- whether the current TSWR TikTok destination is correct and what URL should replace the blank TSWR YouTube footer link
