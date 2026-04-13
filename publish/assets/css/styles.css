@@ -634,14 +634,14 @@ h3 {
 }
 
 .site-nav-primary > *:not(:last-child) {
-  margin-right: 0.9rem;
+  margin-right: 0.58rem;
 }
 
 .site-nav-primary > *:not(:last-child)::after {
   content: "|";
   position: absolute;
   top: 50%;
-  right: -0.62rem;
+  right: -0.44rem;
   transform: translateY(-50%);
   color: rgba(47, 58, 52, 0.26);
   font-weight: 300;
@@ -656,7 +656,7 @@ h3 {
   text-decoration: none;
   border-radius: 999px;
   min-height: auto;
-  padding: 0.35rem 0.7rem;
+  padding: 0.3rem 0.46rem;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
