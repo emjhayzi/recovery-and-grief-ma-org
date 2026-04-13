@@ -42,7 +42,7 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 | `what-we-do.html` | Peer grief support explanation page | Explain the offer |
 | `connect.html` | Direct support page with email and the shared grief-support Google Form | Reach a real person |
 | `what-is-a-peer-grief-ally.html` | Short explainer page linked from Direct Connection | Clarify the Ally role |
-| `groups.html` | Group support explainer page | Understand groups and choose that path |
+| `groups.html` | Group support explainer page with a featured directory CTA | Understand groups and choose that path |
 | `groups-directory.html` | Printable group directory page | Give visitors the full group list |
 | `whole-person.html` | NewForm / whole-person page with two videos and one image-led story section | Connect grief support with recovery context |
 | `other-paths-to-recovery.html` | Text-forward recovery-path directory page | Explore fellowships and support models |

@@ -20,6 +20,7 @@ Audited against the website source on April 13, 2026.
 - Confirm the global "Request Grief Support" links still match the `connect.html` Google Form route
 - Confirm `groups.html` still presents the support-group pathway clearly
 - Confirm `groups.html` still links to `groups-directory.html`
+- Confirm the `GROUP DIRECTORY` button stands out clearly and still fits the site palette
 - Confirm `groups-directory.html` prints in portrait as intended
 - Confirm `crisis-support.html` still routes urgent visitors to 911 or 988 guidance
 - Confirm the primary nav still shows `What We Do` first and `Who We Are` last
