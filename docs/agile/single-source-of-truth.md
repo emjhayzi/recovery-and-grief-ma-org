@@ -27,7 +27,7 @@ Current public site structure in source:
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
-- `groups.html`: support groups page with three editorial content bands and a featured `GROUP DIRECTORY` CTA
+- `groups.html`: support groups page with three editorial content bands and a clay-highlighted opening band
 - `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn title-slide image block
 - `other-paths-to-recovery.html`: text-forward recovery-path directory page

@@ -51,7 +51,7 @@ Implemented in source right now:
 - dedicated `crisis-support.html` route used by the global crisis links
 - dedicated `what-is-a-peer-grief-ally.html` route linked from `connect.html`
 - dedicated `groups-directory.html` route linked from `groups.html`
-- Support Groups page now gives the `GROUP DIRECTORY` call-to-action a palette-matched featured treatment
+- Support Groups page now emphasizes the opening group-information band with a clay gradient treatment
 - whole-person page with two live YouTube embeds plus a Tavyn title-slide image block
 - recovery directory page under `other-paths-to-recovery.html`
 - unified Google Form support route used both globally and on `connect.html`

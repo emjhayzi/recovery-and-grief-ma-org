@@ -38,7 +38,7 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 - the global support links include a Google Form request route plus a dedicated crisis page
 - `connect.html` offers both `connect@recoveryandgrief-MA.org` and the same live Google Form used by the global support links
 - `groups.html` now links to a printable `groups-directory.html` page
-- `groups.html` now gives the `GROUP DIRECTORY` call-to-action a more prominent clay-to-teal treatment
+- `groups.html` now emphasizes the opening support-group band with a clay gradient treatment while keeping the CTA button secondary
 - `what-is-a-peer-grief-ally.html` is a simple explainer page linked from `connect.html`
 - `what-we-do.html` is now a two-band explanation page with editorial imagery
 - `who-we-are.html` includes six team/profile sections with real images and long-form copy
