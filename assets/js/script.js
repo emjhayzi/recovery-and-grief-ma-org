@@ -205,179 +205,6 @@ if (currentHref && nav) {
 }
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const pageTransitionDuration = 320;
-const pageTransitionStorageKey = "recovery-and-grief-page-transition";
-const supportsViewTransitions =
-  !reduceMotionQuery.matches &&
-  typeof document.startViewTransition === "function" &&
-  typeof CSS !== "undefined" &&
-  typeof CSS.supports === "function" &&
-  CSS.supports("view-transition-name: page-masthead");
-
-const setTransitionName = (element, name) => {
-  if (!element || reduceMotionQuery.matches) {
-    return;
-  }
-
-  element.style.viewTransitionName = name;
-};
-
-const setupSharedElementTransitions = () => {
-  setTransitionName(document.querySelector(".brand-shell"), "site-chrome");
-  setTransitionName(document.querySelector(".page-hero, .hero-stage"), "page-masthead");
-
-  const featureMedia = document.querySelector(
-    [
-      ".connect-band__image img",
-      ".team-hero-collage__frame--primary img",
-      ".path-feature-media",
-      ".content-card.wide-card",
-      ".hero-path-grid",
-    ].join(", ")
-  );
-
-  setTransitionName(featureMedia, "page-feature-media");
-};
-
-const getStoredTransitionState = () => {
-  try {
-    return JSON.parse(sessionStorage.getItem(pageTransitionStorageKey) || "null");
-  } catch {
-    return null;
-  }
-};
-
-const clearStoredTransitionState = () => {
-  try {
-    sessionStorage.removeItem(pageTransitionStorageKey);
-  } catch {}
-};
-
-const setupPageTransitionFallback = () => {
-  document.body.classList.remove("has-page-transition-fallback");
-
-  if (reduceMotionQuery.matches || supportsViewTransitions) {
-    clearStoredTransitionState();
-    return;
-  }
-
-  // Create the overlay element once
-  const overlay = document.createElement("div");
-  overlay.className = "page-transition-overlay";
-  document.body.appendChild(overlay);
-
-  // If arriving from a transition, start covered then reveal
-  const storedState = getStoredTransitionState();
-  const isFreshTransition =
-    storedState &&
-    typeof storedState.timestamp === "number" &&
-    Date.now() - storedState.timestamp < 1800;
-
-  if (isFreshTransition) {
-    overlay.classList.add("is-fading-in");
-    document.documentElement.classList.remove("ptr-mask");
-
-    // Wait for fonts + layout to fully settle before revealing
-    const reveal = () => {
-      window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          overlay.classList.remove("is-fading-in");
-          overlay.classList.add("is-revealing");
-
-          const cleanup = () => {
-            overlay.classList.remove("is-revealing");
-          };
-          overlay.addEventListener("transitionend", cleanup, { once: true });
-          window.setTimeout(cleanup, 1000);
-        });
-      });
-    };
-
-    // Hold overlay until fonts are ready + a minimum settle time
-    const minDelay = new Promise((r) => window.setTimeout(r, 250));
-    const fontsReady = document.fonts?.ready || Promise.resolve();
-    Promise.all([minDelay, fontsReady]).then(reveal).catch(reveal);
-  }
-
-  // Safety: always remove ptr-mask even if transition state was stale
-  document.documentElement.classList.remove("ptr-mask");
-
-  clearStoredTransitionState();
-
-  let isNavigating = false;
-
-  document.addEventListener(
-    "click",
-    (event) => {
-      const link = event.target.closest("a[href]");
-
-      if (!link || isNavigating || event.defaultPrevented) {
-        return;
-      }
-
-      if (
-        event.button !== 0 ||
-        event.metaKey ||
-        event.ctrlKey ||
-        event.shiftKey ||
-        event.altKey ||
-        link.target === "_blank" ||
-        link.hasAttribute("download")
-      ) {
-        return;
-      }
-
-      const destination = new URL(link.href, window.location.href);
-      const isPageNavigation =
-        destination.pathname.endsWith(".html") || destination.pathname.endsWith("/");
-      const isSamePageAnchor =
-        destination.pathname === window.location.pathname &&
-        destination.search === window.location.search &&
-        Boolean(destination.hash);
-
-      if (
-        destination.origin !== window.location.origin ||
-        !["http:", "https:"].includes(destination.protocol) ||
-        !isPageNavigation ||
-        isSamePageAnchor ||
-        (destination.pathname === window.location.pathname &&
-          destination.search === window.location.search) ||
-        link.getAttribute("href")?.startsWith("#")
-      ) {
-        return;
-      }
-
-      isNavigating = true;
-      event.preventDefault();
-
-      try {
-        sessionStorage.setItem(
-          pageTransitionStorageKey,
-          JSON.stringify({ timestamp: Date.now() })
-        );
-      } catch {}
-
-      // Fade the overlay in (covers the page)
-      overlay.classList.add("is-fading-out");
-
-      // Navigate once fully faded
-      const navigate = () => {
-        window.location.assign(destination.href);
-      };
-      overlay.addEventListener("transitionend", navigate, { once: true });
-      // Safety fallback in case transitionend doesn't fire
-      window.setTimeout(navigate, 900);
-    },
-    true
-  );
-
-  window.addEventListener("pageshow", (event) => {
-    if (event.persisted) {
-      overlay.classList.remove("is-fading-out");
-      isNavigating = false;
-    }
-  });
-};
 
 const setupHomeMotion = () => {
   if (page !== "home" || reduceMotionQuery.matches) {
@@ -434,8 +261,6 @@ const syncSiteNavWidth = () => {
   document.documentElement.style.setProperty("--site-nav-width", `${width}px`);
 };
 
-setupSharedElementTransitions();
-setupPageTransitionFallback();
 setupHomeMotion();
 syncSiteNavWidth();
 
@@ -466,3 +291,82 @@ if (dropdownBtn && navDropdown && dropdownMenu) {
     }
   });
 }
+
+/**
+ * ── Global Link Standardization ──────────────────────────────────────────────
+ * Ensures internal links open in the same tab and external links open in a new tab.
+ */
+const standardizeLinks = () => {
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href) return;
+    
+    const isExternal = href.startsWith("http") || href.startsWith("//");
+
+    if (isExternal) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    } else if (href.endsWith(".html") || href === "index.html" || href.startsWith("/") || href.startsWith("#")) {
+      if (link.getAttribute("target") === "_blank") {
+        link.removeAttribute("target");
+      }
+    }
+  });
+};
+
+standardizeLinks();
+
+/**
+ * ── Page Transitions Coordination ───────────────────────────────────────────
+ */
+const initPageTransitions = () => {
+  const body = document.body;
+
+  // 1. Fade In on Load
+  // We use DOMContentLoaded instead of window.load so the fade starts 
+  // as soon as the structure is ready, eliminating the "blank hang" delay.
+  document.addEventListener("DOMContentLoaded", () => {
+    requestAnimationFrame(() => {
+      body.classList.remove("is-loading");
+    });
+  });
+
+  // 2. Fade Out on Internal Link Click
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+    if (!href) return;
+
+    // Ignore external links, mailto, tel, and modifier keys (Cmd/Ctrl)
+    const isInternal = (
+      href.endsWith(".html") || 
+      href === "index.html" || 
+      href.startsWith("/") || 
+      href.startsWith("./")
+    ) && !href.startsWith("http") && !href.startsWith("//");
+
+    const isModifier = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
+    const isNewTab = link.getAttribute("target") === "_blank";
+
+    if (isInternal && !isModifier && !isNewTab && !href.startsWith("#")) {
+      e.preventDefault();
+      body.classList.add("is-leaving");
+
+      // Navigate after the 800ms transition finishes
+      setTimeout(() => {
+        window.location.href = href;
+      }, 800);
+    }
+  });
+
+  // 3. Handle Back Button (ensures page isn't invisible when coming back)
+  window.addEventListener("pageshow", (e) => {
+    if (e.persisted) {
+      body.classList.remove("is-loading", "is-leaving");
+    }
+  });
+};
+
+initPageTransitions();
