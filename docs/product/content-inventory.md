@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Inventory audited against the website source on April 12, 2026.
+Inventory audited against the website source on April 13, 2026.
 
 ## Project Format
 
@@ -40,7 +40,7 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 | `about.html` | Redirect page | Preserve legacy route |
 | `who-we-are.html` | Team and story page with six profile sections | Build trust |
 | `what-we-do.html` | Peer grief support explanation page | Explain the offer |
-| `connect.html` | Direct support page with email and SADOD Request Help form | Reach a real person |
+| `connect.html` | Direct support page with email and the shared grief-support Google Form | Reach a real person |
 | `what-is-a-peer-grief-ally.html` | Short explainer page linked from Direct Connection | Clarify the Ally role |
 | `groups.html` | Group support explainer page | Understand groups and choose that path |
 | `groups-directory.html` | Printable group directory page | Give visitors the full group list |
@@ -54,12 +54,12 @@ The project is a folder-based static website. Root HTML files and `assets/` are 
 
 Current homepage cards route to:
 
-- `who-we-are.html`
+- `what-we-do.html`
 - `connect.html`
 - `groups.html`
 - `whole-person.html`
-- `resources.html`
-- `help-others.html`
+- `https://sadod.org/home/recovery`
+- `https://forms.gle/H2V17AgJfC9tmfpu8`
 
 ## Design And Layout Notes
 
@@ -73,8 +73,7 @@ Current homepage cards route to:
 
 - Leslie bio still contains `202x`
 - `help-others.html` is intentionally unfinished as a public pathway
-- global support links use a Google Form while `connect.html` also links to the SADOD Request Help form
-- TSWR TikTok should be validated and the TSWR YouTube footer link is still a blank placeholder
+- TSWR TikTok should still be validated for final public use
 
 ## Deployment Inventory
 

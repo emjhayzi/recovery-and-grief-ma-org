@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 12, 2026.
+Audited against the website source on April 13, 2026.
 
 ## Purpose
 
@@ -76,6 +76,5 @@ Before publishing:
 
 - Leslie's `202x`
 - final decision on `help-others.html`
-- support-request route consistency
-- TSWR TikTok validation and TSWR YouTube destination
+- TSWR TikTok validation
 - staging and production deployment settings

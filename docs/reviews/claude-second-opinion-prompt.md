@@ -43,7 +43,8 @@ Important context:
 - The root website files are the implementation source of truth.
 - `resources.html` is intentionally a bridge page that routes into `other-paths-to-recovery.html`.
 - `help-others.html` is intentionally still a future-state public page.
-- The global support links currently use a Google Form, while `connect.html` also links to the SADOD Request Help form.
+- The global support links and `connect.html` now use the same Google Form route.
+- Primary nav exposes `What We Do` and `Who We Are` as top-level links, while top-level `More Resources` and `Help Others` now point to approved external destinations.
 - Leslie's bio still contains `202x`.
 
 Please prioritize findings, risks, and practical recommendations over compliments.

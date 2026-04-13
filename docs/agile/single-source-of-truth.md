@@ -1,6 +1,6 @@
 # Single Source Of Truth
 
-Implementation audit date: April 12, 2026
+Implementation audit date: April 13, 2026
 
 This file is the master planning record for the Recovery and Grief website.
 
@@ -25,7 +25,7 @@ Current public site structure in source:
 - `about.html`: redirect page
 - `who-we-are.html`: team and lived-experience page with six profiles
 - `what-we-do.html`: peer grief support explanation page
-- `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
 - `groups.html`: support groups page with three editorial content bands
 - `groups-directory.html`: printable support-group directory page
@@ -38,10 +38,12 @@ Current public site structure in source:
 Current shared behavior in source:
 
 - co-branded masthead with clickable SADOD and TSWR logos
+- primary nav exposes `What We Do` first and `Who We Are` last as top-level links
+- primary `More Resources` and `Help Others` links route to approved external destinations
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
 - homepage hero headline reads "You Are Not Alone" on one line
-- shared footer support links route to a Google Form and the crisis page
+- shared footer support links route to the unified Google Form and the crisis page
 - local Geneva font is used through `assets/fonts/GENEVA.TTF`
 - `publish/` is generated from source with `node scripts/build-publish.mjs`
 
@@ -49,8 +51,7 @@ Current shared behavior in source:
 
 - Leslie's bio in `who-we-are.html` still includes `202x`
 - `help-others.html` is still intentionally a public placeholder-style page
-- the global "Request Grief Support" link uses a Google Form while `connect.html` separately links to `https://sadod.org/request-help`
-- the TSWR TikTok destination should be verified and the TSWR YouTube footer link is still blank in source
+- the TSWR TikTok destination should still be verified for final public use
 
 ## Status Summary
 
@@ -69,27 +70,26 @@ What is not final:
 
 - one visible `202x` content placeholder
 - final product decision on the public volunteer page
-- support-request route consistency
-- validation of TSWR social destinations
+- validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
 1. clear the remaining `202x` placeholder in Leslie's bio when the approved year is known
 2. decide whether `help-others.html` stays public, is hidden, or is fully built out
-3. decide whether the Google Form support route and the SADOD Request Help form should be unified
-4. validate the TSWR TikTok URL and set the final TSWR YouTube destination
-5. run full staging QA after each significant website change
-6. confirm production hosting and DNS settings
+3. validate the TSWR TikTok URL
+4. run full staging QA after each significant website change
+5. confirm production hosting and DNS settings
 
 ## Current Decisions
 
 - the website remains a custom static build
 - GitHub is the repository of record
 - Cloudflare Pages is the preferred deployment path
-- About Us is split into Who We Are and What We Do
+- the primary nav exposes `What We Do` and `Who We Are` as separate top-level items
 - the fuller recovery-path directory lives in `other-paths-to-recovery.html`
 - `resources.html` remains public as a bridge route
+- `help-others.html` remains public as a companion page while top-level `Help Others` routes to the approved external form
 - helper scripts and the Node publish build remain part of the workflow
 
 ## Supporting Docs That Must Stay In Sync

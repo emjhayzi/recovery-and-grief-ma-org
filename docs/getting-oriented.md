@@ -2,6 +2,8 @@
 
 Primary planning tracker: `docs/agile/single-source-of-truth.md`
 
+Audited against the website source on April 13, 2026.
+
 This file is the fastest way to re-enter the project after time away.
 
 ## What This Project Is
@@ -15,7 +17,7 @@ This file is the fastest way to re-enter the project after time away.
 ## Current Public Pages
 
 - `index.html`: homepage with six pathway cards
-- `about.html`: legacy redirect to `who-we-are.html`
+- `about.html`: legacy redirect to `what-we-do.html`
 - `who-we-are.html`: team and story page
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page
@@ -74,20 +76,21 @@ Helper scripts:
 - shared footer with support, social, and PSCP sections
 - global crisis route via `crisis-support.html`
 - calm page-to-page transitions with reduced-motion handling
-- live direct-contact email and SADOD Request Help form on `connect.html`
+- live direct-contact email and unified Google Form support links on `connect.html`
 - dedicated Peer Grief Ally explainer page linked from `connect.html`
 - dedicated printable group directory page linked from `groups.html`
 - populated team page with six profile sections
 - two live YouTube embeds on `whole-person.html` plus a Tavyn title-slide image block
 - More Resources bridge page
+- primary nav now surfaces `What We Do` and `Who We Are` as top-level items
+- primary `More Resources` and `Help Others` links now point to approved external destinations
 - generated Cloudflare-ready `publish/` bundle
 
 ## What Is Still Open In Source
 
 - Leslie's bio still contains `202x`
 - `help-others.html` is still intentionally a placeholder-style public page
-- the global request link and the `connect.html` request link use different URLs
-- TSWR TikTok should be validated and the TSWR YouTube link still needs its final URL
+- TSWR TikTok should still be validated for final public use
 
 ## Working Rule
 

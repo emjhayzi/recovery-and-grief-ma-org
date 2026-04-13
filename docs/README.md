@@ -1,6 +1,6 @@
 # Documentation Hub
 
-Audited against the website source on April 12, 2026.
+Audited against the website source on April 13, 2026.
 
 This folder supports the website source of truth. It should never override what is actually implemented in the root HTML, CSS, and JavaScript files.
 

@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Roadmap audited against the website source on April 12, 2026.
+Roadmap audited against the website source on April 13, 2026.
 
 No production launch date is locked in the source files, so this roadmap is phase-based rather than date-based.
 
@@ -11,7 +11,7 @@ No production launch date is locked in the source files, so this roadmap is phas
 The site is structurally complete. Remaining work is concentrated in:
 
 - one visible public placeholder year
-- a few route and social-link validation questions
+- one remaining partner-link validation question
 - final staging and deployment confirmation
 
 ## Phase 1: Content And Link Validation
@@ -19,8 +19,7 @@ The site is structurally complete. Remaining work is concentrated in:
 Focus:
 
 - replace Leslie's `202x` with approved copy
-- confirm whether the support-request routes should stay split
-- validate the TSWR TikTok destination and set the final TSWR YouTube URL
+- validate the TSWR TikTok destination
 
 Exit criteria:
 

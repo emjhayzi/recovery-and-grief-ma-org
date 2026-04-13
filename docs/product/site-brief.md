@@ -1,6 +1,6 @@
 # Site Brief
 
-Audited against the website source on April 12, 2026.
+Audited against the website source on April 13, 2026.
 
 ## Site Purpose
 
@@ -57,7 +57,7 @@ Explain how peer grief support works and why lived experience matters.
 
 ### Direct Connection
 
-Offer the clearest route to one-on-one support through email, the SADOD Request Help form, and a clear Peer Grief Ally explainer.
+Offer the clearest route to one-on-one support through email, the shared grief-support online form, and a clear Peer Grief Ally explainer.
 
 ### Support Groups
 
@@ -87,5 +87,4 @@ Provide immediate, clear guidance for urgent situations and route people to 911 
 
 - Leslie's `202x` year in `who-we-are.html`
 - whether `help-others.html` should stay public in its current state
-- whether the Google Form support route and the SADOD Request Help form should be unified
-- whether the current TSWR TikTok destination is correct and what URL should replace the blank TSWR YouTube footer link
+- whether the current TSWR TikTok destination is correct

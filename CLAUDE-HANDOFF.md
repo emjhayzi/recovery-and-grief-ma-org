@@ -1,6 +1,6 @@
 # Claude Handoff
 
-Audited against the website source on April 12, 2026.
+Audited against the website source on April 13, 2026.
 
 Use this file as the fastest orientation pass before reviewing or editing the project.
 
@@ -36,7 +36,7 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 
 - homepage hero uses a one-line "You Are Not Alone" heading and six pathway cards
 - the global support links include a Google Form request route plus a dedicated crisis page
-- `connect.html` offers both `connect@recoveryandgrief-MA.org` and the live SADOD Request Help form
+- `connect.html` offers both `connect@recoveryandgrief-MA.org` and the same live Google Form used by the global support links
 - `groups.html` now links to a printable `groups-directory.html` page
 - `what-is-a-peer-grief-ally.html` is a simple explainer page linked from `connect.html`
 - `what-we-do.html` is now a two-band explanation page with editorial imagery
@@ -44,14 +44,15 @@ Maintain and refine a calm, trustworthy static website for people in recovery gr
 - `whole-person.html` contains two live YouTube embeds plus a Tavyn title-slide image block
 - `resources.html` is intentionally a short bridge page into `other-paths-to-recovery.html`
 - `help-others.html` is intentionally still a visible future-state page
+- primary nav now exposes `What We Do` and `Who We Are` as top-level items
+- primary `More Resources` and `Help Others` destinations now point to the approved external URLs
 - `assets/js/script.js` now handles site navigation plus calm page transitions
 
 ## Current Open Questions In The Source
 
 - Leslie's bio still includes a `202x` placeholder year on `who-we-are.html`
 - `help-others.html` still needs a keep/hide/finalize decision
-- the global request route and the `connect.html` request route are not the same URL
-- the TSWR TikTok URL should be confirmed and the TSWR YouTube footer link still needs its final destination
+- the TSWR TikTok URL should still be confirmed for final public use
 
 ## Main Files
 

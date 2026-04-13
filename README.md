@@ -1,6 +1,6 @@
 # Recovery and Grief Website
 
-Audited against the website source on April 12, 2026.
+Audited against the website source on April 13, 2026.
 
 This repository contains the current custom static website for Recovery and Grief, a Massachusetts peer grief support site for people in recovery grieving a death caused by alcohol or other drugs.
 
@@ -17,10 +17,10 @@ Use this order when checking what is true:
 ## Current Site Map
 
 - `index.html`: homepage with the "You Are Not Alone" hero and six pathway cards
-- `about.html`: redirect to `who-we-are.html`
+- `about.html`: redirect to `what-we-do.html`
 - `who-we-are.html`: team and lived-experience page
 - `what-we-do.html`: peer grief support explanation page
-- `connect.html`: direct connection page with email plus the SADOD Request Help form
+- `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: simple explainer page linked from `connect.html`
 - `groups.html`: support groups page
 - `groups-directory.html`: printable support-group directory page
@@ -45,20 +45,22 @@ Implemented in source right now:
 - homepage hero with six clear pathway cards
 - homepage partnership section beneath the hero
 - shared footer with support links, social links, and PSCP attribution
+- top-level primary navigation with `What We Do` first and `Who We Are` last
+- top-level `More Resources` and `Help Others` links routed to approved external destinations
 - page-to-page transitions via the shared JavaScript/CSS motion layer
 - dedicated `crisis-support.html` route used by the global crisis links
 - dedicated `what-is-a-peer-grief-ally.html` route linked from `connect.html`
 - dedicated `groups-directory.html` route linked from `groups.html`
 - whole-person page with two live YouTube embeds plus a Tavyn title-slide image block
 - recovery directory page under `other-paths-to-recovery.html`
+- unified Google Form support route used both globally and on `connect.html`
 - generated `publish/` build for Cloudflare Pages
 
 Still open in the source:
 
 - Leslie's bio on `who-we-are.html` still contains `202x`
 - `help-others.html` is still intentionally a public placeholder page
-- the global "Request Grief Support" links point to a Google Form, while `connect.html` separately points to `https://sadod.org/request-help`
-- the TSWR TikTok destination should be validated and the TSWR YouTube footer link is still a blank placeholder
+- the TSWR TikTok destination should still be validated for final public use
 
 ## Preview
 

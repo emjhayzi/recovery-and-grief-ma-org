@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Backlog audited against the website source on April 12, 2026.
+Backlog audited against the website source on April 13, 2026.
 
 Prioritization key:
 
@@ -23,19 +23,19 @@ Done when:
 - the approved year replaces `202x`
 - staging QA confirms the biography reads cleanly in context
 
-## Epic 2: Support Route Clarity
+## Epic 2: Support Route Consistency
 
-### `P1` Decide whether support-request links should be unified
+### `P2` Preserve the unified support-request route
 
 Current source truth:
 
-- the global "Request Grief Support" links point to a Google Form
-- `connect.html` separately links to `https://sadod.org/request-help`
+- the global "Request Grief Support" links use the approved Google Form
+- `connect.html` now uses the same Google Form through its brief and optional online form labels
 
 Done when:
 
-- the split is either intentionally documented or simplified to one route
-- docs and staging behavior match the chosen approach
+- future edits keep the support route unified
+- docs and staging behavior continue to match the implemented route
 
 ## Epic 3: Public Link Validation
 
@@ -43,9 +43,9 @@ Done when:
 
 Current source truth:
 
-- TSWR footer links are populated
+- TSWR footer links are populated for Facebook, Instagram, and TikTok
 - the current TikTok URL should be confirmed for final public use
-- the YouTube footer link is still blank in source
+- the TSWR YouTube icon has been removed from the footer
 
 Done when:
 
