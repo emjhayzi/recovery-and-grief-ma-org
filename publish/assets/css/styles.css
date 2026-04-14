@@ -3812,6 +3812,10 @@ body[data-page="whole-person"] .path-band__title--single {
     margin-top: 0.15rem;
   }
 
+  .site-nav {
+    display: none;
+  }
+
   .brand-shell {
     padding: 0 var(--shell-inline-pad) 0.85rem;
     margin-top: 0;
