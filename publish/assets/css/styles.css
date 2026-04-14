@@ -4102,7 +4102,7 @@ body[data-page="whole-person"] .path-band__title--single {
   }
 
   .brand-shell {
-    padding: 1.15rem var(--shell-inline-pad) 0.85rem;
+    padding: 0 var(--shell-inline-pad) 0.85rem;
     border-radius: 28px;
     background: rgba(255, 250, 245, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.12);
