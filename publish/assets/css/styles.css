@@ -3819,10 +3819,7 @@ body[data-page="whole-person"] .path-band__title--single {
 @media (max-width: 760px) {
   .crisis-bar {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 9000;
     padding: 0.4rem 0.6rem;
   }
@@ -3839,7 +3836,7 @@ body[data-page="whole-person"] .path-band__title--single {
 
 
   body {
-    padding-top: 1.85rem;
+    padding-top: 0;
   }
 
   .site-nav-support-links {
