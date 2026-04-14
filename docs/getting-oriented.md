@@ -2,7 +2,7 @@
 
 Primary planning tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 13, 2026.
+Audited against the website source on April 15, 2026.
 
 This file is the fastest way to re-enter the project after time away.
 
@@ -27,7 +27,6 @@ This file is the fastest way to re-enter the project after time away.
 - `whole-person.html`: Your Path / NewForm page
 - `other-paths-to-recovery.html`: recovery-path directory
 - `resources.html`: bridge page into Other Paths to Recovery
-- `help-others.html`: visible future-state volunteer page
 - `crisis-support.html`: crisis support page
 
 ## Shared Files
@@ -86,11 +85,16 @@ Helper scripts:
 - primary `More Resources` and `Help Others` links now point to approved external destinations
 - generated Cloudflare-ready `publish/` bundle
 
+## Recent Changes
+
+- mobile header spacing resolved: body padding-top tightened so the brand-shell sits close to the fixed crisis bar with no visible gap
+- mobile crisis bar height increased and content centered (balanced vertical padding, explicit horizontal centering)
+- CSS syntax error in the mobile brand-shell block corrected
+- dead `help-others` entry removed from the JavaScript navigation map
+
 ## What Is Still Open In Source
 
-- Leslie's bio still contains `202x`
-- `help-others.html` is still intentionally a placeholder-style public page
-- TSWR TikTok should still be validated for final public use
+- final staging and production deployment verification
 
 ## Working Rule
 

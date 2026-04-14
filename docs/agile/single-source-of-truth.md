@@ -1,6 +1,6 @@
 # Single Source Of Truth
 
-Implementation audit date: April 14, 2026
+Implementation audit date: April 15, 2026
 
 This file is the master planning record for the Recovery and Grief website.
 
@@ -39,7 +39,8 @@ Current shared behavior in source:
 - branding text (Massachusetts, Recovery and Grief, subtitle) and menu button are explicitly centered on all mobile/tablet viewports
 - mobile navigation uses a fixed, centered modal card over a blurred backdrop, with page-scroll locking
 - crisis support page features full-width, elegantly spaced interactive cards on mobile
-- crisis bar explicitly keeps crisis action links cleanly constrained to a single line on mobile viewports
+- crisis bar is fixed at the top of the viewport on mobile with centered, vertically balanced padding and horizontally centered links
+- mobile header has no excess top spacing — body padding-top is set to clear the fixed crisis bar without creating a visible gap
 - footer legal elements dynamically shift to the absolute bottom below the PSCP text on mobile viewports via robust Flexbox ordering with equalized spacing
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
@@ -51,7 +52,9 @@ Current shared behavior in source:
 
 ## Open Items Confirmed In Source
 
-- the TSWR TikTok destination has been verified
+- the TSWR TikTok destination has been verified (`@.thesunwillrise` with dot is correct)
+- Leslie's bio year is confirmed as 2022
+- `help-others.html` has been retired; the Help Others nav link and homepage card route to the external Google Form
 
 ## Status Summary
 
@@ -60,23 +63,24 @@ What is in good shape:
 - site architecture and navigation
 - homepage pathway-based entry points
 - direct support, support-group, and crisis routes
-- populated Who We Are page
+- populated Who We Are page (Leslie's bio year confirmed as 2022)
 - whole-person and recovery resource pathways
 - calm shared motion system
 - generated publish workflow
 - supporting docs realigned to implemented behavior
+- TSWR TikTok URL confirmed (`@.thesunwillrise`)
+- Help Others decision made: retired `help-others.html`, routes to external form
+- mobile header spacing resolved: no gap between fixed crisis bar and brand-shell
+- mobile crisis bar height and centering refined
 
 What is not final:
 
-- validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
-1. validate the TSWR TikTok URL
-3. validate the TSWR TikTok URL
-4. run full staging QA after each significant website change
-5. confirm production hosting and DNS settings
+1. run full staging QA after each significant website change
+2. confirm production hosting and DNS settings
 
 ## Current Decisions
 

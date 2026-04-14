@@ -211,7 +211,6 @@ const navMap = {
   "whole-person": "whole-person.html",
   "other-paths-to-recovery": "whole-person.html",
   resources: "resources.html",
-  "help-others": "help-others.html",
 };
 
 const currentHref = navMap[page];
