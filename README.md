@@ -53,7 +53,6 @@ Implemented in source right now:
 - whole-person page with two live YouTube embeds plus a Tavyn native video player block
 - recovery directory page under `other-paths-to-recovery.html`
 - refined mobile navigation (centered modal) and forced single-line mobile crisis links
-- responsive footer layout with dynamic legal block placement based on viewport
 - unified Google Form support route used both globally and on `connect.html`
 - generated `publish/` build for Cloudflare Pages
 
