@@ -3827,6 +3827,7 @@ body[data-page="whole-person"] .path-band__title--single {
     right: 0;
     z-index: 9000;
     padding: 0.4rem 0.6rem 0;
+    border-bottom: none;
   }
 
   .crisis-bar-inner {
@@ -3841,7 +3842,7 @@ body[data-page="whole-person"] .path-band__title--single {
 
 
   body {
-    padding-top: 1.85rem;
+    padding-top: 1.6rem;
   }
 
   .site-nav-support-links {
