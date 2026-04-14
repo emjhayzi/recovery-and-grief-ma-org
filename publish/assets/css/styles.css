@@ -2650,6 +2650,7 @@ p.peer-overview-card__eyebrow {
 }
 
 .footer-legal {
+  grid-column: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -3968,22 +3969,16 @@ body[data-page="whole-person"] .path-band__title--single {
   }
 
   .footer-cta {
-    display: contents;
-  }
-
-  .footer-center {
-    order: 5;
-  }
-
-  .footer-right {
-    order: 8;
+    align-items: center;
+    justify-self: stretch;
+    text-align: center;
   }
 
   .footer-legal {
+    grid-column: 1;
     justify-content: center;
-    order: 10;
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
+    margin-top: 2.75rem;
+    padding-top: 1.75rem;
     border-top: 1px solid rgba(52, 63, 58, 0.08);
     width: 100%;
   }
