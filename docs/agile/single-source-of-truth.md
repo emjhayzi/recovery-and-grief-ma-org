@@ -35,8 +35,8 @@ Current public site structure in source:
 
 Current shared behavior in source:
 
-- co-branded masthead with clickable SADOD and TSWR logos
-- primary nav exposes `What We Do` first and `Who We Are` last as top-level links
+- site header transitions to the mobile, centered layout (with menu toggle) at the 980px breakpoint to match main content transitions
+- branding text (Massachusetts, Recovery and Grief, subtitle) and menu button are explicitly centered on all mobile/tablet viewports
 - mobile navigation uses a fixed, centered modal card over a blurred backdrop, with page-scroll locking
 - crisis support page features full-width, elegantly spaced interactive cards on mobile
 - crisis bar explicitly keeps crisis action links cleanly constrained to a single line on mobile viewports
@@ -85,8 +85,7 @@ What is not final:
 - Cloudflare Pages is the preferred deployment path
 - the primary nav exposes `What We Do` and `Who We Are` as separate top-level items
 - the fuller recovery-path directory lives in `other-paths-to-recovery.html`
-- `resources.html` remains public as a bridge route
-- `help-others.html` remains public as a companion page while top-level `Help Others` routes to the approved external form
+- help-others and resources temporary bridge routes have been retired from the source
 - helper scripts and the Node publish build remain part of the workflow
 
 ## Supporting Docs That Must Stay In Sync
