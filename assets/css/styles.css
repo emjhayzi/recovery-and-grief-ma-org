@@ -3713,7 +3713,19 @@ body[data-page="whole-person"] .path-band__title--single {
     left: 0;
     right: 0;
     z-index: 9000;
+    padding: 0.4rem 0.6rem;
   }
+
+  .crisis-bar-inner {
+    gap: clamp(0.5rem, 3vw, 1.5rem);
+  }
+
+  .crisis-link {
+    font-size: 0.62rem;
+    white-space: nowrap;
+    gap: 0.3rem;
+  }
+
 
   body {
     padding-top: 2.6rem;
