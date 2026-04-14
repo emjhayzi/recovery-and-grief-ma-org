@@ -2650,6 +2650,7 @@ p.peer-overview-card__eyebrow {
 }
 
 .footer-legal {
+  grid-column: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -2657,7 +2658,7 @@ p.peer-overview-card__eyebrow {
   gap: 0.35rem 0.55rem;
   font-size: 0.72rem;
   color: var(--muted);
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
 }
 
 .footer-legal a {
@@ -3959,11 +3960,11 @@ body[data-page="whole-person"] .path-band__title--single {
     text-align: center;
   }
 
-  .footer-nav { order: 1; }
-  .footer-center { order: 10; }
-  .footer-right { order: 20; }
-  .footer-support-links { order: 5; }
-  .footer-column-label { order: 4; }
+  .footer-nav { order: 0; }
+  .footer-center { order: 0; }
+  .footer-right { order: 0; }
+  .footer-support-links { order: 0; }
+  .footer-column-label { order: 0; }
 
   .footer-nav {
     padding-left: 0;
@@ -3971,11 +3972,15 @@ body[data-page="whole-person"] .path-band__title--single {
   }
 
   .footer-cta {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-legal {
-    order: 30;
+    grid-column: 1;
+    order: 100; /* Ensure it stays at the very bottom if some order is used */
     justify-content: center;
     width: 100%;
   }
