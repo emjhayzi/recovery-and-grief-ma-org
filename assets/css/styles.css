@@ -2660,6 +2660,10 @@ p.peer-overview-card__eyebrow {
   margin-top: 1.25rem;
 }
 
+.footer-legal--mobile {
+  display: none;
+}
+
 .footer-legal a {
   color: var(--muted);
   text-decoration: underline;
@@ -3978,6 +3982,14 @@ body[data-page="whole-person"] .path-band__title--single {
   .footer-social-row,
   .footer-legal {
     justify-content: center;
+  }
+
+  .footer-legal--desktop {
+    display: none !important;
+  }
+
+  .footer-legal--mobile {
+    display: flex !important;
   }
 
   .site-footer,
