@@ -3954,7 +3954,9 @@ body[data-page="whole-person"] .path-band__title--single {
   .footer-nav,
   .footer-center,
   .footer-right,
-  .footer-cta {
+  .footer-cta,
+  .footer-support-links,
+  .footer-column-label {
     align-items: center;
     justify-self: stretch;
     text-align: center;
@@ -3966,18 +3968,17 @@ body[data-page="whole-person"] .path-band__title--single {
   }
 
   .footer-cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: stretch;
-    row-gap: 0;
-    gap: 0.9rem;
-    min-height: 0;
+    display: contents;
   }
 
-  .footer-social-row,
+  .footer-social-row {
+    justify-content: center;
+  }
+
   .footer-legal {
     justify-content: center;
+    order: 10;
+    margin-top: 2rem;
   }
 
   .site-footer,
