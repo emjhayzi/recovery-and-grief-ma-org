@@ -1,6 +1,6 @@
 # Single Source Of Truth
 
-Implementation audit date: April 13, 2026
+Implementation audit date: April 14, 2026
 
 This file is the master planning record for the Recovery and Grief website.
 
@@ -29,7 +29,7 @@ Current public site structure in source:
 - `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
 - `groups.html`: support groups page with three editorial content bands and a clay-highlighted opening band
 - `groups-directory.html`: printable support-group directory page
-- `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn title-slide image block
+- `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn native video player block
 - `other-paths-to-recovery.html`: text-forward recovery-path directory page
 - `resources.html`: short bridge page into Other Paths to Recovery
 - `help-others.html`: intentional public future-state volunteer page
@@ -39,17 +39,18 @@ Current shared behavior in source:
 
 - co-branded masthead with clickable SADOD and TSWR logos
 - primary nav exposes `What We Do` first and `Who We Are` last as top-level links
-- primary `More Resources` and `Help Others` links route to approved external destinations
+- mobile navigation uses a fixed, centered modal card over a blurred backdrop, with page-scroll locking
+- crisis support page features full-width, elegantly spaced interactive cards on mobile
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
 - homepage hero headline reads "You Are Not Alone" on one line
 - shared footer support links route to the unified Google Form and the crisis page
 - local Geneva font is used through `assets/fonts/GENEVA.TTF`
+- Tavyn title block on the Whole Person page utilizes a native HTML5 video player
 - `publish/` is generated from source with `node scripts/build-publish.mjs`
 
 ## Open Items Confirmed In Source
 
-- Leslie's bio in `who-we-are.html` still includes `202x`
 - `help-others.html` is still intentionally a public placeholder-style page
 - the TSWR TikTok destination should still be verified for final public use
 
@@ -68,15 +69,13 @@ What is in good shape:
 
 What is not final:
 
-- one visible `202x` content placeholder
 - final product decision on the public volunteer page
 - validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
-1. clear the remaining `202x` placeholder in Leslie's bio when the approved year is known
-2. decide whether `help-others.html` stays public, is hidden, or is fully built out
+1. decide whether `help-others.html` stays public, is hidden, or is fully built out
 3. validate the TSWR TikTok URL
 4. run full staging QA after each significant website change
 5. confirm production hosting and DNS settings

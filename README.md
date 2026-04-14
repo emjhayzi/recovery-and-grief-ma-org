@@ -1,6 +1,6 @@
 # Recovery and Grief Website
 
-Audited against the website source on April 13, 2026.
+Audited against the website source on April 14, 2026.
 
 This repository contains the current custom static website for Recovery and Grief, a Massachusetts peer grief support site for people in recovery grieving a death caused by alcohol or other drugs.
 
@@ -24,7 +24,7 @@ Use this order when checking what is true:
 - `what-is-a-peer-grief-ally.html`: simple explainer page linked from `connect.html`
 - `groups.html`: support groups page
 - `groups-directory.html`: printable support-group directory page
-- `whole-person.html`: Your Path / NewForm page with two YouTube embeds, path imagery, and a Tavyn title-slide image block
+- `whole-person.html`: Your Path / NewForm page with two YouTube embeds, path imagery, and a native Tavyn video player block
 - `other-paths-to-recovery.html`: recovery-path directory page
 - `resources.html`: short bridge page into Other Paths to Recovery
 - `help-others.html`: public future-facing volunteer placeholder page
@@ -50,16 +50,16 @@ Implemented in source right now:
 - page-to-page transitions via the shared JavaScript/CSS motion layer
 - dedicated `crisis-support.html` route used by the global crisis links
 - dedicated `what-is-a-peer-grief-ally.html` route linked from `connect.html`
-- dedicated `groups-directory.html` route linked from `groups.html`
+- dedicated `groups-directory.html` route linked from `groups.html` with a direct PDF download link
 - Support Groups page now emphasizes the opening group-information band with a clay gradient treatment
-- whole-person page with two live YouTube embeds plus a Tavyn title-slide image block
+- whole-person page with two live YouTube embeds plus a Tavyn native video player block
 - recovery directory page under `other-paths-to-recovery.html`
+- refined mobile navigation (centered modal) and optimized crisis support layout
 - unified Google Form support route used both globally and on `connect.html`
 - generated `publish/` build for Cloudflare Pages
 
 Still open in the source:
 
-- Leslie's bio on `who-we-are.html` still contains `202x`
 - `help-others.html` is still intentionally a public placeholder page
 - the TSWR TikTok destination should still be validated for final public use
 
