@@ -72,6 +72,7 @@ What is in good shape:
 - Help Others decision made: retired `help-others.html`, routes to external form
 - mobile header spacing resolved: no gap between fixed crisis bar and brand-shell
 - mobile crisis bar height and centering refined
+- inner page titles on mobile wrap, center horizontally, and have asymmetric padding (more top, less bottom) to match the visual weight of the homepage hero title
 
 What is not final:
 

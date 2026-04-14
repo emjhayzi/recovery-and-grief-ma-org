@@ -91,6 +91,7 @@ Helper scripts:
 - mobile crisis bar height increased and content centered (balanced vertical padding, explicit horizontal centering)
 - CSS syntax error in the mobile brand-shell block corrected
 - dead `help-others` entry removed from the JavaScript navigation map
+- inner page titles on mobile now wrap and center horizontally; page-hero padding adjusted for balanced top/bottom spacing
 
 ## What Is Still Open In Source
 
