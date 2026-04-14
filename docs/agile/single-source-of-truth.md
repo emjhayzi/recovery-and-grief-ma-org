@@ -31,8 +31,6 @@ Current public site structure in source:
 - `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn native video player block
 - `other-paths-to-recovery.html`: text-forward recovery-path directory page
-- `resources.html`: short bridge page into Other Paths to Recovery
-- `help-others.html`: intentional public future-state volunteer page
 - `crisis-support.html`: crisis support route for urgent help guidance
 
 Current shared behavior in source:
@@ -51,8 +49,7 @@ Current shared behavior in source:
 
 ## Open Items Confirmed In Source
 
-- `help-others.html` is still intentionally a public placeholder-style page
-- the TSWR TikTok destination should still be verified for final public use
+- the TSWR TikTok destination has been verified
 
 ## Status Summary
 
@@ -69,13 +66,12 @@ What is in good shape:
 
 What is not final:
 
-- final product decision on the public volunteer page
 - validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
-1. decide whether `help-others.html` stays public, is hidden, or is fully built out
+1. validate the TSWR TikTok URL
 3. validate the TSWR TikTok URL
 4. run full staging QA after each significant website change
 5. confirm production hosting and DNS settings

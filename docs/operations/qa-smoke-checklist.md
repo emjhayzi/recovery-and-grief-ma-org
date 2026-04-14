@@ -15,8 +15,6 @@ Audited against the website source on April 13, 2026.
   - `groups-directory.html`
   - `whole-person.html`
   - `other-paths-to-recovery.html`
-  - `resources.html`
-  - `help-others.html`
   - `crisis-support.html`
 - Confirm no obvious broken images or layout artifacts
 - Confirm all internal links and configured external nav destinations work
@@ -37,15 +35,12 @@ Audited against the website source on April 13, 2026.
 - Confirm the global "Request Grief Support" links use the same Google Form as `connect.html`
 - Confirm `groups.html` reads clearly and loads all three editorial image bands
 - Confirm `groups-directory.html` loads and prints in portrait cleanly
-- Confirm `resources.html` CTA leads into `other-paths-to-recovery.html`
 - Confirm `whole-person.html` links to Other Paths to Recovery correctly
 - Confirm `crisis-support.html` 988 links work
 - Confirm `crisis-support.html` organization-column phone links and `CLICK HERE` resource links work as intended
 
 ## Content And Trust Checks
 
-- Confirm Leslie's bio still matches the approved source text
-- Confirm `help-others.html` still matches the current product decision
 - Confirm TSWR social links use the intended public URLs
 - Confirm the missing TSWR YouTube footer icon is still intentional
 - Confirm footer support and partner text still feels accurate and trustworthy

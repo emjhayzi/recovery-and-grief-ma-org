@@ -26,8 +26,6 @@ Use this order when checking what is true:
 - `groups-directory.html`: printable support-group directory page
 - `whole-person.html`: Your Path / NewForm page with two YouTube embeds, path imagery, and a native Tavyn video player block
 - `other-paths-to-recovery.html`: recovery-path directory page
-- `resources.html`: short bridge page into Other Paths to Recovery
-- `help-others.html`: public future-facing volunteer placeholder page
 - `crisis-support.html`: crisis support page for urgent help guidance
 
 ## Shared Files
@@ -60,8 +58,7 @@ Implemented in source right now:
 
 Still open in the source:
 
-- `help-others.html` is still intentionally a public placeholder page
-- the TSWR TikTok destination should still be validated for final public use
+- the TSWR TikTok destination has been verified
 
 ## Preview
 

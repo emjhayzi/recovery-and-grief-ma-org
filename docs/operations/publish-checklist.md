@@ -14,7 +14,6 @@ Audited against the website source on April 13, 2026.
 
 - Confirm homepage "Explore More Resources" routes to `https://sadod.org/home/recovery`
 - Confirm homepage "Volunteer to Help Others" routes to `https://forms.gle/H2V17AgJfC9tmfpu8`
-- Confirm `resources.html` still routes visitors into `other-paths-to-recovery.html`
 - Confirm `connect.html` still links to both email and the unified Google Form
 - Confirm `connect.html` still links to `what-is-a-peer-grief-ally.html`
 - Confirm the global "Request Grief Support" links still match the `connect.html` Google Form route
@@ -24,8 +23,6 @@ Audited against the website source on April 13, 2026.
 - Confirm `groups-directory.html` prints in portrait as intended
 - Confirm `crisis-support.html` still routes urgent visitors to 911 or 988 guidance
 - Confirm the primary nav still shows `What We Do` first and `Who We Are` last
-- Replace Leslie's `202x` before production if approved copy is available
-- Confirm `help-others.html` still matches the current product decision
 
 ## Footer And Trust Signals
 
