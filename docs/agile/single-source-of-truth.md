@@ -39,6 +39,8 @@ Current shared behavior in source:
 - primary nav exposes `What We Do` first and `Who We Are` last as top-level links
 - mobile navigation uses a fixed, centered modal card over a blurred backdrop, with page-scroll locking
 - crisis support page features full-width, elegantly spaced interactive cards on mobile
+- crisis bar explicitly keeps crisis action links cleanly constrained to a single line on mobile viewports
+- footer legal elements dynamically adapt, sitting within Support & Action natively while shifting explicitly below the PSCP text on mobile
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
 - homepage hero headline reads "You Are Not Alone" on one line

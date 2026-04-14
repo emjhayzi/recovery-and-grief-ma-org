@@ -52,7 +52,8 @@ Implemented in source right now:
 - Support Groups page now emphasizes the opening group-information band with a clay gradient treatment
 - whole-person page with two live YouTube embeds plus a Tavyn native video player block
 - recovery directory page under `other-paths-to-recovery.html`
-- refined mobile navigation (centered modal) and optimized crisis support layout
+- refined mobile navigation (centered modal) and forced single-line mobile crisis links
+- responsive footer layout with dynamic legal block placement based on viewport
 - unified Google Form support route used both globally and on `connect.html`
 - generated `publish/` build for Cloudflare Pages
 
