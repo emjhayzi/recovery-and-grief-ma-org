@@ -258,9 +258,9 @@ body.is-leaving main {
   margin-top: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: #045e84;
+  font-size: 14pt;
+  font-weight: 400;
+  color: var(--brand-blue);
   font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
 }
 
@@ -279,6 +279,12 @@ body.is-leaving main {
   align-items: start;
   max-width: 62rem;
   margin: 0 auto;
+}
+
+.partnership-inner--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 46rem;
+  text-align: center;
 }
 
 .partnership-col + .partnership-col {
@@ -399,6 +405,10 @@ main :where(p, li, dt, dd, blockquote, figcaption) a:not([class]):focus-visible,
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.header-logo[aria-label="Peer Support Community Partners logo"] img {
+  transform: scale(1.15);
 }
 
 a.header-logo {
@@ -2999,16 +3009,6 @@ body[data-page="connect"] .connect-band__text p {
   margin-top: 1.5rem;
 }
 
-.directory-frame-card {
-  width: min(100%, 108rem);
-  margin: 0 auto;
-  padding: 1rem;
-  border-radius: var(--radius-lg);
-  background: var(--panel);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-}
-
 .directory-toolbar {
   display: flex;
   align-items: center;
@@ -3024,29 +3024,197 @@ body[data-page="connect"] .connect-band__text p {
   flex-shrink: 0;
 }
 
-.directory-notice {
-  margin: 0;
-  padding: 0.45rem 0.85rem;
-  font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
-  font-size: 0.97rem;
-  line-height: 1.5;
-  text-align: center;
-  color: #6b4c1e;
-  background: rgba(255, 220, 140, 0.28);
-  border: 1px solid rgba(210, 160, 60, 0.35);
-  border-radius: 999px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.directory-toolbar--top {
+  width: min(100%, 60rem);
+  margin: 0 auto 0.9rem;
+  justify-content: flex-end;
 }
 
-.directory-document {
-  display: block;
-  width: 100%;
+.flyer {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1c1c1c;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 4vw, 3rem);
+  font-family: "Geneva", "Verdana", "Tahoma", sans-serif;
+  line-height: 1.5;
+}
+
+.flyer-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(0.75rem, 2.5vw, 1.75rem);
+  text-align: center;
+}
+
+.flyer-logo {
+  width: clamp(88px, 13vw, 120px);
   height: auto;
-  border-radius: calc(var(--radius-md) - 2px);
-  background: #fff;
+  justify-self: center;
+}
+
+.flyer-title-block {
+  text-align: center;
+}
+
+.flyer-title {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  font-size: clamp(1.4rem, 3.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #222;
+}
+
+.flyer-subtitle {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: #333;
+}
+
+.flyer-intro {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: stretch;
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.flyer-photo-wrap {
+  position: relative;
+  min-height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flyer-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flyer-intro-text {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+  color: #2a2a2a;
+  line-height: 1.55;
+}
+
+.flyer-section {
+  margin-top: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.flyer-heading {
+  text-align: center;
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #1c1c1c;
+  margin: 0 0 clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.flyer-subnote {
+  text-align: center;
+  margin: -0.4rem 0 1.1rem;
+  font-size: 0.98rem;
+  color: #2a2a2a;
+}
+
+.flyer-cols {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.flyer-cols--inperson {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.flyer-vgroup {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: clamp(0.8rem, 2vw, 1.1rem);
+  margin-top: clamp(0.8rem, 2vw, 1.1rem);
+}
+
+.flyer-line {
+  margin: 0 0 0.7rem;
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
+  color: #1c1c1c;
+  word-break: break-word;
+}
+
+.flyer-line:last-child {
+  margin-bottom: 0;
+}
+
+.flyer-underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.flyer a {
+  color: #1668c1;
+}
+
+.flyer-col--qr,
+.flyer-col--zoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+
+.flyer-qr {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+}
+
+.flyer-qr-caption {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: #1c1c1c;
+}
+
+.flyer-italic {
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .flyer-logo {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .flyer-intro,
+  .flyer-cols--inperson,
+  .flyer-vgroup {
+    grid-template-columns: 1fr;
+  }
+
+  .flyer-col--qr {
+    justify-self: center;
+  }
 }
 
 .peer-ally-document {
@@ -3696,10 +3864,6 @@ body[data-page="whole-person"] .path-band__title--single {
     max-width: 46%;
   }
 
-  .directory-frame-card {
-    padding: 0.9rem;
-  }
-
   .river-grid div {
     padding: 0.9rem;
   }
@@ -3771,7 +3935,7 @@ body[data-page="whole-person"] .path-band__title--single {
   }
 
   .eyebrow {
-    font-size: 0.67rem;
+    font-size: 14pt;
     width: 100%;
     text-align: center;
   }
@@ -4003,12 +4167,6 @@ body[data-page="whole-person"] .path-band__title--single {
     align-items: stretch;
   }
 
-  .directory-notice {
-    border-radius: 999px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .directory-print-button {
     width: 100%;
     text-align: center;
@@ -4037,10 +4195,6 @@ body[data-page="whole-person"] .path-band__title--single {
 
   .directory-print-button {
     width: 100%;
-  }
-
-  .directory-document {
-    max-height: none;
   }
 
   body {
@@ -4680,29 +4834,11 @@ body[data-page="whole-person"] .path-band__title--single {
   .content-card,
   .crisis-hero-card,
   .crisis-resource-card,
-  .directory-frame-card {
-    margin: 0 !important;
-    background: #fff !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-  }
-
   .crisis-table tr {
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
-  .directory-frame-card {
-    padding: 0 !important;
-    width: 100% !important;
-    border-radius: 0;
-  }
-
-  .directory-document {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 0;
-  }
 }
 
 @media (max-width: 360px) {

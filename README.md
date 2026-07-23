@@ -1,6 +1,6 @@
 # Recovery and Grief Website
 
-Audited against the website source on April 14, 2026.
+Audited against the website source on July 13, 2026.
 
 This repository contains the current custom static website for Recovery and Grief, a Massachusetts peer grief support site for people in recovery grieving a death caused by alcohol or other drugs.
 
@@ -23,7 +23,7 @@ Use this order when checking what is true:
 - `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: simple explainer page linked from `connect.html`
 - `groups.html`: support groups page
-- `groups-directory.html`: printable support-group directory page
+- `groups-directory.html`: native flyer-style directory page mirroring the printed PDF (co-branded header, group photo, In-Person and Virtual group listings, QR code, PDF download)
 - `whole-person.html`: Your Path / NewForm page with two YouTube embeds, path imagery, and a native Tavyn video player block
 - `other-paths-to-recovery.html`: recovery-path directory page
 - `crisis-support.html`: crisis support page for urgent help guidance
@@ -39,9 +39,9 @@ Use this order when checking what is true:
 
 Implemented in source right now:
 
-- shared co-branded masthead with outbound SADOD and TSWR logo links
-- homepage hero with six clear pathway cards
-- homepage partnership section beneath the hero
+- shared co-branded masthead with outbound PSCP (left) and SADOD (right) logo links; TSWR retained in the footer only
+- homepage hero with six clear pathway cards (captions renamed per the June 2026 update)
+- homepage "Services in Massachusetts and Beyond" band at the bottom of the page (the former "A Grassroots Partnership" subhead was removed)
 - shared footer with support links, social links, and PSCP attribution
 - top-level primary navigation with `What We Do` first and `Who We Are` last
 - top-level `More Resources` and `Help Others` links routed to approved external destinations
@@ -56,6 +56,7 @@ Implemented in source right now:
 - footer legal elements dynamically shift to the absolute bottom below the PSCP column on mobile via Flexbox ordering with equalized vertical spacing
 - retired legacy bridge routes (`resources.html`, `help-others.html`)
 - unified Google Form support route used both globally and on `connect.html`
+- MASSACHUSETTS eyebrow at 14pt regular in the nav-label color, plus a third quick-support link ("Grief Support Groups HERE" to `groups.html`) beneath the nav
 - generated `publish/` build for Cloudflare Pages
 
 Still open in the source:

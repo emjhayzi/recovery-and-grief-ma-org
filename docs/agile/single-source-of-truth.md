@@ -1,6 +1,6 @@
 # Single Source Of Truth
 
-Implementation audit date: April 15, 2026
+Implementation audit date: July 13, 2026
 
 This file is the master planning record for the Recovery and Grief website.
 
@@ -28,7 +28,7 @@ Current public site structure in source:
 - `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
 - `groups.html`: support groups page with three editorial content bands and a clay-highlighted opening band
-- `groups-directory.html`: printable support-group directory page
+- `groups-directory.html`: native flyer-style directory page mirroring the printed PDF on a white document card (co-branded header, group photo, intro, In-Person and Virtual group listings, QR code, PDF download)
 - `whole-person.html`: NewForm / recovery page with two live video embeds and one Tavyn native video player block
 - `other-paths-to-recovery.html`: text-forward recovery-path directory page
 - `crisis-support.html`: crisis support route for urgent help guidance
@@ -39,8 +39,7 @@ Current shared behavior in source:
 - branding text (Massachusetts, Recovery and Grief, subtitle) and menu button are explicitly centered on all mobile/tablet viewports
 - mobile navigation uses a fixed, centered modal card over a blurred backdrop, with page-scroll locking
 - crisis support page features full-width, elegantly spaced interactive cards on mobile
-- crisis bar is fixed at the top of the viewport on mobile with centered, vertically balanced padding and horizontally centered links
-- mobile header has no excess top spacing — body padding-top is set to clear the fixed crisis bar without creating a visible gap
+- crisis bar explicitly keeps crisis action links cleanly constrained to a single line on mobile viewports
 - footer legal elements dynamically shift to the absolute bottom below the PSCP text on mobile viewports via robust Flexbox ordering with equalized spacing
 - shared stylesheet and shared JavaScript file
 - calm page-to-page transitions with reduced-motion support
@@ -49,12 +48,25 @@ Current shared behavior in source:
 - local Geneva font is used through `assets/fonts/GENEVA.TTF`
 - Tavyn title block on the Whole Person page utilizes a native HTML5 video player
 - `publish/` is generated from source with `node scripts/build-publish.mjs`
+- masthead is co-branded PSCP (left) and SADOD (right); the PSCP logo is scaled up ~15% so both read evenly. TSWR appears in the footer only.
+
+## Phase One Update — June 2026 Doc (Completed July 13, 2026)
+
+Applied from `RG-Website - Update - June 2026.docx`:
+
+- Masthead logos: replaced TSWR with PSCP and swapped sides to PSCP (left) / SADOD (right) across all pages; TSWR retained in the footer.
+- Group directory rebuilt from a flat image into a native HTML flyer page that mirrors the PDF on a white document card; new `assets/docs/groups-directory.pdf` wired to the download button.
+- Homepage: deleted the "A Grassroots Partnership" subhead and content; "Services in Massachusetts and Beyond" now stands alone as a centered band at the bottom of the page.
+- Homepage hero card captions renamed (five of six): Direct Connection to "Connect With a Peer Grief Helper", Support Groups to "Attend a Peer Grief Support Group", Your Path to "Find Your Recovery Path", More Resources to "Explore More Resources", Help Others to "Volunteer to Help Others"; "Learn About Peer Grief Support" unchanged.
+- "MASSACHUSETTS" eyebrow set to 14pt, regular weight, colored to match the nav labels.
+- Added a third quick-support link beneath the nav: "Grief Support Groups HERE" pointing to `groups.html`, placed between the two existing links.
+- New assets: `assets/images/pscp-logo-square.png`, `assets/images/directory-photo.png`, `assets/images/directory-qr.png`.
+- Cache-bust version advanced to `v=20260713i`.
 
 ## Open Items Confirmed In Source
 
-- the TSWR TikTok destination has been verified (`@.thesunwillrise` with dot is correct)
-- Leslie's bio year is confirmed as 2022
-- `help-others.html` has been retired; the Help Others nav link and homepage card route to the external Google Form
+- the TSWR TikTok destination has been verified
+- directory facilitator emails use the `peersupportcommunitypartners.com` domain (differs from the source PDF's `peercommunitysupportpartners.com`; confirm before production)
 
 ## Status Summary
 
@@ -63,25 +75,25 @@ What is in good shape:
 - site architecture and navigation
 - homepage pathway-based entry points
 - direct support, support-group, and crisis routes
-- populated Who We Are page (Leslie's bio year confirmed as 2022)
+- populated Who We Are page
 - whole-person and recovery resource pathways
 - calm shared motion system
 - generated publish workflow
 - supporting docs realigned to implemented behavior
-- TSWR TikTok URL confirmed (`@.thesunwillrise`)
-- Help Others decision made: retired `help-others.html`, routes to external form
-- mobile header spacing resolved: no gap between fixed crisis bar and brand-shell
-- mobile crisis bar height and centering refined
-- inner page titles on mobile wrap, center horizontally, and have asymmetric padding (more top, less bottom) to match the visual weight of the homepage hero title
 
 What is not final:
 
+- validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
-1. run full staging QA after each significant website change
-2. confirm production hosting and DNS settings
+1. QA pass across all pages for the masthead logo swap and the new quick-support link
+2. commit Phase One and push so Cloudflare builds a staging version for review
+3. validate the TSWR TikTok URL
+4. run full staging QA after each significant website change
+5. confirm production hosting and DNS settings
+6. Phase Two (June 2026 doc): MA-vs-virtual wording, strengthen "Path" content and NF app QR, Connect page fixes, remove David and Leslie from Who We Are
 
 ## Current Decisions
 
@@ -92,6 +104,7 @@ What is not final:
 - the fuller recovery-path directory lives in `other-paths-to-recovery.html`
 - help-others and resources temporary bridge routes have been retired from the source
 - helper scripts and the Node publish build remain part of the workflow
+- the active local working copy lives at `~/Projects/Recovery & Grief Website` (moved out of OneDrive to avoid sync conflicts that split edits into device-named copies)
 
 ## Supporting Docs That Must Stay In Sync
 

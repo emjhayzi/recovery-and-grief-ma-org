@@ -2,7 +2,7 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Backlog audited against the website source on April 15, 2026.
+Backlog audited against the website source on April 13, 2026.
 
 Prioritization key:
 
@@ -12,9 +12,16 @@ Prioritization key:
 
 ## Epic 1: Public Content Cleanup
 
-### ~~`P0` Clear Leslie's remaining placeholder year~~ — DONE
+### `P0` Clear Leslie's remaining placeholder year
 
-- confirmed as 2022
+Current source truth:
+
+- `who-we-are.html` still contains `202x` in Leslie's bio
+
+Done when:
+
+- the approved year replaces `202x`
+- staging QA confirms the biography reads cleanly in context
 
 ## Epic 2: Support Route Consistency
 
@@ -32,16 +39,31 @@ Done when:
 
 ## Epic 3: Public Link Validation
 
-### ~~`P1` Validate TSWR social destinations~~ — DONE
+### `P1` Validate TSWR social destinations
 
-- TSWR TikTok confirmed as `@.thesunwillrise`
-- Facebook and Instagram previously confirmed
+Current source truth:
+
+- TSWR footer links are populated for Facebook, Instagram, and TikTok
+- the current TikTok URL should be confirmed for final public use
+- the TSWR YouTube icon has been removed from the footer
+
+Done when:
+
+- the approved TSWR public URLs are confirmed in source
+- footer behavior is consistent across the site
 
 ## Epic 4: Public Page Decisions
 
-### ~~`P1` Decide final role of `help-others.html`~~ — DONE
+### `P1` Decide final role of `help-others.html`
 
-- `help-others.html` retired; nav link and homepage card route to the external Google Form
+Current source truth:
+
+- the page is visible in navigation and intentionally framed as future content
+
+Done when:
+
+- the page is either finalized, hidden, or intentionally kept public
+- navigation and docs reflect that decision
 
 ## Epic 5: Launch Readiness
 
