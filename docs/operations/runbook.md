@@ -2,11 +2,24 @@
 
 Primary tracker: `docs/agile/single-source-of-truth.md`
 
-Audited against the website source on April 13, 2026.
+Audited against the website source on August 2, 2026.
 
 ## Purpose
 
 This runbook explains how to edit, preview, QA, publish, and maintain the website.
+
+## Change Request Workflow (Standing Process)
+
+For any incoming request — revision, change, update, or similar:
+
+1. Receive the request.
+2. Verify the request and cross-reference it against `docs/agile/single-source-of-truth.md`.
+3. Process the change on the local repo first, then ask for approval before committing.
+4. Push to `staging` once approved, and have it reviewed.
+5. Push to `main` (Live) once staging review is complete.
+6. Update the SSOT to reflect the completed change.
+7. Verify the change on Live.
+8. Verify Live and Staging match.
 
 ## Core Rule
 
@@ -74,7 +87,5 @@ Before publishing:
 
 ## Current Watch Items
 
-- Leslie's `202x`
 - final decision on `help-others.html`
-- TSWR TikTok validation
 - staging and production deployment settings
