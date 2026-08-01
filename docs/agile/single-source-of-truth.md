@@ -87,17 +87,15 @@ What is in good shape:
 
 What is not final:
 
-- validation of the TSWR TikTok destination
 - final staging and production verification
 
 ## Working Priorities
 
 1. QA pass across all pages for the masthead logo swap and the new quick-support link
 2. commit Phase One and push so Cloudflare builds a staging version for review
-3. validate the TSWR TikTok URL
-4. run full staging QA after each significant website change
-5. confirm production hosting and DNS settings
-6. Phase Two (June 2026 doc): MA-vs-virtual wording, strengthen "Path" content and NF app QR, Connect page fixes
+3. run full staging QA after each significant website change
+4. confirm production hosting and DNS settings
+5. Phase Two (June 2026 doc): MA-vs-virtual wording, strengthen "Path" content and NF app QR, Connect page fixes
 
 ## Current Decisions
 
