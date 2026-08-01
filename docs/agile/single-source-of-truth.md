@@ -23,7 +23,7 @@ Current public site structure in source:
 
 - `index.html`: homepage with six pathway cards
 - `about.html`: redirect page
-- `who-we-are.html`: team and lived-experience page with six profiles
+- `who-we-are.html`: team and lived-experience page with four profiles (Tavyn, Melissa, Olivia, Franklin; Leslie and David removed August 2026)
 - `what-we-do.html`: peer grief support explanation page
 - `connect.html`: direct connection page with email plus the shared grief-support Google Form
 - `what-is-a-peer-grief-ally.html`: explainer page linked from `connect.html`
@@ -63,6 +63,10 @@ Applied from `RG-Website - Update - June 2026.docx`:
 - New assets: `assets/images/pscp-logo-square.png`, `assets/images/directory-photo.png`, `assets/images/directory-qr.png`.
 - Cache-bust version advanced to `v=20260713i`.
 
+## Who We Are Page Update — August 2026
+
+Removed Leslie Lagos and David Swindell profile blocks from `who-we-are.html` per Phase Two direction in the June 2026 update doc. Remaining four profiles (Tavyn, Melissa, Olivia, Franklin) keep their original order and alternating left/right photo layout without further CSS changes. Committed on branch `who-we-are-remove-leslie-david`, merged and pushed to `main`.
+
 ## Open Items Confirmed In Source
 
 - the TSWR TikTok destination has been verified
@@ -93,7 +97,7 @@ What is not final:
 3. validate the TSWR TikTok URL
 4. run full staging QA after each significant website change
 5. confirm production hosting and DNS settings
-6. Phase Two (June 2026 doc): MA-vs-virtual wording, strengthen "Path" content and NF app QR, Connect page fixes, remove David and Leslie from Who We Are
+6. Phase Two (June 2026 doc): MA-vs-virtual wording, strengthen "Path" content and NF app QR, Connect page fixes
 
 ## Current Decisions
 
